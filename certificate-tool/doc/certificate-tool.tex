@@ -1,0 +1,433 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage[margin=2cm]{geometry}
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+\section{Signing algorithm}
+
+\noindent
+Consider two certificates $P$ and $Q$ where $P$ is signed by $Q$.
+Let $s$ be the signature in $P$ and let $k$ be the public
+key in $Q$.
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+$\quad P\quad$\\
+\\
+\\
+\\
+\\
+\\
+\hline
+$s$\\
+\hline
+\end{tabular}
+\qquad
+\begin{tabular}{|c|}
+\hline
+$\quad Q\quad$\\
+\\
+\\
+\hline
+$k$\\
+\hline
+\\
+\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+By necessity $s$ and $k$ are compatible.
+For example, if $k$ is RSA 2048 then $s$ is a PKCS\footnote{RFC 3447 Public-Key Cryptography Standards (PKCS)}
+signature that is 2048 bits in length (256 bytes).
+
+\bigskip
+\noindent
+A hash digest of $P$ is contained in $s$.
+For example, the following unencrypted signature $s$ is for RSA 2048 and hash digest SHA256.
+(Numerals are in hexadecimal.)
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+{\footnotesize\tt 00 01 ff $\cdots$ ff 00 30 31 30 0d 06 09 60 86 48 01 65 03 04 02 01 05 00 04 20} & HASH\\
+\hline
+\end{tabular}
+
+\medskip
+Signature $s$ (plaintext)
+\end{center}
+
+\noindent
+The length of HASH is 32 bytes because SHA256 is used.
+The 19 byte sequence starting with $\tt 30$ is from
+``Abstract Syntax Notation One.''
+The {\tt ff} bytes are pad bytes that are added to make the total length of the signature 2048 bits (256 bytes).
+Hence there are $256-3-19-32=202$ pad bytes.
+
+\bigskip
+\noindent
+Note that the above signature is the unencrypted value of $s$.
+In the actual certificate, $s$ is encrypted using the private key associated with $k$.
+After encryption, $s$ is still 256 bytes long.
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+{\footnotesize\tt
+76 b6 97 82 0f 06 b7 48 59 02 a0 2c f4 $\cdots$
+fe c3 61 25 5b 1c da 77 9a a1 63 d4 49 cd}\\
+\hline
+\end{tabular}
+
+\medskip
+Signature $s$ (encrypted)
+\end{center}
+
+\noindent
+To prove that $P$ is signed by $Q$, $s$ is decrypted using $Q$'s public key $k$.
+Then if HASH matches a digest of $P$, the signing of $P$ by $Q$ is proven.
+
+\bigskip
+\noindent
+Proving ``$P$ signed by $Q$'' proves that $s$ was encrypted using the private key associated with $k$.
+Only the owner of $Q$ knows the private key.
+No one can change the contents of $P$ without breaking the hash digest in $s$,
+and no one can change $s$ without knowing the private key.
+Hence we can trust the contents of $P$ if we trust $Q$.
+
+\newpage
+\section{RSA functions}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+void rsa_encrypt_signature
+          (uint8_t *sig, int len, struct keyinfo *key)
+\end{verbatim}
+
+\noindent
+Encrypts signature {\tt sig} in situ using the private key in {\tt key}.
+Argument {\tt len} is the length of the signature in bytes.
+This function is used to sign a certificate.
+
+\bigskip
+\bigskip
+\begin{verbatim}
+uint8_t *rsa_decrypt_signature
+          (struct certinfo *p, struct certinfo *q)
+\end{verbatim}
+
+\noindent
+Decrypts the signature in certificate {\tt p} using the public key in {\tt q} and returns the result.
+On success, the result is returned in a malloc'd buffer that the caller should free.
+The length of the buffer is the same as the signature length.
+Returns NULL on error.
+
+\newpage
+\section{Elliptic curve functions}
+
+\subsection{prime256v1}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+void ec256_encrypt
+          (struct keyinfo *key, uint8_t *hash, int len, uint8_t *sig)
+\end{verbatim}
+
+\noindent
+Encrypts {\tt hash} using the private key in {\tt key}.
+The 64 byte result is returned in {\tt sig}.
+This function is used to sign a certificate.
+
+\bigskip
+\begin{tabular}{ll}
+{\tt key} & Pointer to a private key.\\
+{\tt hash} & Pointer to a hash digest value.\\
+{\tt len} & Byte length of hash digest value (32 bytes maximum).\\
+{\tt sig} & Pointer to a 64 byte buffer.
+\end{tabular}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+int ec256_verify
+          (struct certinfo *p, struct certinfo *q)
+\end{verbatim}
+
+\noindent
+Returns 0 if certificate {\tt p} is signed by {\tt q}
+where the public key type of {\tt q} is prime256v1.
+
+\bigskip
+\subsection{secp384r1}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+void ec384_encrypt
+          (struct keyinfo *key, uint8_t *hash, int len, uint8_t *sig)
+\end{verbatim}
+
+\noindent
+Encrypts {\tt hash} using the private key in {\tt key}.
+The 96 byte result is returned in {\tt sig}.
+This function is used to sign a certificate.
+
+\bigskip
+\begin{tabular}{ll}
+{\tt key} & Pointer to a private key.\\
+{\tt hash} & Pointer to a hash digest value.\\
+{\tt len} & Byte length of hash digest value (48 bytes maximum).\\
+{\tt sig} & Pointer to a 96 byte buffer.
+\end{tabular}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+int ec384_verify
+          (struct certinfo *p, struct certinfo *q)
+\end{verbatim}
+
+\noindent
+Returns 0 if certificate {\tt p} is signed by {\tt q}
+where the public key type of {\tt q} is secp384r1.
+
+\newpage
+\section{Hash functions}
+
+\bigskip
+\bigskip
+\begin{verbatim}
+void md5(uint8_t *buf, int len, uint8_t *out)
+void sha1(uint8_t *buf, int len, uint8_t *out)
+void sha224(uint8_t *buf, int len, uint8_t *out)
+void sha256(uint8_t *buf, int len, uint8_t *out)
+void sha384(uint8_t *buf, int len, uint8_t *out)
+void sha512(uint8_t *buf, int len, uint8_t *out)
+\end{verbatim}
+
+\noindent
+The hash value of {\tt buf} is returned in {\tt out}.
+Argument {\tt len} is the length of {\tt buf} in bytes.
+The following table shows the byte length of each result.
+
+\bigskip
+\noindent
+\begin{tabular}{|l|l|}
+\hline
+Digest & Length\\
+\hline
+MD5 & 16 bytes\\
+SHA1 & 20\\
+SHA224 & 28\\
+SHA256 & 32\\
+SHA384 & 48\\
+SHA512 & 64\\
+\hline
+\end{tabular}
+
+\bigskip
+\noindent
+The hash value of a certificate is encrypted in the certificate signature.
+
+\newpage
+\section{ASN.1 Encodings}
+
+\noindent
+Encoded integers may have an extra leading 00 byte added due to encoding rules.
+Encoding rules add the 00 byte if the first byte of the unencoded integer is greater than 127.
+
+\bigskip
+\noindent
+For example, a 256 byte RSA modulus that begins with hex 80 is encoded as 257 bytes.
+
+\newpage
+\subsection{RSA}
+
+\subsubsection{Public key}
+
+\noindent
+The following example is for RSA 1024 which has a 128 byte modulus.
+The two integers in the encoding are the modulus followed by the exponent.
+
+\begin{verbatim}
+134 159:     SEQUENCE {
+137  13:       SEQUENCE {
+139   9:         OBJECT IDENTIFIER rsaEncryption (1 2 840 113549 1 1 1)
+150   0:         NULL
+       :         }
+152 141:       BIT STRING, encapsulates {
+156 137:         SEQUENCE {
+159 129:           INTEGER
+       :             00 C4 B9 4C 7D 39 E6 64 4E 66 88 92 60 24 AC C8
+       :             C7 80 19 3D B9 05 A9 0D 56 EE 2D B6 DB D9 73 C2
+       :             0C 97 6F E8 08 FE DC 5B 55 0A 5E FA B0 66 F7 B2
+       :             EA 78 31 45 4C 58 3D 49 F2 09 AF C8 37 81 86 7D
+       :             C1 55 1F 9F EA 8C DB ED 5B 28 2E 2D 7B CD 84 77
+       :             4D 06 9D 57 E7 BE 23 6F 39 08 73 F4 3C 89 35 AF
+       :             65 FE B1 C0 5B 19 A3 60 78 80 DB 07 6D 36 28 C8
+       :             A0 EB CA 2D 5C 1D B2 A0 9C 59 0F 6E E2 AA 9D B5
+       :             27
+291   3:           INTEGER 65537
+       :           }
+       :         }
+       :       }
+\end{verbatim}
+
+\subsubsection{Signature}
+
+\noindent
+The signature is the bit string field at the end of the certificate.
+The length of the signature is the same as the unencoded RSA modulus.
+In this case (RSA 1024) the length is 128 bytes.
+
+\begin{verbatim}
+296  13:   SEQUENCE {
+298   9:     OBJECT IDENTIFIER sha256WithRSAEncryption (1 2 840 113549 1 1 11)
+309   0:     NULL
+       :     }
+311 129:   BIT STRING
+       :     7E 97 8C BA 48 9D 89 C8 98 E4 77 27 E4 01 54 4D
+       :     65 BB 96 04 46 43 C2 4A F4 6C B3 19 9A 4B 56 28
+       :     10 99 4C 5F 12 D9 3D 36 5F BC C7 C9 F2 28 1A 24
+       :     5D 09 05 AA 85 17 18 E6 B0 1D C9 C6 CD 8A AE 10
+       :     6F AA 9E 6E 09 B6 C5 85 54 2D CF 7B A0 B8 72 67
+       :     86 9C 51 35 8D ED 17 8A 48 23 A4 82 53 3C BE 29
+       :     5A 7D DA 00 B5 D3 9F EC 9A 6F 3D 95 B7 B4 64 72
+       :     56 D1 3C DA 62 BD 4B 45 81 C2 D4 35 E1 06 DB 24
+\end{verbatim}
+
+\newpage
+\subsection{prime256v1}
+
+\subsubsection{Public key}
+
+\noindent
+Bit string data is the byte sequence $(04\mid X\mid Y)$.
+The length of $X$ is 32 bytes and the length of $Y$ is 32 bytes.
+
+\begin{verbatim}
+162  89:     SEQUENCE {
+164  19:       SEQUENCE {
+166   7:         OBJECT IDENTIFIER ecPublicKey (1 2 840 10045 2 1)
+175   8:         OBJECT IDENTIFIER prime256v1 (1 2 840 10045 3 1 7)
+       :         }
+185  66:       BIT STRING
+       :         04 AB AA 1E 30 A0 41 00 05 C5 7F 32 E3 99 B8 BE
+       :         3B 8A C1 4A A2 A3 4C CB 3C 44 97 04 4D D2 99 F1
+       :         E9 CD FE 63 B3 C4 B7 05 99 1B 94 1B 87 3B 47 BA
+       :         3A 76 AA 37 96 2F 89 47 31 53 EB 77 E6 43 17 D2
+       :         3B
+       :       }
+\end{verbatim}
+
+\subsubsection{Signature}
+
+\noindent
+The two integers in the encoding are $R$ followed by $S$.
+The unencoded length of $R$ is 32 bytes and the unencoded length of $S$ is 32 bytes.
+
+\begin{verbatim}
+253  10:   SEQUENCE {
+255   8:     OBJECT IDENTIFIER ecdsaWithSHA256 (1 2 840 10045 4 3 2)
+       :     }
+265  72:   BIT STRING, encapsulates {
+268  69:     SEQUENCE {
+270  33:       INTEGER
+       :         00 9F 3F A9 AE 97 A0 48 52 AA AA AF 3E CA BA 62
+       :         5F 6C 2C 46 BB 29 D0 19 A6 14 EA C0 5D 0E B9 B8
+       :         D5
+305  32:       INTEGER
+       :         16 76 0A FC 4D 9C 6F 65 BD D2 8B CA EF C5 6E 07
+       :         76 46 13 1D CF 39 A8 E3 80 D8 BD 2E B2 F9 89 0D
+       :       }
+       :     }
+\end{verbatim}
+
+\newpage
+\subsection{secp384r1}
+
+\subsubsection{Public key}
+
+\noindent
+Bit string data is the byte sequence $(04\mid X\mid Y)$.
+The length of $X$ is 48 bytes and the length of $Y$ is 48 bytes.
+
+\begin{verbatim}
+163 118:     SEQUENCE {
+165  16:       SEQUENCE {
+167   7:         OBJECT IDENTIFIER ecPublicKey (1 2 840 10045 2 1)
+176   5:         OBJECT IDENTIFIER secp384r1 (1 3 132 0 34)
+       :         }
+183  98:       BIT STRING
+       :         04 42 62 D9 F6 76 24 10 AE 1B 60 1F 59 45 C5 7D
+       :         69 89 A3 A7 29 92 40 E6 BF FD F0 D0 20 55 BD 97
+       :         5E 2B D8 BB 14 56 30 08 6E F0 02 A8 DB F4 DD C5
+       :         BD DD 69 AB 39 B9 32 FC 55 D4 D5 8C 70 8E 27 3C
+       :         AA A0 72 67 22 AB 1D DF 41 B5 D4 99 6D 32 7C 06
+       :         ED 48 9F 31 E5 BD 10 AA 09 E7 5B 19 B6 8D 23 43
+       :         27
+       :       }
+\end{verbatim}
+
+\subsubsection{Signature}
+
+\noindent
+The two integers in the encoding are $R$ followed by $S$.
+The unencoded length of $R$ is 48 bytes and the unencoded length of $S$ is 48 bytes.
+
+\begin{verbatim}
+283  10:   SEQUENCE {
+285   8:     OBJECT IDENTIFIER ecdsaWithSHA256 (1 2 840 10045 4 3 2)
+       :     }
+295 104:   BIT STRING, encapsulates {
+298 101:     SEQUENCE {
+300  48:       INTEGER
+       :         33 30 98 0F AA 4C 83 A1 0C 17 F9 3F 2F 05 F7 92
+       :         2B 97 E9 2E E5 63 33 26 29 36 10 4F 65 2F E4 BA
+       :         FF 14 09 0E 6B 07 BC 3D 8C 62 E0 4E 9C 4E B4 37
+350  49:       INTEGER
+       :         00 F6 6E EC 4F F9 5B 37 DC 8D E3 E9 B3 CA 13 0C
+       :         5A BE F4 72 E4 4B 7A B4 BF C7 05 F1 71 83 77 68
+       :         DF CF F3 CA B2 3E C5 8F E6 7E 34 B7 B4 AB 6F D5
+       :         4F
+       :       }
+       :     }
+\end{verbatim}
+
+\newpage
+\section{References}
+
+\noindent
+Certicom Corp., ``Standards for Efficient Cryptography 1 (SEC 1: Elliptic Curve Cryptography)''
+
+\bigskip
+\noindent
+FIPS Publication 180-4, Secure Hash Standard
+
+\bigskip
+\noindent
+Kaliski B., ``A Layman's Guide to a Subset of ASN.1, BER, and DER''
+
+\bigskip
+\noindent
+NIST, ``Mathematical routines for the NIST prime elliptic curves''
+
+\bigskip
+\noindent
+RFC 1321 The MD5 Message-Digest Algorithm
+
+\bigskip
+\noindent
+RFC 3447 Public-Key Cryptography Standards (PKCS)
+
+\end{document}

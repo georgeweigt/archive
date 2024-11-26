@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\parindent=0pt
+\begin{document}
+
+This is a C code project for learning about Ethereum communication.
+
+\bigskip
+For example, consider the following documentation
+from the Ethereum project website.\footnote{\tt https://github.com/ethereum/devp2p/blob/master/rlpx.md}
+
+\begin{quote}
+Alice wants to send an encrypted message that can be decrypted by Bob's static private key $k_B$.
+Alice knows about Bob's static public key $K_B$.
+
+\medskip
+To encrypt the message $m$, Alice generates a random number $r$
+and corresponding elliptic curve public key $R=r*G$ and computes the
+shared secret $S=P_x$ where $(P_x,P_y)=r*K_B$.
+She derives key material for encryption and authentication as
+$k_E\,\|\,k_M=\text{\tt KDF}(S,32)$
+as well as a random initialization vector \verb$iv$.
+Alice sends the encrypted message $R\,\|\,\text{\tt iv}\,\|\,c\,\|\,d$
+where $c=\text{\tt AES}(k_E,\text{\tt iv},m)$
+and $d=\text{\tt MAC}\big(\text{\tt sha256}(k_M),\text{\tt iv}\,\|\,c\big)$ to Bob.
+\end{quote}
+
+Let
+\begin{align*}
+r&=\text{\footnotesize\tt ephemeral\_private\_key} & \text{\footnotesize 32 bytes}
+\\
+R&=\text{\footnotesize\tt ephemeral\_public\_key} & \text{\footnotesize 64 bytes}
+\\
+S&=\text{\footnotesize\tt shared\_secret} & \text{\footnotesize 32 bytes}
+\\
+K_B&=\text{\footnotesize\tt peer\_public\_key} & \text{\footnotesize 64 bytes}
+\\
+k_E&=\text{\footnotesize\tt aes\_key} & \text{\footnotesize 16 bytes}
+\\
+k_M&=\text{\footnotesize\tt hmac\_key} & \text{\footnotesize 32 bytes}
+\end{align*}
+
+Then this is the code for $r$ and $R=r*G$.
+{\footnotesize
+\begin{verbatim}
+ec_genkey(ephemeral_private_key, ephemeral_public_key);
+\end{verbatim}
+}
+
+\bigskip
+This is the code for $S=P_x$ where $(P_x,P_y)=r*K_B$.
+{\footnotesize
+\begin{verbatim}
+ec_ecdh(shared_secret, ephemeral_private_key, peer_public_key);
+\end{verbatim}
+}
+
+\bigskip
+And this is the code for $k_E\,\|\,k_M=\text{\tt KDF}(S,32)$.
+{\footnotesize
+\begin{verbatim}
+kdf(aes_key, hmac_key, shared_secret);
+\end{verbatim}
+}
+
+\section*{Review of shared secrets}
+
+Let $k_a$ and $k_b$ be private keys and let $K_a$ and $K_b$ be public keys such that
+\begin{equation*}
+K_a=k_a\,G,\quad K_b=k_b\,G
+\end{equation*}
+where $G$ is the generator point.
+
+\bigskip
+It follows that
+\begin{equation*}
+\frac{K_a}{k_a}=G,\quad \frac{K_b}{k_b}=G
+\end{equation*}
+
+Hence
+\begin{equation*}
+\frac{K_a}{k_a}=\frac{K_b}{k_b}
+\end{equation*}
+and
+\begin{equation*}
+k_b\,K_a=k_a\,K_b
+\end{equation*}
+
+After $A$ and $B$ exchange public keys, both can compute shared secret $S$.
+\begin{equation*}
+k_a\,K_b=S,\quad k_b\,K_a=S
+\end{equation*}
+
+Since $S$ is a point, by convention $S_x$ is used for the actual shared secret.
+
+\end{document}
+
+\bigskip
+Normally we don't care what $S$ is but mathematically we have
+\begin{equation*}
+S=k_ak_b\,G
+\end{equation*}
+
+The unknown private key cannot be recovered because the arithmetic is done with a modulus.
+
+\end{document}
