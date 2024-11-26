@@ -1,0 +1,18 @@
+                              Analysis of Variance
+
+    Source     DF     Sum of Squares     Mean Square     F Value     Pr > F
+    Model       2         1.53213547      0.76606773      613.19     0.0000
+    Error      28         0.03498056      0.00124931                       
+    Total      30         1.56711603                                       
+
+               Root MSE           0.03535     R-Square     0.9777
+               Dependent Mean     1.42133     Adj R-Sq     0.9761
+               Coeff Var          2.48679                        
+
+                              Parameter Estimates
+
+         Parameter       Estimate     Std Err     t Value     Pr > |t|
+         (Intercept)     -2.88007     0.34734       -8.29       0.0000
+         log(Girth)       1.98265     0.07501       26.43       0.0000
+         log(Height)      1.11712     0.20444        5.46       0.0000
+
