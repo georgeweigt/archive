@@ -18,7 +18,3 @@ Example
 ```
 ./lisp schwarzschild-metric.lisp
 ```
-
-#
-
-[simple-lisp.pdf](https://georgeweigt.github.io/simple-lisp.pdf)
