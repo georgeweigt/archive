@@ -1,7 +1,3 @@
-[certificate-tool.pdf](https://georgeweigt.github.io/certificate-tool.pdf)
-
-#
-
 To build ctool
 
 ```
