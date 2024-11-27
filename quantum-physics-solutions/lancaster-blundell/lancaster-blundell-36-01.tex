@@ -1,0 +1,290 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(36.1) (a) Show that the Dirac equation can be recast in the form
+\begin{equation*}
+i\frac{\partial\psi}{\partial t}=\hat H_D\psi
+\tag{36.33}
+\end{equation*}
+where $\hat H_D=\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m$
+and find $\boldsymbol\alpha$ and $\beta$ in terms of the
+$\gamma$ matrices.
+
+\bigskip
+(b) Evaluate $\hat H_D^2$ and show that for a Klein-Gordon
+dispersion to result we must have:
+
+(i) that the $\alpha^i$ and $\beta$ objects all anticommute with
+each other; and
+
+(ii) $(\alpha^i)^2=(\beta)^2=1$.
+
+\bigskip
+(c) Prove the following commutation relations
+
+(i) $[\hat H,\hat L^i]=i(\hat{\mathbf p}\times\boldsymbol\alpha)^i$
+where $\hat{\mathbf L}=\hat{\mathbf x}\times\hat{\mathbf p}$.
+
+(ii) $[\hat H,\hat S^i]=-i(\hat{\mathbf p}\times\boldsymbol\alpha)^i$
+where $\hat{\mathbf S}=\frac{1}{2}\boldsymbol\Sigma$ and we define
+$\boldsymbol\Sigma=\frac{i}{2}\boldsymbol\gamma\times\boldsymbol\gamma$.
+}}
+
+\bigskip
+(a) Consider the following form of the Dirac equation.
+\begin{equation*}
+i\bigg(
+\gamma^0\frac{\partial}{\partial t}
++\gamma^1\frac{\partial}{\partial x}
++\gamma^2\frac{\partial}{\partial y}
++\gamma^3\frac{\partial}{\partial z}
+\bigg)\psi=m\psi
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+i\gamma^0\frac{\partial}{\partial t}\psi
+=-i\bigg(
+\gamma^1\frac{\partial}{\partial x}
++\gamma^2\frac{\partial}{\partial y}
++\gamma^3\frac{\partial}{\partial z}
+\bigg)\psi+m\psi
+\end{equation*}
+
+Noting that $\gamma^0\gamma^0=I$, multiply both sides by $\gamma^0$ to obtain
+\begin{equation*}
+i\frac{\partial}{\partial t}\psi=-i\gamma^0\bigg(
+\gamma^1\frac{\partial}{\partial x}
++\gamma^2\frac{\partial}{\partial y}
++\gamma^3\frac{\partial}{\partial z}
+\bigg)\psi+m\gamma^0\psi
+\end{equation*}
+
+Hence for $\hat{\mathbf p}=-i\nabla$ we have
+\begin{equation*}
+\boldsymbol\alpha=\gamma^0\begin{pmatrix}\gamma^1\\ \gamma^2\\ \gamma^3\end{pmatrix},
+\quad
+\beta=\gamma^0
+\end{equation*}
+
+(b) The dispersion relation is
+\begin{equation*}
+\hat H_D^2=\hat{\mathbf p}^2+m^2
+\end{equation*}
+
+Squaring $\hat H_D$ we have
+\begin{align*}
+\hat H_D^2
+&=(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)
+\\
+&=(\boldsymbol\alpha\cdot\hat{\mathbf p})(\boldsymbol\alpha\cdot\hat{\mathbf p})
++(\boldsymbol\alpha\cdot\hat{\mathbf p})\beta m+\beta m(\boldsymbol\alpha\cdot\hat{\mathbf p})+\beta^2m^2
+\end{align*}
+
+The middle terms must cancel, that is
+\begin{equation*}
+(\boldsymbol\alpha\cdot\hat{\mathbf p})\beta m+\beta m(\boldsymbol\alpha\cdot\hat{\mathbf p})=0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\alpha^i\beta=-\beta\alpha^i
+\end{equation*}
+
+Cross terms must cancel, that is
+\begin{equation*}
+\bigg(
+{-}i\alpha^1\frac{\partial}{\partial x}
+-i\alpha^2\frac{\partial}{\partial y}
+-i\alpha^3\frac{\partial}{\partial z}
+\bigg)^2
+=-(\alpha^1)^2\frac{\partial^2}{\partial x^2}
+-(\alpha^2)^2\frac{\partial^2}{\partial y^2}
+-(\alpha^3)^2\frac{\partial^2}{\partial z^2}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\alpha^i\alpha^j=-\alpha^j\alpha^i,\quad i\ne j
+\end{equation*}
+
+With the above anticommutation relations we now have
+\begin{equation*}
+\hat H_D^2=-(\alpha^1)^2\frac{\partial^2}{\partial x^2}
+-(\alpha^2)^2\frac{\partial^2}{\partial y^2}
+-(\alpha^3)^2\frac{\partial^2}{\partial z^2}
++\beta^2m=\hat{\mathbf p}^2+m^2
+\end{equation*}
+
+Hence
+\begin{equation*}
+(\alpha^i)^2=I\quad\text{and}\quad\beta^2=I
+\end{equation*}
+
+(c) We have
+\begin{equation*}
+\hat{\mathbf L}\psi=\hat{\mathbf x}\times\hat{\mathbf p}\psi
+\end{equation*}
+
+If follows that
+\begin{align*}
+[\hat H_D,\hat{\mathbf L}]\psi
+&=\hat H_D\hat{\mathbf L}\psi-\hat{\mathbf L}\hat H_D\psi
+\\
+&=(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)(\hat{\mathbf x}\times\hat{\mathbf p}\psi)
+-\hat{\mathbf x}\times\hat{\mathbf p}(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)\psi
+\end{align*}
+
+The $\beta$ terms cancel because $\beta$ commutes with $\hat{\mathbf x}$ and $\hat{\mathbf p}$.
+\begin{equation*}
+\beta\hat{\mathbf x}\times\hat{\mathbf p}
+=\hat{\mathbf x}\times\hat{\mathbf p}\beta
+\end{equation*}
+
+Hence
+\begin{equation*}
+[\hat H_D,\hat{\mathbf L}]\psi
+=(\boldsymbol\alpha\cdot\hat{\mathbf p})(\hat{\mathbf x}\times\hat{\mathbf p}\psi)
+-\hat{\mathbf x}\times\hat{\mathbf p}(\boldsymbol\alpha\cdot\hat{\mathbf p})\psi
+\tag{1}
+\end{equation*}
+
+By the product rule for differentiation
+\begin{equation*}
+(\boldsymbol\alpha\cdot\hat{\mathbf p})(\hat{\mathbf x}\times\hat{\mathbf p}\psi)
+=(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf x}\times\hat{\mathbf p}\psi
++\hat{\mathbf x}\times(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf p}\psi
+\tag{2}
+\end{equation*}
+
+Substitute (2) into (1).
+\begin{align*}
+[\hat H_D,\hat{\mathbf L}]\psi
+&=(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf x}\times\hat{\mathbf p}\psi
++\hat{\mathbf x}\times(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf p}\psi
+-\hat{\mathbf x}\times\hat{\mathbf p}(\boldsymbol\alpha\cdot\hat{\mathbf p})\psi
+\\
+&=(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf x}\times\hat{\mathbf p}\psi
+\end{align*}
+
+Note that
+\begin{equation*}
+(\boldsymbol\alpha\cdot\hat{\mathbf p})\hat{\mathbf x}
+=\boldsymbol\alpha\cdot(-i\nabla\hat{\mathbf x})
+=-i\boldsymbol\alpha
+\end{equation*}
+
+Hence
+\begin{equation*}
+[\hat H_D,\hat{\mathbf L}]\psi
+=-i\boldsymbol\alpha\times\hat{\mathbf p}\psi
+=i(\hat{\mathbf p}\times\boldsymbol\alpha)\psi
+\end{equation*}
+
+For part (ii) we have
+\begin{equation*}
+\hat{\mathbf S}\psi
+=\frac{i}{4}\boldsymbol\gamma\times\boldsymbol\gamma\psi
+=\frac{i}{4}\gamma^0\boldsymbol\alpha\times\gamma^0\boldsymbol\alpha\psi
+=\frac{i}{4}\gamma^0\boldsymbol\alpha\gamma^0\times\boldsymbol\alpha\psi
+=-\frac{i}{4}\boldsymbol\alpha\times\boldsymbol\alpha\psi
+\end{equation*}
+
+It follows that
+\begin{align*}
+[\hat H_D,\hat{\mathbf S}]\psi
+&=\hat H_D\hat{\mathbf S}\psi-\hat{\mathbf S}\hat H_D\psi
+\\
+&=-\frac{i}{4}(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)(\boldsymbol\alpha\times\boldsymbol\alpha\psi)
++\frac{i}{4}\boldsymbol\alpha\times\boldsymbol\alpha(\boldsymbol\alpha\cdot\hat{\mathbf p}+\beta m)\psi
+\end{align*}
+
+The $\beta$ terms cancel by the following identity.
+(Recall $\beta\boldsymbol\alpha=-\boldsymbol\alpha\beta$.)
+\begin{equation*}
+\beta\boldsymbol\alpha\times\boldsymbol\alpha
+=-\boldsymbol\alpha\beta\times\boldsymbol\alpha
+=\boldsymbol\alpha\times\boldsymbol\alpha\beta
+\end{equation*}
+
+Hence
+\begin{equation*}
+[\hat H_D,\hat{\mathbf S}]\psi
+=-\frac{i}{4}(\boldsymbol\alpha\cdot\hat{\mathbf p})(\boldsymbol\alpha\times\boldsymbol\alpha\psi)
++\frac{i}{4}\boldsymbol\alpha\times\boldsymbol\alpha(\boldsymbol\alpha\cdot\hat{\mathbf p})\psi
+\end{equation*}
+
+Consider the following component forms.
+\begin{equation*}
+\boldsymbol\alpha\cdot\hat{\mathbf p}
+=\alpha^1\hat p^1+\alpha^2\hat p^2+\alpha^3\hat p^3,
+\quad
+\boldsymbol\alpha\times\boldsymbol\alpha
+=\begin{pmatrix}
+\alpha^2\alpha^3-\alpha^3\alpha^2
+\\
+\alpha^3\alpha^1-\alpha^1\alpha^3
+\\
+\alpha^1\alpha^2-\alpha^2\alpha^1
+\end{pmatrix}
+=2\begin{pmatrix}
+\alpha^2\alpha^3
+\\
+\alpha^3\alpha^1
+\\
+\alpha^1\alpha^2
+\end{pmatrix}
+\end{equation*}
+
+It follows that
+\begin{align*}
+-\frac{i}{4}
+(\boldsymbol\alpha\cdot\hat{\mathbf p})(\boldsymbol\alpha\times\boldsymbol\alpha\psi)
+&=\frac{i}{2}\begin{pmatrix}
+-\alpha^1\alpha^2\alpha^3\hat p^1-\alpha^3\hat p^2+\alpha^2\hat p^3
+\\
+\alpha^3\hat p^1-\alpha^2\alpha^3\alpha^1\hat p^2-\alpha^1\hat p^3
+\\
+-\alpha^2\hat p^1+\alpha^1\hat p^2-\alpha^3\alpha^1\alpha^2\hat p^3
+\end{pmatrix}\psi
+=\frac{i}{2}(\boldsymbol\alpha\times\hat{\mathbf p}-\epsilon)\psi
+\\[1ex]
+\frac{i}{4}
+(\boldsymbol\alpha\times\boldsymbol\alpha)(\boldsymbol\alpha\cdot\hat{\mathbf p})\psi
+&=\frac{i}{2}\begin{pmatrix}
+\alpha^2\alpha^3\alpha^1\hat p^1-\alpha^3\hat p^2+\alpha^2\hat p^3
+\\
+\alpha^3\hat p^1+\alpha^3\alpha^1\alpha^2\hat p^2-\alpha^1\hat p^3
+\\
+-\alpha^2\hat p^1+\alpha^1\hat p^2+\alpha^1\alpha^2\alpha^3\hat p^3
+\end{pmatrix}\psi
+=\frac{i}{2}(\boldsymbol\alpha\times\hat{\mathbf p}+\epsilon)\psi
+\end{align*}
+where
+\begin{equation*}
+\epsilon=\begin{pmatrix}
+\alpha^1\alpha^2\alpha^3\hat p^1
+\\
+\alpha^2\alpha^3\alpha^1\hat p^2
+\\
+\alpha^3\alpha^1\alpha^2\hat p^3
+\end{pmatrix}
+=\begin{pmatrix}
+\alpha^2\alpha^3\alpha^1\hat p^1
+\\
+\alpha^3\alpha^1\alpha^2\hat p^2
+\\
+\alpha^1\alpha^2\alpha^3\hat p^3
+\end{pmatrix}
+\end{equation*}
+
+Hence
+\begin{equation*}
+[\hat H_D,\hat{\mathbf S}]\psi
+=\frac{i}{2}(\boldsymbol\alpha\times\hat{\mathbf p}-\epsilon)\psi
++\frac{i}{2}(\boldsymbol\alpha\times\hat{\mathbf p}+\epsilon)\psi
+=i\boldsymbol\alpha\times\hat{\mathbf p}\psi
+=-i(\hat{\mathbf p}\times\boldsymbol\alpha)\psi
+\end{equation*}
+
+\end{document}

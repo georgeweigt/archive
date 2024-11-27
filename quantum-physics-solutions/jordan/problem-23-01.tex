@@ -1,0 +1,141 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+23-1.
+Le $U$ be a matrix that has an inverse and let
+$A$, $B$, $C$ and $A'$, $B'$, $C'$ be matrices related by
+\begin{align*}
+A'&=U^{-1}AU,
+\\
+B'&=U^{-1}BU,
+\\
+C'&=U^{-1}CU.
+\end{align*}
+
+Show that if
+\begin{equation*}
+A+B=C,
+\end{equation*}
+
+then
+\begin{equation*}
+A'+B'=C'.
+\end{equation*}
+
+Show that if
+\begin{equation*}
+AB=C,
+\end{equation*}
+
+then
+\begin{equation*}
+A'B'=C';
+\end{equation*}
+
+in particular, if
+\begin{equation*}
+A^2=C,
+\end{equation*}
+
+then
+\begin{equation*}
+(A')^2=C'.
+\end{equation*}
+
+Show that if there is a complex number $z$ such that
+\begin{equation*}
+zB=C,
+\end{equation*}
+
+then
+\begin{equation*}
+zB'=C'.
+\end{equation*}
+
+Show that if $B$ has an inverse and
+\begin{equation*}
+B^{-1}=C,
+\end{equation*}
+
+the $B'$ has an inverse and
+\begin{equation*}
+(B')^{-1}=C'.
+\end{equation*}
+
+These show that algebraic relations between
+matrices are not changed when all the matrices
+are changed by multiplication with $U$ and $U^{-1}$.
+}}
+
+\bigskip
+If $A+B=C$ then
+\begin{equation*}
+U^{-1}(A+B)U=U^{-1}CU
+\end{equation*}
+
+By distributive property
+\begin{equation*}
+U^{-1}AU+U^{-1}BU=U^{-1}CU
+\end{equation*}
+
+Hence
+\begin{equation*}
+A'+B'=C'
+\end{equation*}
+
+If $AB=C$ then
+\begin{equation*}
+U^{-1}ABU=U^{-1}CU
+\end{equation*}
+
+By $UU^{-1}=1$ we have
+\begin{equation*}
+U^{-1}AUU^{-1}BU=U^{-1}CU
+\end{equation*}
+
+Hence
+\begin{equation*}
+A'B'=C'
+\end{equation*}
+
+If $A^2=C$ then
+\begin{equation*}
+U^{-1}AUU^{-1}AU=U^{-1}CU
+\end{equation*}
+
+Hence
+\begin{equation*}
+A'A'=(A')^2=C'
+\end{equation*}
+
+If $zB=C$ then
+\begin{equation*}
+U^{-1}zBU=U^{-1}CU
+\end{equation*}
+
+By commutative property of scalars with matrices
+\begin{equation*}
+zU^{-1}BU=U^{-1}CU
+\end{equation*}
+
+Hence
+\begin{equation*}
+zB'=C'
+\end{equation*}
+
+If $B^{-1}=C$ then
+\begin{equation*}
+U^{-1}B^{-1}U=U^{-1}CU
+\end{equation*}
+
+By the property that $(UV)^{-1}=V^{-1}U^{-1}$ we have
+\begin{equation*}
+(U^{-1}BU)^{-1}=U^{-1}CU
+\end{equation*}
+
+Hence
+\begin{equation*}
+(B')^{-1}=C'
+\end{equation*}
+
+\end{document}

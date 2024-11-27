@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+20-3.
+Use the result of the last problem to calculate
+\begin{equation*}
+L_3(Q_1^2+Q_2^2+Q_3^2)-(Q_1^2+Q_2^2+Q_3^2)L_3
+\end{equation*}
+
+and
+\begin{equation*}
+L_3(P_1^2+P_2^2+P_3^2)-(P_1^2+P_2^2+P_3^2)L_3
+\end{equation*}
+
+Both of these can be done the same way $J_3J^2-J^2J_3$ was.
+}}
+
+\bigskip
+Start with
+\begin{align*}
+[L_3,Q^2]&=L_3(Q_1^2+Q_2^2+Q_3^2)-(Q_1^2+Q_2^2+Q_3^2)L_3
+\\
+&=L_3Q_1Q_1-Q_1Q_1L_3+L_3Q_2Q_2-Q_2Q_2L_3+L_3Q_3Q_3-Q_3Q_3L_3
+\end{align*}
+
+By problem 20-2
+\begin{align*}
+Q_1L_3&=L_3Q_1-i\hbar Q_2
+\\
+Q_2L_3&=L_3Q_2+i\hbar Q_1
+\\
+Q_3L_3&=L_3Q_3
+\end{align*}
+
+Substitute from problem 20-2.
+\begin{align*}
+[L_3,Q^2]
+&=L_3Q_1Q_1-Q_1(L_3Q_1-i\hbar Q_2)+L_2Q_2Q_2-Q_2(L_3Q_2+i\hbar Q_1)
+\\
+&=(L_3Q_1-Q_1L_3)Q_1+(L_3Q_2-Q_2L_3)Q_2
+\\
+&=i\hbar Q_2Q_1-i\hbar Q_1Q_2
+\\
+&=0
+\end{align*}
+
+Repeat with $P$ substituted for $Q$.
+
+\end{document}

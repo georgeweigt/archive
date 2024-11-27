@@ -1,0 +1,13 @@
+"Verify solutions for Exercise 4-6"
+
+b = exp(i phi) / sqrt(1 - c^2)
+a = -b c
+check(0 == a + b c)
+check(1 == conj(a) a + c conj(a) b + c conj(b) a + conj(b) b)
+
+b = exp(i phi) / sqrt(2 (1 - c))
+a = -b
+check(0 == a + b c + a c + b)
+check(1 == conj(a) a + c conj(a) b + c conj(b) a + conj(b) b)
+
+"ok"

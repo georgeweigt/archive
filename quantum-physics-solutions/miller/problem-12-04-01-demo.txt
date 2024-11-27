@@ -1,0 +1,15 @@
+"Verify 12.4.1"
+
+s = (cos(theta/2), exp(i phi) sin(theta/2))
+
+sigmax = ((0,1),(1,0))
+sigmay = ((0,-i),(i,0))
+sigmaz = ((1,0),(0,-1))
+
+check(dot(conj(s),sigmax,s) == sin(theta) cos(phi))
+check(dot(conj(s),sigmay,s) == sin(theta) sin(phi))
+check(dot(conj(s),sigmaz,s) == cos(theta))
+
+"ok"
+
+

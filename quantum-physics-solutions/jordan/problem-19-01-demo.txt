@@ -1,0 +1,22 @@
+"Problem 19-1"
+
+E = -m (Z e^2)^2 / (2 hbar^2 n^2)
+
+"Verify equation (1)"
+r = -1/2 Z e^2 / E
+check(r == hbar^2 n^2 / (m Z e^2))
+"ok"
+
+"Verify equation (2)"
+v = sqrt(Z e^2 / (m r))
+check(v == Z e^2 / (hbar n))
+"ok"
+
+"Verify equation (3)"
+p = m v
+check(p == m Z e^2 / (hbar n))
+"ok"
+
+"Verify equation (4)"
+check(r p == hbar n)
+"ok"

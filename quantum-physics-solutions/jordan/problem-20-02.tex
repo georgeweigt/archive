@@ -1,0 +1,86 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+20-2.
+Work out
+\begin{align*}
+Q_1L_3&-L_3Q_1,
+\\
+Q_2L_3&-L_3Q_2,
+\\
+Q_3L_3&-L_3Q_3,
+\end{align*}
+
+and write the answers in terms of $Q_1$, $Q_2$, $Q_3$.
+
+\bigskip
+Work out
+\begin{align*}
+P_1L_3&-L_3P_1,
+\\
+P_2L_3&-L_3P_2,
+\\
+P_3L_3&-L_3P_3,
+\end{align*}
+
+and write the answers in terms of $P_1$, $P_2$, $P_3$.
+
+\bigskip
+What position coordinates and momentum projections do you expect can be measured together with the projection of the orbital angular momentum in the 3 direction without restriction of accuracy?
+}}
+
+\bigskip
+We have
+\begin{align*}
+Q_1L_3-L_3Q_1&=Q_1(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)Q_1
+\\
+&=Q_1Q_1P_2-Q_1Q_2P_1-Q_1P_2Q_1+Q_2P_1Q_1
+\\
+&=Q_1(Q_1P_2-P_2Q_1)-Q_2(Q_1P_1-P_1Q_1)
+\\
+&=-i\hbar Q_2
+\\[1ex]
+Q_2L_3-L_3Q_2&=Q_2(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)Q_2
+\\
+&=Q_2Q_1P_2-Q_2Q_2P_1-Q_1P_2Q_2+Q_2P_1Q_2
+\\
+&=Q_1(Q_2P_2-P_2Q_2)-Q_2(Q_2P_1-P_1Q_2)
+\\
+&=i\hbar Q_1
+\\[1ex]
+Q_3L_3-L_3Q_3&=Q_3(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)Q_3
+\\
+&=Q_3(Q_1P_2-Q_2P_1)-Q_3(Q_1P_2-Q_2P_1)
+\\
+&=0
+\end{align*}
+
+and
+\begin{align*}
+P_1L_3-L_3P_1&=P_1(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)P_1
+\\
+&=P_1Q_1P_2-P_1Q_2P_1-Q_1P_2P_1+Q_2P_1P_1
+\\
+&=(P_1Q_1-Q_1P_1)P_2-(P_1Q_2-Q_2P_1)P_1
+\\
+&=-i\hbar P_2
+\\[1ex]
+P_2L_3-L_3P_2&=P_2(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)P_2
+\\
+&=P_2Q_1P_2-P_2Q_2P_1-Q_1P_2P_2+Q_2P_1P_2
+\\
+&=(P_2Q_1-Q_1P_2)P_2-(P_2Q_2-Q_2P_2)P_1
+\\
+&=i\hbar P_1
+\\[1ex]
+P_3L_3-L_3P_3&=P_3(Q_1P_2-Q_2P_1)-(Q_1P_2-Q_2P_1)P_3
+\\
+&=(Q_1P_2-Q_2P_1)P_3-(Q_1P_2-Q_2P_1)P_3
+\\
+&=0
+\end{align*}
+
+Matrices $L_3$ and $Q_3$ commute hence $L_3$ and $Q_3$ represent independent random variables.
+Matrices $L_3$ and $P_3$ commute hence $L_3$ and $P_3$ represent independent random variables.
+
+\end{document}

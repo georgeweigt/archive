@@ -1,0 +1,103 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+16.1.1
+Consider a system that has two possible single fermion states,
+1 and 2, and can have anywhere from zero to two particles in it.
+There are therefore four possible states of this system:
+$|0_1,0_2\rangle$ (the state with no particles in either single-fermion state,
+a state we could also write as the empty state $|0\rangle$),
+$|1_1,0_2\rangle$, $|0_1,1_2\rangle$, and $|1_1,1_2\rangle$.
+(We will also choose the standard ordering of the states to be in
+the order 1, 2.)
+Any state of the system could be described as a linear combination of these
+four basis states, i.e.,
+\begin{equation*}
+|\Psi\rangle=c_1|0_1,0_2\rangle+c_2|1_1,0_2\rangle
++c_3|0_1,1_2\rangle+c_4|1_1,1_2\rangle
+\end{equation*}
+which we could also choose to write as a vector
+\begin{equation*}
+|\Psi\rangle=\begin{pmatrix}c_1\\c_2\\c_3\\c_4\end{pmatrix}
+\end{equation*}
+
+(i) Construct $4\times4$ matrices for each of the operators
+$\hat b_1^\dag$, $\hat b_1$, $\hat b_2^\dag$, and $\hat b_2$.
+
+\bigskip
+(ii) Explicitly verify by matrix multiplication the anticommutation relations
+\begin{align*}
+\hat b_1^\dag\hat b_1+\hat b_1\hat b_1^\dag&=1
+\\
+\hat b_2^\dag\hat b_2+\hat b_2\hat b_2^\dag&=1
+\\
+\hat b_1^\dag\hat b_2^\dag+\hat b_2^\dag\hat b_1^\dag&=0
+\\
+\hat b_1^\dag\hat b_1^\dag+\hat b_1^\dag\hat b_1^\dag&=0
+\end{align*}
+}}
+
+\bigskip
+(i) Let
+\begin{equation*}
+|00\rangle=\begin{pmatrix}1\\0\\0\\0\end{pmatrix},
+\quad
+|10\rangle=\begin{pmatrix}0\\1\\0\\0\end{pmatrix},
+\quad
+|01\rangle=\begin{pmatrix}0\\0\\1\\0\end{pmatrix},
+\quad
+|11\rangle=\begin{pmatrix}0\\0\\0\\1\end{pmatrix}
+\end{equation*}
+
+For annihilation operator $\hat b_1$ we have
+\begin{equation*}
+\hat b_1|10\rangle=|00\rangle,
+\quad
+\hat b_1|11\rangle=-|01\rangle
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+\hat b_1|10\rangle=|00\rangle\langle10|10\rangle=|00\rangle,
+\quad
+\hat b_1|11\rangle=-|01\rangle\langle11|11\rangle=-|01\rangle
+\end{equation*}
+
+Hence
+\begin{equation*}
+\hat b_1=|00\rangle\langle10|-|01\rangle\langle11|
+=\begin{pmatrix}0&1&0&0\\0&0&0&0\\0&0&0&-1\\0&0&0&0\end{pmatrix}
+\end{equation*}
+
+For annihilation operator $\hat b_2$ we have
+\begin{equation*}
+\hat b_2|01\rangle=|00\rangle,
+\quad
+\hat b_2|11\rangle=|10\rangle
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+\hat b_2|01\rangle=|00\rangle\langle01|01\rangle=|00\rangle,
+\quad
+\hat b_2|11\rangle=|10\rangle\langle11|11\rangle=|10\rangle
+\end{equation*}
+
+Hence
+\begin{equation*}
+\hat b_2=|00\rangle\langle01|+|10\rangle\langle11|
+=\begin{pmatrix}0&0&1&0\\0&0&0&1\\0&0&0&0\\0&0&0&0\end{pmatrix}
+\end{equation*}
+
+For the creation operators we have
+\begin{equation*}
+\hat b_1^\dag=(\hat b_1)^\dag=\begin{pmatrix}0&0&0&0\\1&0&0&0\\0&0&0&0\\0&0&-1&0\end{pmatrix}
+\end{equation*}
+and
+\begin{equation*}
+\hat b_2^\dag=(\hat b_2)^\dag=\begin{pmatrix}0&0&0&0\\0&0&0&0\\1&0&0&0\\0&1&0&0\end{pmatrix}
+\end{equation*}
+
+(ii) See Eigenmath demo.
+
+\end{document}

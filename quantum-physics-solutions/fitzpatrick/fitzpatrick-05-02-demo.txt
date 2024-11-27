@@ -1,0 +1,14 @@
+"First wavefunction probability"
+
+f = sqrt(2 / a) expsin(3 pi x / a) exp(-i E3 t / hbar)
+check(defint(conj(f) f, x, 0, a) == 1) -- check normalization
+defint(conj(f) f, x, 0, a/2)
+
+"Second wavefunction probability"
+
+f = 1 / sqrt(a) expsin(pi x / a) exp(-i E1 t / hbar) +
+1 / sqrt(a) expsin(2 pi x / a) exp(-i E2 t / hbar)
+check(defint(conj(f) f, x, 0, a) == 1) -- check normalization
+P = defint(conj(f) f, x, 0, a / 2)
+check(P == 4 / (3 pi) cos((E1 - E2) t / hbar) + 1 / 2)
+4 / (3 pi) cos((E1 - E2) t / hbar) + 1 / 2

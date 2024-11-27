@@ -1,0 +1,45 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.1.2
+Given that
+\begin{equation*}
+\hat a^\dag\hat a|\psi_n\rangle=n|\psi_n\rangle
+\end{equation*}
+and
+\begin{equation*}
+\left[\hat a,\hat a^\dag\right]=\hat a\hat a^\dag-\hat a^\dag\hat a=1
+\end{equation*}
+show that
+\begin{equation*}
+\hat a^\dag\hat a\left(\hat a^\dag|\psi_n\rangle\right)
+=(n+1)\left(\hat a^\dag|\psi_n\rangle\right)
+\end{equation*}
+}}
+
+\bigskip
+Noting that linear operators are associative we have
+\begin{equation*}
+\hat a^\dag\hat a\left(\hat a^\dag|\psi_n\rangle\right)
+=\hat a^\dag(\hat a\hat a^\dag)|\psi_n\rangle
+\end{equation*}
+
+Then by the commutator relation given above we have
+\begin{equation*}
+\hat a^\dag\hat a\left(\hat a^\dag|\psi_n\rangle\right)
+=\hat a^\dag(\hat a^\dag\hat a+1)|\psi_n\rangle
+\end{equation*}
+
+By the number operator given above we have
+\begin{equation*}
+\hat a^\dag\hat a\left(\hat a^\dag|\psi_n\rangle\right)
+=\hat a^\dag(n+1)|\psi_n\rangle
+\end{equation*}
+
+Numbers commute with operators hence
+\begin{equation*}
+\hat a^\dag\hat a\left(\hat a^\dag|\psi_n\rangle\right)
+=(n+1)\hat a^\dag|\psi_n\rangle
+\end{equation*}
+
+\end{document}

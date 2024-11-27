@@ -1,0 +1,111 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+11.1.1
+Consider a single barrier of thickness $L$, with height $V$ much larger than
+the energy $E$ of an
+electron wave incident on the left of the barrier.
+Presume the barrier is thick enough that the amount
+of wave reflected back from the right hand side of the barrier to the left is
+essentially negligible.
+Show that the fraction $\eta$ of incident electrons transmitted by this
+barrier can be written approximately as
+\begin{equation*}
+\eta\approx\frac{16k^2\kappa^2}{\left(k^2+\kappa^2\right)^2}
+\exp(-2\kappa L)
+\end{equation*}
+
+where $k=(2m_oE/\hbar^2)^{1/2}$ and $\kappa=[2m_o(V-E)/\hbar^2]^{1/2}$.
+[Note: use the expression of the form $\eta=|F|^2/|A|^2$ where $F$ and $A$
+are the amplitudes of the transmitted and incident waves respectively;
+otherwise the algebra becomes much more involved.]
+}}
+
+\bigskip
+From figure 11.1
+\begin{align*}
+\psi_L(z)&=Ae^{ikz}+Be^{-ikz}
+\\
+\psi_B(z)&=Ce^{-\kappa z}+De^{\kappa z}
+\\
+\psi_R(z)&=Fe^{ikz}
+\end{align*}
+
+From the boundary condition $\psi_B(L)=\psi_R(L)$
+\begin{equation*}
+Ce^{-\kappa L}+De^{\kappa L}=Fe^{ikL}
+\tag{1}
+\end{equation*}
+
+From the boundary condition $\psi'_B(L)=\psi'_R(L)$
+\begin{equation*}
+-\kappa Ce^{-\kappa L}+\kappa De^{\kappa L}=ikFe^{ikL}
+\tag{2}
+\end{equation*}
+
+Add $-\kappa$ times (1) to (2) to obtain
+\begin{equation*}
+-2\kappa Ce^{-\kappa L}=(-\kappa+ik)Fe^{ikL}
+\end{equation*}
+
+Hence
+\begin{equation*}
+C=\frac{\kappa-ik}{2\kappa}F\exp(ikL+\kappa L)
+\end{equation*}
+
+Add $\kappa$ times (1) to (2) to obtain
+\begin{equation*}
+2\kappa De^{\kappa L}=(\kappa+ik)Fe^{ikL}
+\end{equation*}
+
+Hence
+\begin{equation*}
+D=\frac{\kappa+ik}{2\kappa}F\exp(ikL-\kappa L)
+\end{equation*}
+
+Note that
+\begin{equation*}
+\frac{|C|}{|D|}=\exp(2\kappa L)
+\end{equation*}
+
+Hence $|C|\gg|D|$ for $2\kappa L\gg1$.
+
+\bigskip
+From the boundary condition $\psi_L(0)=\psi_B(0)$
+\begin{equation*}
+A+B=C+D
+\tag{3}
+\end{equation*}
+
+From the boundary condition $\psi'_L(0)=\psi'_B(0)$
+\begin{equation*}
+ikA-ikB=-\kappa C+\kappa D
+\tag{4}
+\end{equation*}
+
+Add $ik$ times (3) to (4) to obtain
+\begin{equation*}
+2ikA=(ik-\kappa)C+(ik+\kappa)D
+\end{equation*}
+
+Hence
+\begin{equation*}
+A=\frac{ik-\kappa}{2ik}C+\frac{ik+\kappa}{2ik}D
+\end{equation*}
+
+Substitute for $C$ and use the approximation $D=0$.
+\begin{equation*}
+A=\frac{(ik-\kappa)(\kappa-ik)}{4ik\kappa}F\exp(ikL+\kappa L)
+\end{equation*}
+
+Hence
+\begin{equation*}
+\frac{F}{A}=\frac{4ik\kappa}{(ik-\kappa)(\kappa-ik)}\exp(-ikL-\kappa L)
+\end{equation*}
+
+and
+\begin{equation*}
+\eta=\left|\frac{F}{A}\right|^2=\frac{16k^2\kappa^2}{\left(k^2+\kappa^2\right)^2}\exp(-2\kappa L)
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,100 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 7.2.
+Calculate the matrix elements of $\sigma_z\otimes\tau_x$
+by forming inner products as we did in Eq.~7.2.
+}}
+
+\bigskip
+Similar to equation 7.2 we have for $\sigma_z\otimes\tau_x$
+\begin{equation*}
+\sigma_z\otimes\tau_x=\begin{pmatrix}
+\langle uu|\sigma_z\tau_x|uu\rangle
+&\langle uu|\sigma_z\tau_x|ud\rangle
+&\langle uu|\sigma_z\tau_x|du\rangle
+&\langle uu|\sigma_z\tau_x|dd\rangle
+\\[1ex]
+\langle ud|\sigma_z\tau_x|uu\rangle
+&\langle ud|\sigma_z\tau_x|ud\rangle
+&\langle ud|\sigma_z\tau_x|du\rangle
+&\langle ud|\sigma_z\tau_x|dd\rangle
+\\[1ex]
+\langle du|\sigma_z\tau_x|uu\rangle
+&\langle du|\sigma_z\tau_x|ud\rangle
+&\langle du|\sigma_z\tau_x|du\rangle
+&\langle du|\sigma_z\tau_x|dd\rangle
+\\[1ex]
+\langle dd|\sigma_z\tau_x|uu\rangle
+&\langle dd|\sigma_z\tau_x|ud\rangle
+&\langle dd|\sigma_z\tau_x|du\rangle
+&\langle dd|\sigma_z\tau_x|dd\rangle
+\end{pmatrix}
+\end{equation*}
+
+Let $\sigma_z$ operate on the left as in equation 7.3.
+The result is
+\begin{equation*}
+\sigma_z\otimes\tau_x=\begin{pmatrix}
+\langle uu|\tau_x|uu\rangle
+&\langle uu|\tau_x|ud\rangle
+&\langle uu|\tau_x|du\rangle
+&\langle uu|\tau_x|dd\rangle
+\\[1ex]
+\langle ud|\tau_x|uu\rangle
+&\langle ud|\tau_x|ud\rangle
+&\langle ud|\tau_x|du\rangle
+&\langle ud|\tau_x|dd\rangle
+\\[1ex]
+-\langle du|\tau_x|uu\rangle
+&-\langle du|\tau_x|ud\rangle
+&-\langle du|\tau_x|du\rangle
+&-\langle du|\tau_x|dd\rangle
+\\[1ex]
+-\langle dd|\tau_x|uu\rangle
+&-\langle dd|\tau_x|ud\rangle
+&-\langle dd|\tau_x|du\rangle
+&-\langle dd|\tau_x|dd\rangle
+\end{pmatrix}
+\end{equation*}
+
+Let $\tau_x$ operate on the right.
+Recalling from exercise 7.1 that $\tau_x$ flips the direction Bob's spin we have
+\begin{equation*}
+\sigma_z\otimes\tau_x=\begin{pmatrix}
+\langle uu|ud\rangle
+&\langle uu|uu\rangle
+&\langle uu|dd\rangle
+&\langle uu|du\rangle
+\\[1ex]
+\langle ud|ud\rangle
+&\langle ud|uu\rangle
+&\langle ud|dd\rangle
+&\langle ud|du\rangle
+\\[1ex]
+-\langle du|ud\rangle
+&-\langle du|uu\rangle
+&-\langle du|dd\rangle
+&-\langle du|du\rangle
+\\[1ex]
+-\langle dd|ud\rangle
+&-\langle dd|uu\rangle
+&-\langle dd|dd\rangle
+&-\langle dd|du\rangle
+\end{pmatrix}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\sigma_z\otimes\tau_x=\begin{pmatrix}
+0&1&0&0
+\\
+1&0&0&0
+\\
+0&0&0&-1
+\\
+0&0&-1&0
+\end{pmatrix}
+\end{equation*}
+
+\end{document}

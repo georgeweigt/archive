@@ -1,0 +1,32 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+12.4.1
+Show that for
+$|s\rangle=\cos(\theta/2)|{\uparrow}\rangle
++\exp(i\phi)\sin(\theta/2)|{\downarrow}\rangle$
+\begin{equation*}
+\langle s|\hat{\boldsymbol\sigma}|s\rangle
+=\mathbf i\sin\theta\cos\phi+\mathbf j\sin\theta\sin\phi+\mathbf k\cos\theta
+\end{equation*}
+}}
+
+\bigskip
+Noting that
+\begin{align*}
+\langle s|\hat\sigma_x|s\rangle&=\sin\theta\cos\phi
+\\
+\langle s|\hat\sigma_y|s\rangle&=\sin\theta\sin\phi
+\\
+\langle s|\hat\sigma_z|s\rangle&=\cos\theta
+\end{align*}
+
+we have
+\begin{equation*}
+\langle s|\hat{\boldsymbol\sigma}|s\rangle=
+\mathbf i\langle s|\hat\sigma_x|s\rangle+\mathbf j\langle s|\hat\sigma_y|s\rangle
++\mathbf k\langle s|\hat\sigma_z|s\rangle
+=\mathbf i\sin\theta\cos\phi+\mathbf j\sin\theta\sin\phi+\mathbf k\cos\theta
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,50 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-9. Demonstrate that an operator which commutes with the Hamiltonian,
+and contains no explicit time dependence,
+has an expectation value which is constant in time.
+}}
+
+\bigskip
+For operator $O$ we have
+\begin{equation*}
+\langle O\rangle=\int_{-\infty}^\infty\psi^*O\psi\,dx
+\end{equation*}
+
+If operator $O$ has no time dependence we can write
+\begin{align*}
+\frac{d}{dt}\langle O\rangle
+&=\frac{d}{dt}\int_{-\infty}^\infty\psi^*O\psi\,dx
+\\
+&=\int_{-\infty}^\infty\left(\frac{\partial}{\partial t}\psi^*\right)O\psi\,dx
++\int_{-\infty}^\infty\psi^*O\left(\frac{\partial}{\partial t}\psi\right)\,dx
+\end{align*}
+
+Substitute
+\begin{equation*}
+\frac{\partial}{\partial t}\psi^*=\frac{i}{\hbar}\psi^*H
+\tag{1}
+\end{equation*}
+
+and
+\begin{equation*}
+\frac{\partial}{\partial t}\psi=-\frac{i}{\hbar}H\psi
+\tag{2}
+\end{equation*}
+
+to obtain
+\begin{equation*}
+\frac{d}{dt}\langle O\rangle
+=\frac{i}{\hbar}\int_{-\infty}^\infty\psi^*HO\psi\,dx
+-\frac{i}{\hbar}\int_{-\infty}^\infty\psi^*OH\psi\,dx
+\end{equation*}
+
+If $O$ commutes with $H$ then $HO\psi=OH\psi$ and
+\begin{equation*}
+\frac{d}{dt}\langle O\rangle=0
+\end{equation*}
+
+Note: Equation (1) is the dual of Schrodinger equation (2).
+
+\end{document}

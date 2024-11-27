@@ -1,0 +1,29 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+8-4. The Hamiltonian for an axially symmetric rotator is given by
+\begin{equation*}
+H=\frac{L_x^2+L_y^2}{2I_1}+\frac{L_z^2}{2I_2}
+\end{equation*}
+
+What are the eigenvalues of $H$?
+}}
+
+\bigskip
+By $L^2=L_x^2+L_y^2+L_z^2$ we have
+\begin{equation*}
+L_x^2+L_y^2=L^2-L_z^2
+\end{equation*}
+
+Substitute into the Hamiltonian to obtain
+\begin{equation*}
+HY_{l,m}=\left(\frac{L^2}{2I_1}-\frac{L_z^2}{2I_1}+\frac{L_z^2}{2I_2}\right)Y_{l,m}
+=\left(\frac{l(l+1)\hbar^2}{2I_1}-\frac{m^2\hbar^2}{2I_1}+\frac{m^2\hbar^2}{2I_2}\right)Y_{l,m}
+\end{equation*}
+
+Hence the eigenvalues are
+\begin{equation*}
+\frac{l(l+1)\hbar^2}{2I_1}-\frac{m^2\hbar^2}{2I_1}+\frac{m^2\hbar^2}{2I_2}
+\end{equation*}
+
+\end{document}

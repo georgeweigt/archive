@@ -1,0 +1,89 @@
+"Problem 28-3"
+
+"Single particle"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+K1(f) = P1(f) / hbar
+K2(f) = P2(f) / hbar
+K3(f) = P3(f) / hbar
+
+G1(f) = Q1(f) m / hbar
+G2(f) = Q2(f) m / hbar
+G3(f) = Q3(f) m / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(G1(K1(psi)) - K1(G1(psi)) == i m / hbar psi)
+check(G1(K2(psi)) - K2(G1(psi)) == 0)
+check(G1(K3(psi)) - K3(G1(psi)) == 0)
+
+check(G2(K1(psi)) - K1(G2(psi)) == 0)
+check(G2(K2(psi)) - K2(G2(psi)) == i m / hbar psi)
+check(G2(K3(psi)) - K3(G2(psi)) == 0)
+
+check(G3(K1(psi)) - K1(G3(psi)) == 0)
+check(G3(K2(psi)) - K2(G3(psi)) == 0)
+check(G3(K3(psi)) - K3(G3(psi)) == i m / hbar psi)
+
+"ok"
+
+"Two particles"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+Pe1(f) = -i hbar d(f,qe1)
+Pe2(f) = -i hbar d(f,qe2)
+Pe3(f) = -i hbar d(f,qe3)
+
+Pn1(f) = -i hbar d(f,qn1)
+Pn2(f) = -i hbar d(f,qn2)
+Pn3(f) = -i hbar d(f,qn3)
+
+Le1(f) = Qe2(Pe3(f)) - Qe3(Pe2(f))
+Le2(f) = Qe3(Pe1(f)) - Qe1(Pe3(f))
+Le3(f) = Qe1(Pe2(f)) - Qe2(Pe1(f))
+
+Ln1(f) = Qn2(Pn3(f)) - Qn3(Pn2(f))
+Ln2(f) = Qn3(Pn1(f)) - Qn1(Pn3(f))
+Ln3(f) = Qn1(Pn2(f)) - Qn2(Pn1(f))
+
+K1(f) = (Pe1(f) + Pn1(f)) / hbar
+K2(f) = (Pe2(f) + Pn2(f)) / hbar
+K3(f) = (Pe3(f) + Pn3(f)) / hbar
+
+G1(f) = (me Qe1(f) + mn Qn1(f)) / hbar
+G2(f) = (me Qe2(f) + mn Qn2(f)) / hbar
+G3(f) = (me Qe3(f) + mn Qn3(f)) / hbar
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+check(G1(K1(psi)) - K1(G1(psi)) == i (me + mn) / hbar psi)
+check(G1(K2(psi)) - K2(G1(psi)) == 0)
+check(G1(K3(psi)) - K3(G1(psi)) == 0)
+
+check(G2(K1(psi)) - K1(G2(psi)) == 0)
+check(G2(K2(psi)) - K2(G2(psi)) == i (me + mn) / hbar psi)
+check(G2(K3(psi)) - K3(G2(psi)) == 0)
+
+check(G3(K1(psi)) - K1(G3(psi)) == 0)
+check(G3(K2(psi)) - K2(G3(psi)) == 0)
+check(G3(K3(psi)) - K3(G3(psi)) == i (me + mn) / hbar psi)
+
+"ok"

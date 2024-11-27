@@ -1,0 +1,31 @@
+"Problem 24-3"
+
+I = ((1,0),(0,1))
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+A1 = Sigma1
+A2 = Sigma2
+A3 = Sigma3
+
+J1 = 1/2 Sigma1
+J2 = 1/2 Sigma2
+J3 = 1/2 Sigma3
+
+"Verify commutation relations"
+
+check(dot(A1,J1) - dot(J1,A1) == 0)
+check(dot(A2,J1) - dot(J1,A2) == -i A3)
+check(dot(A3,J1) - dot(J1,A3) == i A2)
+
+check(dot(A1,J2) - dot(J2,A1) == i A3)
+check(dot(A2,J2) - dot(J2,A2) == 0)
+check(dot(A3,J2) - dot(J2,A3) == -i A1)
+
+check(dot(A1,J3) - dot(J3,A1) == -i A2)
+check(dot(A2,J3) - dot(J3,A2) == i A1)
+check(dot(A3,J3) - dot(J3,A3) == 0)
+
+"ok"

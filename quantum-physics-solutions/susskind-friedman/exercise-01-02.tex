@@ -1,0 +1,31 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 1.2.
+Show that the inner product defined by Eq.~1.2 satisfies all the
+axioms of inner products.
+}}
+
+\bigskip
+This is the inner product.
+\begin{equation*}
+\langle B|A\rangle=\sum_iB_i^*A_i
+\end{equation*}
+
+The first axiom is linearity.
+\begin{equation*}
+\langle C|\Bigl(|A\rangle+|B\rangle\Bigr)=\sum_iC_i^*(A_i+B_i)
+=\sum_i(C_i^*A_i+C_i^*B_i)=\langle C|A\rangle+\langle C|B\rangle
+\end{equation*}
+
+Hence linearity is satisfied.
+
+\bigskip
+The second axiom is interchanging bras and kets is complex conjugation.
+\begin{equation*}
+\langle B|A\rangle=\sum_iB_i^*A_i=\sum_i\left(B_iA_i^*\right)^*=\langle A|B\rangle^*
+\end{equation*}
+
+Hence the second axiom is satisfied.
+
+\end{document}

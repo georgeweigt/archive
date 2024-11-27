@@ -1,0 +1,34 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-3. Classically, if a particle is not observed then the probability
+of finding it in a one-dimensional
+box of length $L$, which extends from $x=0$ to $x=L$, is a constant
+$1/L$ per unit length.
+Show that the classical expectation value of $x$ is $L/2$,
+the expectation value of $x^2$ is $L^2/3$, and the
+standard deviation of $x$ is $L/\sqrt{12}$.
+}}
+
+\bigskip
+The probability density function is the uniform distribution
+\begin{equation*}
+f(x)=\frac{1}{L}
+\end{equation*}
+
+Hence
+\begin{align*}
+\langle x\rangle&=\int_0^Lxf(x)\,dx
+=\frac{x^2}{2L}\bigg|_0^L=\frac{L}{2}
+\\
+\langle x^2\rangle&=\int_0^Lx^2f(x)\,dx
+=\frac{x^3}{3L}\bigg|_0^L=\frac{L^2}{3}
+\end{align*}
+
+The standard deviation is
+\begin{equation*}
+\sigma_x=\sqrt{\langle x^2\rangle-\langle x\rangle^2}
+=\sqrt{\frac{L^2}{3}-\frac{L^2}{4}}=\frac{L}{\sqrt{12}}
+\end{equation*}
+
+\end{document}

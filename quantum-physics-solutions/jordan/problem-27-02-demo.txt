@@ -1,0 +1,85 @@
+"Problem 27-2"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+Pe1(f) = -i hbar d(f,qe1)
+Pe2(f) = -i hbar d(f,qe2)
+Pe3(f) = -i hbar d(f,qe3)
+
+Pn1(f) = -i hbar d(f,qn1)
+Pn2(f) = -i hbar d(f,qn2)
+Pn3(f) = -i hbar d(f,qn3)
+
+Q1(f) = Qe1(f) - Qn1(f)
+Q2(f) = Qe2(f) - Qn2(f)
+Q3(f) = Qe3(f) - Qn3(f)
+
+K1(f) = Pe1(f) + Pn1(f)
+K2(f) = Pe2(f) + Pn2(f)
+K3(f) = Pe3(f) + Pn3(f)
+
+R1(f) = me / (mn + me) Qe1(f) + mn / (mn + me) Qn1(f)
+R2(f) = me / (mn + me) Qe2(f) + mn / (mn + me) Qn2(f)
+R3(f) = me / (mn + me) Qe3(f) + mn / (mn + me) Qn3(f)
+
+P1(f) = mn / (mn + me) Pe1(f) - me / (mn + me) Pn1(f)
+P2(f) = mn / (mn + me) Pe2(f) - me / (mn + me) Pn2(f)
+P3(f) = mn / (mn + me) Pe3(f) - me / (mn + me) Pn3(f)
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+check(R1(Q1(psi)) == Q1(R1(psi)))
+check(R1(Q2(psi)) == Q2(R1(psi)))
+check(R1(Q3(psi)) == Q3(R1(psi)))
+
+check(R2(Q1(psi)) == Q1(R2(psi)))
+check(R2(Q2(psi)) == Q2(R2(psi)))
+check(R2(Q3(psi)) == Q3(R2(psi)))
+
+check(R3(Q1(psi)) == Q1(R3(psi)))
+check(R3(Q2(psi)) == Q2(R3(psi)))
+check(R3(Q3(psi)) == Q3(R3(psi)))
+
+check(hbar K1(Q1(psi)) == Q1(hbar K1(psi)))
+check(hbar K1(Q2(psi)) == Q2(hbar K1(psi)))
+check(hbar K1(Q3(psi)) == Q3(hbar K1(psi)))
+
+check(hbar K2(Q1(psi)) == Q1(hbar K2(psi)))
+check(hbar K2(Q2(psi)) == Q2(hbar K2(psi)))
+check(hbar K2(Q3(psi)) == Q3(hbar K2(psi)))
+
+check(hbar K3(Q1(psi)) == Q1(hbar K3(psi)))
+check(hbar K3(Q2(psi)) == Q2(hbar K3(psi)))
+check(hbar K3(Q3(psi)) == Q3(hbar K3(psi)))
+
+check(R1(P1(psi)) == P1(R1(psi)))
+check(R1(P2(psi)) == P2(R1(psi)))
+check(R1(P3(psi)) == P3(R1(psi)))
+
+check(R2(P1(psi)) == P1(R2(psi)))
+check(R2(P2(psi)) == P2(R2(psi)))
+check(R2(P3(psi)) == P3(R2(psi)))
+
+check(R3(P1(psi)) == P1(R3(psi)))
+check(R3(P2(psi)) == P2(R3(psi)))
+check(R3(P3(psi)) == P3(R3(psi)))
+
+check(hbar K1(P1(psi)) == P1(hbar K1(psi)))
+check(hbar K1(P2(psi)) == P2(hbar K1(psi)))
+check(hbar K1(P3(psi)) == P3(hbar K1(psi)))
+
+check(hbar K2(P1(psi)) == P1(hbar K2(psi)))
+check(hbar K2(P2(psi)) == P2(hbar K2(psi)))
+check(hbar K2(P3(psi)) == P3(hbar K2(psi)))
+
+check(hbar K3(P1(psi)) == P1(hbar K3(psi)))
+check(hbar K3(P2(psi)) == P2(hbar K3(psi)))
+check(hbar K3(P3(psi)) == P3(hbar K3(psi)))
+
+"ok"

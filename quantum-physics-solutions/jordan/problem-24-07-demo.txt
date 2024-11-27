@@ -1,0 +1,55 @@
+"Problem 24-7"
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+J1 = 1/2 Sigma1
+J2 = 1/2 Sigma2
+J3 = 1/2 Sigma3
+
+A1 = 1/2 hbar Sigma1
+A2 = 1/2 hbar Sigma2
+A3 = 1/2 hbar Sigma3
+
+I = ((1,0),(0,1))
+
+U1 = I - i e J1 - 1/2 e^2 dot(J1,J1)
+U2 = I - i e J2 - 1/2 e^2 dot(J2,J2)
+
+V1 = I + i e J1 - 1/2 e^2 dot(J1,J1)
+V2 = I + i e J2 - 1/2 e^2 dot(J2,J2)
+
+U = dot(V2,V1,U2,U1)
+V = dot(V1,V2,U1,U2)
+
+Y1 = dot(V,A1,U)
+Y2 = dot(V,A2,U)
+Y3 = dot(V,A3,U)
+
+for(j,3,16,
+ Y1 = eval(Y1,e^j,0),
+ Y2 = eval(Y2,e^j,0),
+ Y3 = eval(Y3,e^j,0)
+)
+
+check(Y1 == A1 + e^2 A2)
+check(Y2 == A2 - e^2 A1)
+check(Y3 == A3)
+
+M1 = ((0,0,0),(0,0,-i),(0,i,0))
+M2 = ((0,0,i),(0,0,0),(-i,0,0))
+M3 = ((0,-i,0),(i,0,0),(0,0,0))
+
+I = ((1,0,0),(0,1,0),(0,0,1))
+
+N = dot((I + i e M2 - 1/2 e^2 dot(M2,M2)),
+        (I + i e M1 - 1/2 e^2 dot(M1,M1)),
+        (I - i e M2 - 1/2 e^2 dot(M2,M2)),
+        (I - i e M1 - 1/2 e^2 dot(M1,M1)))
+
+N = eval(N, e^3, 0, e^4, 0, e^5, 0, e^6, 0, e^7, 0, e^8, 0)
+
+check(dot(N,(x1,x2,x3)) == (x1 + e^2 x2, x2 - e^2 x1, x3))
+
+"ok"

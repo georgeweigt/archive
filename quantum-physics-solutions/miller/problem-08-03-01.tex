@@ -1,0 +1,35 @@
+\include{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+8.3.1 Consider a ring of six identical ``atoms'' or ``unit cells'',
+e.g., like a benzene ring, with a repeat length
+(center to center distance between the atoms) of $0.5\,\text{nm}$.
+Explicitly write out each of the different allowed Bloch forms
+(i.e., $\psi(\nu)=u(\nu)\exp(ik\nu)$
+for the effective one-dimensional electron wavefunctions $\psi(\nu)$,
+where $\nu$ is the distance coordinate as we move round the ring,
+and $u(\nu)$ is a function that is periodic with period $0.5\,\text{nm}$.
+Be explicit about the numerical values and units of the allowed values of $k$.
+}}
+
+\bigskip
+By hypothesis we have $N=6$ and $a=0.5\,\text{nm}$.
+
+\bigskip
+Then by equation (8.14) we have
+\begin{equation*}
+k=\frac{2\pi n}{Na}=\frac{2\pi n}{3}\,\text{nm}^{-1},\quad n=0,\pm1,\pm2\,\pm3
+\end{equation*}
+
+Hence the Bloch forms are
+\begin{align*}
+\psi(\nu)&=u(\nu) & &\text{for $n=0$}
+\\
+\psi(\nu)&=u(\nu)\exp\bigg(\pm\frac{2\pi i\nu}{3}\,\text{nm}^{-1}\bigg) & &\text{for $n=\pm1$}
+\\
+\psi(\nu)&=u(\nu)\exp\bigg(\pm\frac{4\pi i\nu}{3}\,\text{nm}^{-1}\bigg) & &\text{for $n=\pm2$}
+\\
+\psi(\nu)&=u(\nu)\exp\big(\pm2\pi i\nu\,\text{nm}^{-1}\big) & &\text{for $n=\pm3$}
+\end{align*}
+
+\end{document}

@@ -1,0 +1,55 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+27-4.
+Show that for two particles
+\begin{multline*}
+\frac{1}{2m_e}\left({P_{e1}}^2+{P_{e2}}^2+{P_{e3}}^2\right)
++\frac{1}{2m_n}\left({P_{n1}}^2+{P_{n2}}^2+{P_{n3}}^2\right)
+\\
+=\frac{\hbar^2}{2(m_e+m_n)}\left({K_1}^2+{K_2}^2+{K_3}^2\right)
++\frac{1}{2m}\left({P_1}^2+{P_2}^2+{P_3}^2\right)
+\end{multline*}
+
+where
+\begin{equation*}
+m=\frac{m_em_n}{m_e+m_n}
+\end{equation*}
+}}
+
+\bigskip
+For direction 1 we have
+\begin{equation*}
+K_1=\frac{1}{\hbar}(P_{e1}+P_{n1}),\quad
+P_1=\frac{m_n}{m_e+m_n}P_{e1}-\frac{m_e}{m_e+m_n}P_{n1}
+\end{equation*}
+
+Hence
+\begin{equation*}
+{K_1}^2=\frac{1}{\hbar^2}\left({P_{e1}}^2+2P_{e1}P_{n1}+{P_{n1}}^2\right)
+\end{equation*}
+
+and
+\begin{equation*}
+{P_1}^2=\left(\frac{m_n}{m_e+m_n}\right)^2{P_{e1}}^2
+-\frac{2m_em_n}{(m_e+m_n)^2}P_{e1}P_{n1}
++\left(\frac{m_e}{m_e+m_n}\right)^2{P_{n1}}^2
+\end{equation*}
+
+Noting that
+\begin{multline*}
+\frac{1}{2(m_e+m_n)}{P_{e1}}^2+\frac{m_e+m_n}{2m_em_n}\left(\frac{m_n}{m_e+m_n}\right)^2{P_{e1}}^2
+\\
+=\left(\frac{m_e}{2m_e(m_e+m_n)}+\frac{m_n}{2m_e(m_e+m_n)}\right){P_{e1}}^2
+=\frac{1}{2m_e}{P_{e1}}^2
+\end{multline*}
+
+and similarly for ${P_{n1}}^2$ we have
+\begin{equation*}
+\frac{\hbar^2}{2(m_e+m_n)}{K_1}^2+\frac{1}{2m}{P_1}^2
+=\frac{1}{2m_e}{P_{e1}}^2+\frac{1}{2m_n}{P_{n1}}^2
+\end{equation*}
+
+Repeat for directions 2 and 3.
+
+\end{document}

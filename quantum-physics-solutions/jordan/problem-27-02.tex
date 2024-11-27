@@ -1,0 +1,35 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+27-2.
+Show that for two particles all the matrices
+$R_1$, $R_2$, $R_3$ and $\hbar K_1$, $\hbar K_2$, $\hbar K_3$ commute with all
+the matrices $Q_1$, $Q_2$, $Q_3$; and $P_1$, $P_2$, $P_3$ that represent
+the relative position and momentum. Use
+the same equations you used for the last problem.
+Assume that the position and momentum
+matrices for each particle satisfy the
+usual commutation relations and that all the
+matrices for one particle commute with all the
+matrices for the other.
+}}
+
+\bigskip
+We have
+\begin{equation*}
+R_1P_1=\left(\frac{m_e}{m_n+m_e}Q_{e1}+\frac{m_n}{m_n+m_e}Q_{n1}\right)
+\left(\frac{m_n}{m_n+m_e}P_{e1}-\frac{m_e}{m_n+m_e}P_{n1}\right)
+\end{equation*}
+
+All matrices commute except $Q_iP_i$ hence
+\begin{align*}
+R_1P_1-P_1R_1&=\frac{m_nm_e}{m_n+m_e}(Q_{e1}P_{e1}-Q_{n1}P_{n1}-P_{e1}Q_{e1}+P_{n1}Q_{n1})
+\\
+&=\frac{m_nm_e}{m_n+m_e}(i\hbar-i\hbar)
+\\
+&=0
+\end{align*}
+
+See the Eigenmath solution for remaining combinations.
+
+\end{document}

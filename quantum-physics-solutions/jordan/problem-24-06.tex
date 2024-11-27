@@ -1,0 +1,66 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-6.
+To describe the spin and magnetic moment
+of a particle such as an electron or proton
+together with the motion in three-dimensional
+space, we need matrices $\Sigma_1$, $\Sigma_2$, $\Sigma_3$ as
+well as matrices $Q_1$, $Q_2$, $Q_3$ and $P_1$, $P_2$, $P_3$ that
+represent position and momentum. The
+matrices $\Sigma_1$, $\Sigma_2$, $\Sigma_3$ commute with $Q_1$, $Q_2$, $Q_3$
+and $P_1$, $P_2$, $P_3$, and the multiplication rules for
+$Q_1$, $Q_2$, $Q_3$ and $P_1$, $P_2$, $P_3$ are the same as before.
+The total angular momentum is the sum of
+the orbital angular momentum and spin
+angular momentum. Then
+\begin{align*}
+J_1&=\frac{1}{\hbar}L_1+\tfrac{1}{2}\Sigma_1,
+\\
+J_2&=\frac{1}{\hbar}L_2+\tfrac{1}{2}\Sigma_2,
+\\
+J_3&=\frac{1}{\hbar}L_3+\tfrac{1}{2}\Sigma_3.
+\end{align*}
+
+Show that these matrices satisfy the commutation
+relations characteristic of matrices $J_1$, $J_2$,
+$J_3$ that correspond to rotations. The spin
+angular momentum represented by the matrices
+\begin{equation*}
+\tfrac{1}{2}\hbar\Sigma_1,\quad
+\tfrac{1}{2}\hbar\Sigma_2,\quad
+\tfrac{1}{2}\hbar\Sigma_3;
+\end{equation*}
+
+the magnetic moment represented by
+\begin{equation*}
+\mu\Sigma_1,\quad
+\mu\Sigma_2,\quad
+\mu\Sigma_3;
+\end{equation*}
+
+the position represented by $Q_1$, $Q_2$, $Q_3$; the
+momentum represented by $P_1$, $P_2$, $P_3$; and the
+orbital angular momentum represented by $L_1$,
+$L_2$, $L_3$ are vector quantities. Show that with
+each of these the matrices $J_1$, $J_2$, $J_3$ satisfy the
+commutation relations that characterize rotations
+of a vector quantity.
+}}
+
+\bigskip
+We have
+\begin{multline*}
+J_1J_2-J_2J_1=\frac{1}{\hbar^2}L_1L_2+\frac{1}{2\hbar}L_1\Sigma_2+\frac{1}{2\hbar}\Sigma_1L_2
++\tfrac{1}{4}\Sigma_1\Sigma_2
+\\
+-\frac{1}{\hbar^2}L_2L_1-\frac{1}{2\hbar}L_2\Sigma_1-\frac{1}{2\hbar}\Sigma_2L_1
+-\tfrac{1}{4}\Sigma_2\Sigma_1
+\\
+=\frac{1}{\hbar^2}(L_1L_2-L_2L_1)+\tfrac{1}{4}(\Sigma_1\Sigma_2-\Sigma_2\Sigma_1)
+=\frac{i}{\hbar}L_3+\frac{i}{2}\Sigma_3=iJ_3
+\end{multline*}
+
+See the Eigenmath solution for the remaining commutation relations.
+
+\end{document}

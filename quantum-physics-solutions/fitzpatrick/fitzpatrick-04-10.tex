@@ -1,0 +1,108 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-10. For a certain system, the operator corresponding
+to the physical quantity $A$ does not commute with the Hamiltonian.
+It has eigenvalues $a_1$ and $a_2$, corresponding to properly normalized
+eigenfunctions
+\begin{align*}
+\phi_1&=(u_1+u_2)/\sqrt2,
+\\
+\phi_2&=(u_1-u_2)/\sqrt2,
+\end{align*}
+
+where $u_1$ and $u_2$ are properly normalized eigenfunctions of the
+Hamiltonian with eigenvalues $E_1$ and $E_2$.
+If the system is in state $\psi=\phi_1$ at time $t=0$,
+show that the expectation value of $A$ at time $t$ is
+\begin{equation*}
+\langle A\rangle=\left(\frac{a_1+a_2}{2}\right)
++\left(\frac{a_1-a_2}{2}\right)
+\cos\left(\frac{(E_1-E_2)t}{\hbar}\right)
+\end{equation*}
+}}
+
+\bigskip
+In matrix form we have
+\begin{equation*}
+\begin{pmatrix}\phi_1\\\phi_2\end{pmatrix}
+=\frac{1}{\sqrt2}
+\begin{pmatrix}1&1\\1&-1\end{pmatrix}
+\begin{pmatrix}u_1\\u_2\end{pmatrix}
+\end{equation*}
+
+Noting that
+\begin{equation*}
+\begin{pmatrix}1&1\\1&-1\end{pmatrix}^{-1}
+=\frac{1}{2}
+\begin{pmatrix}1&1\\1&-1\end{pmatrix}
+\end{equation*}
+
+we have
+\begin{equation*}
+\begin{pmatrix}u_1\\u_2\end{pmatrix}
+=\frac{1}{\sqrt2}
+\begin{pmatrix}1&1\\1&-1\end{pmatrix}
+\begin{pmatrix}\phi_1\\\phi_2\end{pmatrix}
+\end{equation*}
+
+Hence for $u$ as functions of $\phi$
+\begin{align*}
+u_1&=(\phi_1+\phi_2)/\sqrt2
+\\
+u_2&=(\phi_1-\phi_2)/\sqrt2
+\end{align*}
+
+By equation (4.162)
+\begin{equation*}
+\psi(x,t)
+=c_1u_1\exp\left(-\frac{iE_1t}{\hbar}\right)
++c_2u_2\exp\left(-\frac{iE_2t}{\hbar}\right)
+\end{equation*}
+
+Change to the $\phi$ basis.
+\begin{equation*}
+\psi(x,t)
+=c_1\frac{\phi_1+\phi_2}{\sqrt2}\exp\left(-\frac{iE_1t}{\hbar}\right)
++c_2\frac{\phi_1-\phi_2}{\sqrt2}\exp\left(-\frac{iE_2t}{\hbar}\right)
+\end{equation*}
+
+By hypothesis
+\begin{equation*}
+\phi_1=\psi(x,0)=c_1\frac{\phi_1+\phi_2}{\sqrt2}+c_2\frac{\phi_1-\phi_2}{\sqrt2}
+\end{equation*}
+
+Hence
+\begin{equation*}
+c_1=\frac{1}{\sqrt2},\quad c_2=\frac{1}{\sqrt2}
+\end{equation*}
+
+It follows that
+\begin{equation*}
+\psi
+=\frac{\phi_1+\phi_2}{2}\exp\left(-\frac{iE_1t}{\hbar}\right)
++\frac{\phi_1-\phi_2}{2}\exp\left(-\frac{iE_2t}{\hbar}\right)
+\end{equation*}
+
+Noting that
+\begin{align*}
+A\phi_1&=a_1\phi_1
+\\
+A\phi_2&=a_2\phi_2
+\end{align*}
+
+we have
+\begin{equation*}
+A\psi
+=\frac{a_1\phi_1+a_2\phi_2}{2}\exp\left(-\frac{iE_1t}{\hbar}\right)
++\frac{a_1\phi_1-a_2\phi_2}{2}\exp\left(-\frac{iE_2t}{\hbar}\right)
+\end{equation*}
+
+Use Eigenmath to verify that
+\begin{equation*}
+\langle A\rangle
+=\int_{-\infty}^\infty \psi^*A\psi\,dx
+=\frac{a_1+a_2}{2}+\frac{a_1-a_2}{2}\cos\left(\frac{(E_1-E_2)t}{\hbar}\right)
+\end{equation*}
+
+\end{document}

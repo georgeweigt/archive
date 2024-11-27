@@ -1,0 +1,61 @@
+"Problem 24-6"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+J1(f) = L1(f) / hbar
+J2(f) = L2(f) / hbar
+J3(f) = L3(f) / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(J1(J2(psi)) - J2(J1(psi)) == i J3(psi))
+check(J2(J3(psi)) - J3(J2(psi)) == i J1(psi))
+check(J3(J1(psi)) - J1(J3(psi)) == i J2(psi))
+
+check(L1(J2(psi)) - J2(L1(psi)) == i L3(psi))
+check(L2(J3(psi)) - J3(L2(psi)) == i L1(psi))
+check(L3(J1(psi)) - J1(L3(psi)) == i L2(psi))
+
+check(Q1(J2(psi)) - J2(Q1(psi)) == i Q3(psi))
+check(Q2(J3(psi)) - J3(Q2(psi)) == i Q1(psi))
+check(Q3(J1(psi)) - J1(Q3(psi)) == i Q2(psi))
+
+check(P1(J2(psi)) - J2(P1(psi)) == i P3(psi))
+check(P2(J3(psi)) - J3(P2(psi)) == i P1(psi))
+check(P3(J1(psi)) - J1(P3(psi)) == i P2(psi))
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+J1 = 1/2 Sigma1
+J2 = 1/2 Sigma2
+J3 = 1/2 Sigma3
+
+s1 = 1/2 hbar Sigma1
+s2 = 1/2 hbar Sigma2
+s3 = 1/2 hbar Sigma3
+
+mu1 = mu Sigma1
+mu2 = mu Sigma2
+mu3 = mu Sigma3
+
+check(dot(s1,J2) - dot(J2,s1) == i s3)
+check(dot(s2,J3) - dot(J3,s2) == i s1)
+check(dot(s3,J1) - dot(J1,s3) == i s2)
+
+check(dot(mu1,J2) - dot(J2,mu1) == i mu3)
+check(dot(mu2,J3) - dot(J3,mu2) == i mu1)
+check(dot(mu3,J1) - dot(J1,mu3) == i mu2)
+
+"ok"

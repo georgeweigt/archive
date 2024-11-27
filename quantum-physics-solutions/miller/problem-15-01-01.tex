@@ -1,0 +1,60 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.1.1
+Prove the relation
+\begin{equation*}
+[\hat a,\hat a^\dag]=\hat a\hat a^\dag-\hat a^\dag\hat a=1
+\end{equation*}
+for the harmonic oscillator raising and lowering operators, starting from their definitions
+\begin{equation*}
+\hat a^\dag=\frac{1}{\sqrt2}\left(-\frac{d}{d\xi}+\xi\right)
+\quad\text{and}\quad
+\hat a=\frac{1}{\sqrt2}\left(\frac{d}{d\xi}+\xi\right)
+\end{equation*}
+}}
+
+\bigskip
+For $\hat a\hat a^\dag$ we have
+\begin{equation*}
+\hat a\hat a^\dag\psi=\frac{1}{2}\left(\frac{d}{d\xi}+\xi\right)\left(-\frac{d}{d\xi}+\xi\right)\psi
+\end{equation*}
+
+Expand the right-hand side.
+\begin{align*}
+\hat a\hat a^\dag\psi
+%&=\frac{1}{2}\left(\frac{d}{d\xi}+\xi\right)\left(-\frac{d}{d\xi}\psi+\xi\psi\right)
+%\\
+&=\frac{1}{2}\left(-\frac{d^2}{d\xi^2}\psi+\frac{d}{d\xi}(\xi\psi)-\xi\frac{d}{d\xi}\psi+\xi^2\psi\right)
+\\
+&=\frac{1}{2}\left(-\frac{d^2}{d\xi^2}\psi+\psi+\xi^2\psi\right)
+\tag{1}
+\end{align*}
+
+For $\hat a^\dag\hat a$ we have
+\begin{equation*}
+\hat a^\dag\hat a\psi=\frac{1}{2}\left(-\frac{d}{d\xi}+\xi\right)\left(\frac{d}{d\xi}+\xi\right)\psi
+\end{equation*}
+
+Expand the right-hand side.
+\begin{align*}
+\hat a^\dag\hat a\psi
+%&=\frac{1}{2}\left(-\frac{d}{d\xi}+\xi\right)\left(\frac{d}{d\xi}\psi+\xi\psi\right)
+%\\
+&=\frac{1}{2}\left(-\frac{d^2}{d\xi^2}\psi-\frac{d}{d\xi}(\xi\psi)+\xi\frac{d}{d\xi}\psi+\xi^2\psi\right)
+\\
+&=\frac{1}{2}\left(-\frac{d^2}{d\xi^2}\psi-\psi+\xi^2\psi\right)
+\tag{2}
+\end{align*}
+
+Subtract (2) from (1).
+\begin{equation*}
+\hat a\hat a^\dag\psi-\hat a^\dag\hat a\psi=\frac{1}{2}\psi-\left(-\frac{1}{2}\psi\right)=\psi
+\end{equation*}
+
+Hence
+\begin{equation*}
+[\hat a,\hat a^\dag]=1
+\end{equation*}
+
+\end{document}

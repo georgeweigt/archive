@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-1.
+Find the possible values for the quantity represented by the matrix
+\begin{equation*}
+\tfrac{1}{2}(1+\Sigma_1).
+\end{equation*}
+
+Do this two different ways.
+First, consider the matrix as a particular case of
+\begin{equation*}
+x_01+x_1\Sigma_1+x_2\Sigma_2+x_3\Sigma_3
+\end{equation*}
+
+for which we know the possible values.
+Second, consider what the equation
+\begin{equation*}
+\left[\tfrac{1}{2}(1+\Sigma_1)\right]^2=\tfrac{1}{2}(1+\Sigma_1)
+\end{equation*}
+
+tells you about the possible values.
+Check that you get the same answer both ways.
+}}
+
+\bigskip
+For $\tfrac{1}{2}(1+\Sigma_1)$ we have
+\begin{equation*}
+x_0=\tfrac{1}{2},\quad r=\sqrt{\left(\tfrac{1}{2}\right)^2+0^2+0^2}=\tfrac{1}{2}
+\end{equation*}
+
+The possible values are
+\begin{align*}
+x_0+r&=1
+\\
+x_0-r&=0
+\end{align*}
+
+For the second method we have
+\begin{equation*}
+\tfrac{1}{2}(1+\Sigma_1)
+=\begin{pmatrix}\tfrac{1}{2}&\tfrac{1}{2}\\[1ex]\tfrac{1}{2}&\tfrac{1}{2}\end{pmatrix},\quad
+\left[\tfrac{1}{2}(1+\Sigma_1)\right]^2
+=\begin{pmatrix}\tfrac{1}{2}&\tfrac{1}{2}\\[1ex]\tfrac{1}{2}&\tfrac{1}{2}\end{pmatrix}
+\end{equation*}
+
+The possible values of $x$ that satisfy $x=x^2$ are 0 and 1.
+
+\end{document}

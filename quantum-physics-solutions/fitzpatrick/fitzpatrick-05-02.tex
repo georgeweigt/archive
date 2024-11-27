@@ -1,0 +1,76 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+5-2. A particle of mass $m$ moves freely in one dimension between
+impenetrable walls located at $x=0$ and $a$.
+Its initial wavefunction is
+\begin{equation*}
+\psi(x,0)=\sqrt{2/a}\sin(3\pi x/a).
+\end{equation*}
+
+What is the subsequent time evolution of the wavefunction?
+Suppose that the initial wavefunction is
+\begin{equation*}
+\psi(x,0)=\sqrt{1/a}\sin(\pi x/a)[1+2\cos(\pi x/a)].
+\end{equation*}
+
+What now is the subsequent time evolution?
+Calculate the probability of finding the particle
+between 0 and $a/2$ as a function of time in each case.
+}}
+
+\bigskip
+Here is equation (5.11).
+\begin{equation*}
+\psi_n(x)=\sqrt{\frac{2}{a}}\sin\left(n\pi\frac{x}{a}\right)
+\tag{5.11}
+\end{equation*}
+
+Hence for $\sin(3\pi x/a)$ we have $n=3$.
+Then by equation (5.12) the time evolution is
+\begin{equation*}
+\psi(x,t)=\sqrt{\frac{2}{a}}\sin\left(\frac{3\pi x}{a}\right)
+\exp\left(-\frac{iE_3t}{\hbar}\right)
+\end{equation*}
+
+and from equation (5.9)
+\begin{equation*}
+E_3=\frac{3^2\pi^2\hbar^2}{2ma^2}
+\end{equation*}
+
+By the identity $2\sin(x)\cos(x)=\sin(2x)$ we have
+\begin{equation*}
+\sin(\pi x/a)[1+2\cos(\pi x/a)]
+=\sin(\pi x/a)+\sin(2\pi x/a)
+\end{equation*}
+
+Hence for the second wavefunction
+\begin{equation*}
+\psi(x,t)=\frac{1}{\sqrt a}\left(
+\sin\left(\frac{\pi x}{a}\right)
+\exp\left(-\frac{iE_1t}{\hbar}\right)
++\sin\left(\frac{2\pi x}{a}\right)
+\exp\left(-\frac{iE_2t}{\hbar}\right)
+\right)
+\end{equation*}
+
+For the first wavefunction, the probability is
+\begin{equation*}
+\int_0^{a/2}\psi^*\psi\,dx=\frac{1}{2}
+\end{equation*}
+
+For the second wavefunction
+\begin{equation*}
+\int_0^{a/2}\psi^*\psi\,dx=\frac{4}{3\pi}
+\cos\left(\frac{(E_1-E_2)t}{\hbar}\right)+\frac{1}{2}
+\end{equation*}
+
+Noting that
+\begin{equation*}
+\frac{4}{3\pi}\approx0.42
+\end{equation*}
+
+the probability oscillates between 0.08 and 0.92 with the
+frequency determined by $E_1-E_2$.
+
+\end{document}

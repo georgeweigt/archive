@@ -1,0 +1,54 @@
+"Problem 19.3.1"
+
+Lap(f) = d(f,x,x) + d(f,y,y) + d(f,z,z)
+
+psi = R() exp(i S())
+
+"Verify equation (1)"
+
+check(Lap(psi) ==
+Lap(R()) exp(i S()) +
+i R() Lap(S()) exp(i S()) -
+R() dot(grad(S()),grad(S())) exp(i S()) +
+2 i dot(grad(R()),grad(S())) exp(i S()))
+
+"ok"
+
+"Verify equation (3)"
+
+Q = -hbar^2 / (2 m) Lap(R()) / R()
+
+f = -hbar^2 / (2 m) Lap(psi) + V psi - i hbar d(psi,t)
+f = f / psi
+f = 1/2 (f + conj(f))
+
+check(f ==
+Q + hbar^2 / (2 m) dot(grad(S()),grad(S())) + V + hbar d(S(),t))
+
+"ok"
+
+"Verify equation (4)"
+
+f = -hbar^2 / (2 m) Lap(psi) + V psi - i hbar d(psi,t)
+f = -f / exp(i S())
+f = 1/2 i (conj(f) - f)
+check(f ==
+hbar^2 / (2 m) R() Lap(S()) +
+hbar^2 / m dot(grad(R()),grad(S())) +
+hbar d(R(),t))
+
+"ok"
+
+"Verify equation (5)"
+
+check(d(R()^2,t) + div(R()^2 grad(S()) / m) ==
+2 R() (R() Lap(S()) / (2 m) + dot(grad(R()),grad(S())) / m + d(R(),t)))
+
+"ok"
+
+"Verify equation (6)"
+
+check(Lap(exp(i S())) ==
+i Lap(S()) exp(i S()) - dot(grad(S()),grad(S())) exp(i S()))
+
+"ok"

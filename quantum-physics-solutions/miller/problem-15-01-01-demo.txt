@@ -1,0 +1,12 @@
+"Problem 15.1.1"
+
+"Verify commutator"
+
+ahat(f) = sqrt(1/2) (f xi + d(f,xi))
+ahatdag(f) = sqrt(1/2) (f xi - d(f,xi))
+
+C = ahat(ahatdag(psi(xi))) - ahatdag(ahat(psi(xi)))
+
+check(C == psi(xi))
+
+"ok"

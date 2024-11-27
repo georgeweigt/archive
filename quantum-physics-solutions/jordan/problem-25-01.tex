@@ -1,0 +1,54 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+25-1.
+Let
+\begin{equation*}
+U=1-i\varepsilon K_2-\tfrac{1}{2}\varepsilon^2{K_2}^2.
+\end{equation*}
+
+Calculate $U^{-1}L_3U$. Do this two different ways.
+First use
+\begin{equation*}
+L_3=Q_1P_2-Q_2P_1,
+\end{equation*}
+
+the fact that $K_2$ and $U$ commute with $P_1$ and
+$P_2$, and the formulas for $U^{-1}Q_1U$ and $U^{-1}Q_2U$.
+Then use
+\begin{equation*}
+U^{-1}L_3U=L_3-i\varepsilon(L_3K_2-K_2L_3)
+-\tfrac{1}{2}\varepsilon^2[(L_3K_2-K_2L_3)K_2-K_2(L_3K_2-K_2L_3)]
+\end{equation*}
+
+and the commutation relation
+\begin{equation*}
+L_3K_2-K_2L_3=-iP_1.
+\end{equation*}
+
+If you get the same answer, it shows the commutation
+relation does correspond to the way
+angular momentum is changed by a translation.
+}}
+
+\bigskip
+For the first method we have
+\begin{align*}
+U^{-1}L_3U&=U^{-1}Q_1P_2U-U^{-1}Q_2P_1U
+\\
+&=U^{-1}Q_1UP_2-U^{-1}Q_2UP_1
+\\
+&=Q_1P_2-(Q_2+\varepsilon)P_1
+\\
+&=L_3-\varepsilon P_1
+\end{align*}
+
+For the second method we have
+\begin{align*}
+U^{-1}L_3U
+&=L_3-i\varepsilon(-iP_1)-\tfrac{1}{2}\varepsilon^2[(-iP_1)K_2-K_2(-iP_1)]
+\\
+&=L_3-i\varepsilon P_1
+\end{align*}
+
+\end{document}

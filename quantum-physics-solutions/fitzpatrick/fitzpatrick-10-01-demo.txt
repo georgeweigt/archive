@@ -1,0 +1,31 @@
+"Verify spin-1 operators"
+
+Sx = hbar / sqrt(2) ((0,1,0),(1,0,1),(0,1,0))
+Sy = i hbar / sqrt(2) ((0,-1,0),(1,0,-1),(0,1,0))
+Sz = hbar ((1,0,0),(0,0,0),(0,0,-1))
+
+S2 = dot(Sx,Sx) + dot(Sy,Sy) + dot(Sz,Sz)
+
+Sp = hbar sqrt(2) ((0,1,0),(0,0,1),(0,0,0))
+Sm = hbar sqrt(2) ((0,0,0),(1,0,0),(0,1,0))
+
+c(a,b) = dot(a,b) - dot(b,a) -- commutator
+
+check(c(Sx,Sy) == i hbar Sz)
+check(c(Sy,Sz) == i hbar Sx)
+check(c(Sz,Sx) == i hbar Sy)
+
+check(c(S2,Sx) == 0)
+check(c(S2,Sy) == 0)
+check(c(S2,Sz) == 0)
+
+check(Sp == Sx + i Sy)
+check(Sm == Sx - i Sy)
+
+check(dot(Sp,Sm) == S2 - dot(Sz,Sz) + hbar Sz)
+check(dot(Sm,Sp) == S2 - dot(Sz,Sz) - hbar Sz)
+
+check(c(Sp,Sz) == -hbar Sp)
+check(c(Sm,Sz) == hbar Sm)
+
+"ok"

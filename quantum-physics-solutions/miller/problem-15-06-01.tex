@@ -1,0 +1,86 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.6.1
+Show that the coherent state in Eq.~(15.94) is an eigenstate of the
+annihilation operator $\hat a_\lambda$, with eigenvalue
+$\sqrt{\bar n}\exp(-i\omega_\lambda t)$.
+}}
+
+\bigskip
+This is equation (15.94).
+\begin{equation*}
+|\Psi_{\lambda\bar n}\rangle=\sum_{n_\lambda=0}^\infty
+c_{\lambda\bar nn}
+\exp\left[-i\left(n_\lambda+\tfrac{1}{2}\right)\omega_\lambda t\right]
+|n_\lambda\rangle
+\tag{15.94}
+\end{equation*}
+
+We will also need equation (15.95).
+\begin{equation*}
+c_{\lambda\bar nn}
+=\sqrt{\frac{\bar n^{n_\lambda}\exp(-\bar n)}{n_\lambda!}}
+\tag{15.95}
+\end{equation*}
+
+We want to show that
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sqrt{\bar n}\exp(-i\omega_\lambda t)|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+Apply operator $\hat a_\lambda$ to state $|\Psi_{\lambda\bar n}\rangle$ to obtain
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sum_{n_\lambda=0}^\infty
+c_{\lambda\bar nn}
+\exp\left[-i\left(n_\lambda+\tfrac{1}{2}\right)\omega_\lambda t\right]
+\sqrt{n_\lambda}|n_\lambda-1\rangle
+\end{equation*}
+
+The $n_\lambda=0$ term vanishes hence the sum can start from $n_\lambda=1$.
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sum_{n_\lambda=1}^\infty
+c_{\lambda\bar nn}
+\exp\left[-i\left(n_\lambda+\tfrac{1}{2}\right)\omega_\lambda t\right]
+\sqrt{n_\lambda}|n_\lambda-1\rangle
+\end{equation*}
+
+The $\sqrt{n_\lambda}$ cancels with the denominator in $c_{\lambda\bar nn}$.
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sum_{n_\lambda=1}^\infty
+\sqrt{\frac{\bar n^{n_\lambda}\exp(-\bar n)}{(n_\lambda-1)!}}
+\exp\left[-i\left(n_\lambda+\tfrac{1}{2}\right)\omega_\lambda t\right]
+|n_\lambda-1\rangle
+\end{equation*}
+
+On the right-hand side, factor out $\sqrt{\bar n}\exp(-i\omega_\lambda t)$.
+\begin{multline*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle=
+\\
+\sqrt{\bar n}\exp(-i\omega_\lambda t)
+\sum_{n_\lambda=1}^\infty
+\sqrt{\frac{\bar n^{n_\lambda-1}\exp(-\bar n)}{(n_\lambda-1)!}}
+\exp\left[-i\left(n_\lambda-\tfrac{1}{2}\right)\omega_\lambda t\right]
+|n_\lambda-1\rangle
+\end{multline*}
+
+Substitute $n_\lambda+1$ for index $n_\lambda$.
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sqrt{\bar n}\exp(-i\omega_\lambda t)
+\sum_{n_\lambda=0}^\infty
+\sqrt{\frac{\bar n^{n_\lambda}\exp(-\bar n)}{n_\lambda!}}
+\exp\left[-i\left(n_\lambda+\tfrac{1}{2}\right)\omega_\lambda t\right]
+|n_\lambda\rangle
+\end{equation*}
+
+Hence
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle=\sqrt{\bar n}\exp(-i\omega_\lambda t)|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+\end{document}

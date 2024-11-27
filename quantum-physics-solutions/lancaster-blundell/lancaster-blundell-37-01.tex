@@ -1,0 +1,87 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(37.1)
+(a) Verify eqn 37.4.
+
+\bigskip
+(b) Show that the rotation matrix
+\begin{equation*}
+D(\theta^3)=e^{-\tfrac{i}{2}\sigma^3\theta^3}
+=\begin{pmatrix}e^{-\frac{i\theta^3}{2}}&0\\0&e^\frac{i\theta^3}{2}\end{pmatrix}
+\tag{37.22}
+\end{equation*}
+}}
+
+\bigskip
+(a) This is equation (37.4).
+\begin{equation*}
+D(\theta^1)=\exp\bigg({-}\frac{i}{2}\sigma^1\theta^1\bigg)
+=I\cos\frac{\theta^1}{2}-i\sigma^1\sin\frac{\theta^1}{2}
+\tag{37.4}
+\end{equation*}
+
+To verify (37.4), start with equation (37.2).
+\begin{equation*}
+D(\boldsymbol\theta)=\exp\bigg({-}\frac{i}{2}\boldsymbol\sigma\cdot\boldsymbol\theta\bigg)
+\tag{37.2}
+\end{equation*}
+
+Convert $\boldsymbol\sigma\cdot\boldsymbol\theta$ to component form.
+\begin{equation*}
+D(\boldsymbol\theta)=\exp\bigg({-}\frac{i}{2}\big(\sigma^1\theta^1+\sigma^2\theta^2+\sigma^3\theta^3\big)\bigg)
+\end{equation*}
+
+Then for $\theta^2=\theta^3=0$ we have
+\begin{equation*}
+D(\theta^1)=\exp\bigg({-}\frac{i}{2}\sigma^1\theta^1\bigg)
+\end{equation*}
+
+Convert to rectangular coordinates.
+\begin{equation*}
+D(\theta^1)=\cos\bigg(\frac{1}{2}\sigma^1\theta^1\bigg)-i\sin\bigg(\frac{1}{2}\sigma^1\theta^1\bigg)
+\tag{1}
+\end{equation*}
+
+Noting that
+\begin{equation*}
+\big(\sigma^1\big)^2=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}
+=\begin{pmatrix}1&0\\0&1\end{pmatrix}=I
+\end{equation*}
+we have
+\begin{equation*}
+\big(\sigma^1\big)^{2n}=I^n=I
+\end{equation*}
+and
+\begin{equation*}
+\big(\sigma^1\big)^{2n+1}=I^{2n}\sigma^1=\sigma^1
+\end{equation*}
+
+Hence by considering the Taylor expansion of sine and cosine in (1) we have
+\begin{equation*}
+D(\theta^1)=I\cos\frac{\theta^1}{2}-i\sigma^1\sin\frac{\theta^1}{2}
+\end{equation*}
+
+(b) Note that
+\begin{equation*}
+\big(\sigma^3\big)^2=\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+=\begin{pmatrix}1&0\\0&1\end{pmatrix}=I
+\end{equation*}
+
+Hence by the same argument as in part (a) we have
+\begin{equation*}
+D(\theta^3)=I\cos\frac{\theta^3}{2}-i\sigma^3\sin\frac{\theta^3}{2}
+\end{equation*}
+
+Rewrite in matrix form.
+\begin{equation*}
+D(\theta^3)
+=\begin{pmatrix}
+\cos\frac{\theta^3}{2}-i\sin\frac{\theta^3}{2}&0
+\\
+0&\cos\frac{\theta^3}{2}+i\sin\frac{\theta^3}{2}&0
+\end{pmatrix}
+=\begin{pmatrix}e^{-\frac{i\theta^3}{2}}&0\\0&e^\frac{i\theta^3}{2}\end{pmatrix}
+\end{equation*}
+
+\end{document}

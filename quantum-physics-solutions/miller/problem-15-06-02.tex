@@ -1,0 +1,86 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.6.2
+Using the results of Prob.~15.6.1, find an expression for the
+expectation value of the ``position'' $\xi_\lambda$ for the
+coherent state in Eq.~(15.94) in terms of $\bar n$, $\omega_\lambda$
+and time $t$.
+}}
+
+\bigskip
+The expectation of $\hat\xi_\lambda$ for the coherent state is
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle=\langle\Psi_{\lambda\bar n}|\hat\xi_\lambda|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+The operator $\hat\xi_\lambda$ is given by equation (15.78).
+\begin{equation*}
+\hat\xi_\lambda\equiv\frac{1}{\sqrt2}\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\tag{15.78}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle
+=\frac{1}{\sqrt2}
+\langle\Psi_{\lambda\bar n}|
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+Expand the right-hand side.
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle
+=\frac{1}{\sqrt2}
+\langle\Psi_{\lambda\bar n}|
+\hat a_\lambda
+|\Psi_{\lambda\bar n}\rangle
++\frac{1}{\sqrt2}
+\langle\Psi_{\lambda\bar n}|
+\hat a_\lambda^\dag
+|\Psi_{\lambda\bar n}\rangle
+\tag{1}
+\end{equation*}
+
+From problem 15.6.1 we have
+\begin{equation*}
+\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+=\sqrt{\bar n}\exp(-i\omega_\lambda t)|\Psi_{\lambda\bar n}\rangle
+\tag{2}
+\end{equation*}
+
+It follows that
+\begin{equation*}
+\langle\Psi_{\lambda\bar n}|\hat a_\lambda^\dag
+=\left(\hat a_\lambda|\Psi_{\lambda\bar n}\rangle\right)^\dag
+=\sqrt{\bar n}\exp(i\omega_\lambda t)\langle\Psi_{\lambda\bar n}|
+\tag{3}
+\end{equation*}
+
+Substitute (2) and (3) into (1) to obtain
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle
+=\sqrt{\frac{\bar n}{2}}\exp(-i\omega_\lambda t)
+\langle\Psi_{\lambda\bar n}|\Psi_{\lambda\bar n}\rangle
++\sqrt{\frac{\bar n}{2}}\exp(i\omega_\lambda t)
+\langle\Psi_{\lambda\bar n}|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+Noting that $\langle\Psi_{\lambda\bar n}|\Psi_{\lambda\bar n}\rangle=1$ we have
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle
+=\sqrt{\frac{\bar n}{2}}\exp(-i\omega_\lambda t)+\sqrt{\frac{\bar n}{2}}\exp(i\omega_\lambda t)
+\end{equation*}
+
+Finally, by the identity
+\begin{equation*}
+2\cos(\omega_\lambda t)=\exp(-i\omega_\lambda t)+\exp(i\omega_\lambda t)
+\end{equation*}
+
+we have
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle=\sqrt{2\bar n}\cos(\omega_\lambda t)
+\end{equation*}
+
+\end{document}

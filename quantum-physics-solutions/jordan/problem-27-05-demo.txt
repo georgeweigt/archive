@@ -1,0 +1,42 @@
+"Problem 27-5"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+G1(f) = Q1(f) m / hbar
+G2(f) = Q2(f) m / hbar
+G3(f) = Q3(f) m / hbar
+
+U(f) = f - i e G1(f) - 1/2 e^2 G1(G1(f))
+V(f) = f + i e G1(f) - 1/2 e^2 G1(G1(f))
+
+H(f) = (P1(P1(f)) + P2(P2(f)) + P3(P3(f))) / (2 m)
+
+psi = Psi(q1,q2,q3)
+
+"Verify equation (1)"
+
+P = V(P1(U(psi)))
+P = eval(P, e^4, 0, e^3, 0)
+check(P == P1(psi) - e m psi)
+
+P = V(P2(U(psi)))
+P = eval(P, e^4, 0, e^3, 0)
+check(P == P2(psi))
+
+P = V(P3(U(psi)))
+P = eval(P, e^4, 0, e^3, 0)
+check(P == P3(psi))
+
+"ok"
+
+"Verify equation (2)"
+W = V(H(U(psi)))
+W = eval(W, e^4, 0, e^3, 0)
+check(W == H(psi) - e P1(psi) + 1/2 e^2 m psi)
+"ok"

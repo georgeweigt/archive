@@ -1,0 +1,160 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.6.3
+Consider the uncertainty relation for position and momentum in the
+coherent state of Eq.~(15.94).
+
+\bigskip
+(i)
+Deduce the uncertainty relation for the operators $\hat\xi_\lambda$
+and $\hat\pi_\lambda$.
+
+\bigskip
+(ii)
+By evaluating $\langle\hat\xi_\lambda^2\rangle-\bar\xi_\lambda^2$ for the coherent state,
+show that the standard deviation of the width of the resulting probability distribution
+for the ``position'' $\xi$ is $1/\sqrt2$, independent of time.
+
+\bigskip
+(iii)
+Repeat the calculation in (ii) for ``momentum'', with operator $\hat\pi_\lambda$, instead of ``position''.
+
+\bigskip
+(iv)
+Deduce that the coherent state is a ``minimum uncertainty'' state, i.e.,
+it has the minimum possible product of the standard deviations of ``position'' and ``momentum''.
+
+\bigskip
+[Hints: use the results of Probs.~15.6.1 and 15.6.2, and the general relations for uncertainty principles in Chapter 5.]
+}}
+
+\bigskip
+(i) We will need the following formulas.
+\begin{gather*}
+[\hat A,\hat B]=i\hat C\tag{5.4}
+\\
+(\Delta\hat A)^2(\Delta\hat B)^2\ge\frac{\langle\hat C\rangle^2}{4}\tag{5.23}
+\end{gather*}
+
+From problem 15.5.1 we have
+\begin{equation*}
+[\hat\xi_\lambda,\hat\pi_\lambda]=i
+\end{equation*}
+
+Hence by (5.4) and (5.23) with $\hat C=1$ we have
+\begin{equation*}
+(\Delta\hat\xi_\lambda)^2(\Delta\hat\pi_\lambda)^2\ge\frac{1}{4}
+\end{equation*}
+
+Take the square root to obtain the uncertainty in terms of standard deviation.
+\begin{equation*}
+\Delta\hat\xi_\lambda\Delta\hat\pi_\lambda\ge\frac{1}{2}
+\end{equation*}
+
+(ii) We have for the coherent state
+\begin{equation*}
+\langle\hat\xi_\lambda^2\rangle
+=\langle\Psi_{\lambda\bar n}|\hat\xi_\lambda\hat\xi_\lambda|\Psi_{\lambda\bar n}\rangle
+=\frac{1}{2}\langle\Psi_{\lambda\bar n}|
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+From problem 15.6.2 we have
+\begin{align*}
+\langle\Psi_{\lambda\bar n}|\hat a_\lambda\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+&=\bar n\exp(-2i\omega_\lambda t)
+\\
+\langle\Psi_{\lambda\bar n}|\hat a_\lambda^\dag\hat a_\lambda^\dag|\Psi_{\lambda\bar n}\rangle
+&=\bar n\exp(2i\omega_\lambda t)
+\\
+\langle\Psi_{\lambda\bar n}|\hat a_\lambda^\dag\hat a_\lambda|\Psi_{\lambda\bar n}\rangle
+&=\bar n
+\\
+\langle\Psi_{\lambda\bar n}|\hat a_\lambda\hat a_\lambda^\dag|\Psi_{\lambda\bar n}\rangle
+&=\langle\Psi_{\lambda\bar n}|\left(1+\hat a_\lambda^\dag\hat a_\lambda\right)|\Psi_{\lambda\bar n}\rangle
+=1+\bar n
+\end{align*}
+
+Hence
+\begin{equation*}
+\langle\hat\xi_\lambda^2\rangle
+=\frac{\bar n}{2}\exp(-2i\omega_\lambda t)+\frac{\bar n}{2}\exp(2i\omega_\lambda t)+\bar n+\frac{1}{2}
+\end{equation*}
+
+From problem 15.6.2 we have
+\begin{equation*}
+\langle\hat\xi_\lambda\rangle
+=\sqrt{\frac{\bar n}{2}}\exp(-i\omega_\lambda t)+\sqrt{\frac{\bar n}{2}}\exp(i\omega_\lambda t)
+\end{equation*}
+
+Hence the variance of $\hat\xi_\lambda$ is
+\begin{equation*}
+\langle\hat\xi_\lambda^2\rangle-\langle\hat\xi_\lambda\rangle^2=\frac{1}{2}
+\end{equation*}
+and the standard deviation is
+\begin{equation*}
+\Delta\hat\xi_\lambda=\sqrt{\langle\hat\xi_\lambda^2\rangle-\langle\hat\xi_\lambda\rangle^2}=\frac{1}{\sqrt2}
+\end{equation*}
+
+(iii) We have for the coherent state
+\begin{equation*}
+\langle\hat\pi_\lambda^2\rangle
+=\langle\Psi_{\lambda\bar n}|\hat\pi_\lambda\hat\pi_\lambda|\Psi_{\lambda\bar n}\rangle
+=-\frac{1}{2}\langle\Psi_{\lambda\bar n}|
+\left(\hat a_\lambda^\dag-\hat a_\lambda\right)
+\left(\hat a_\lambda^\dag-\hat a_\lambda\right)
+|\Psi_{\lambda\bar n}\rangle
+\end{equation*}
+
+From the results in part (ii) we have
+\begin{equation*}
+\langle\hat\pi_\lambda^2\rangle
+=\bar n-\frac{\bar n}{2}\exp(-2i\omega_\lambda t)-\frac{\bar n}{2}\exp(2i\omega_\lambda t)+\frac{1}{2}
+\end{equation*}
+
+For the expectation of $\hat\pi_\lambda$ we have
+\begin{align*}
+\langle\hat\pi_\lambda\rangle
+&=\langle\Psi_{\lambda\bar n}|\hat\pi_\lambda|\Psi_{\lambda\bar n}\rangle
+\\
+&=\frac{i}{\sqrt2}
+\langle\Psi_{\lambda\bar n}|\left(\hat a_\lambda^\dag-\hat a_\lambda\right)|\Psi_{\lambda\bar n}\rangle
+\\
+&=i\sqrt{\frac{\bar n}{2}}\exp(i\omega_\lambda t)-i\sqrt{\frac{\bar n}{2}}\exp(-i\omega_\lambda t)
+\end{align*}
+
+It follows that
+\begin{equation*}
+\langle\hat\pi_\lambda\rangle^2
+=\bar n-\frac{n}{2}\exp(2i\omega_\lambda t)-\frac{n}{2}\exp(-2i\omega_\lambda t)
+\end{equation*}
+
+Hence the variance of $\hat\pi_\lambda$ is
+\begin{equation*}
+\langle\hat\pi_\lambda^2\rangle-\langle\hat\pi_\lambda\rangle^2=\frac{1}{2}
+\end{equation*}
+and the standard deviation is
+\begin{equation*}
+\Delta\hat\pi_\lambda=\sqrt{\langle\hat\pi_\lambda^2\rangle-\langle\hat\pi_\lambda\rangle^2}=\frac{1}{\sqrt2}
+\end{equation*}
+
+(iv) In part (ii) we found the standard deviation for $\hat\xi_\lambda$.
+\begin{equation*}
+\Delta\hat\xi_\lambda=\sqrt{\langle\hat\xi_\lambda^2\rangle-\langle\hat\xi_\lambda\rangle^2}=\frac{1}{\sqrt2}
+\end{equation*}
+
+In part (iii) we found the standard deviation for $\hat\pi_\lambda$.
+\begin{equation*}
+\Delta\hat\pi_\lambda=\sqrt{\langle\hat\pi_\lambda^2\rangle-\langle\hat\pi_\lambda\rangle^2}=\frac{1}{\sqrt2}
+\end{equation*}
+
+Hence the uncertainty relation is
+\begin{equation*}
+\Delta\hat\xi_\lambda\Delta\hat\pi_\lambda=\frac{1}{2}
+\end{equation*}
+which is the minimum uncertainty from part (i).
+
+\end{document}

@@ -1,0 +1,149 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(14.2)
+{\it A demonstration that the photon has spin-1, with
+only two spin polarizations.}
+
+\bigskip
+A photon $\gamma$ propagates with momentum
+$q^\mu=(|\mathbf q|,0,0,|\mathbf q|)$.
+Working with a basis where the two transverse photon polarizations are
+$\epsilon_{\lambda=1}^\mu(q)=(0,1,0,0)$
+and $\epsilon_{\lambda=2}^\mu(q)=(0,0,1,0)$, it may be
+shown, using Noether's theorem, that the operator
+$\hat S^z$, whose eigenvalue is the $z$-component spin
+angular momentum of the photon, obeys the commutation relation
+\begin{equation*}
+\big[\hat S^z,\hat a_{\mathbf q\lambda}^\dag\big]
+=i\epsilon_\lambda^{\mu=1*}(q)\hat a_{\mathbf q\lambda=2}^\dag
+-i\epsilon_\lambda^{\mu=2*}(q)\hat a_{\mathbf q\lambda=1}^\dag
+\tag{14.36}
+\end{equation*}
+
+(i) Define creation operators for the circular polarizations via
+\begin{equation*}
+\begin{aligned}
+\hat b_{\mathbf qR}^\dag&=-\frac{1}{\sqrt2}
+\big(\hat a_{\mathbf q1}^\dag+i\hat a_{\mathbf q2}^\dag\big)
+\\
+\hat b_{\mathbf qL}^\dag&=\frac{1}{\sqrt2}
+\big(\hat a_{\mathbf q1}^\dag-i\hat a_{\mathbf q2}^\dag\big)
+\end{aligned}
+\tag{14.37}
+\end{equation*}
+
+Show that
+\begin{equation*}
+\begin{aligned}
+\big[\hat S^z,\hat b_{\mathbf qR}^\dag\big]&=\hat b_{\mathbf qR}^\dag
+\\
+\big[\hat S^z,\hat b_{\mathbf qL}^\dag\big]&=-\hat b_{\mathbf qL}^\dag
+\end{aligned}
+\tag{14.38}
+\end{equation*}
+
+(ii) Consider the operation of $S^z$ on a state
+$|\gamma_{\mathbf q\lambda}\rangle=\hat b_{\mathbf q\lambda}|0\rangle$
+containing a single photon propagating along $z$:
+\begin{equation*}
+\hat S^z|\gamma_{\mathbf q\lambda}\rangle
+=\hat S^z\hat b_{\mathbf q\lambda}^\dag|0\rangle,
+\quad
+\lambda=R,L
+\tag{14.39}
+\end{equation*}
+
+Use the results of (i) to argue that the projection of
+the photon spin along its direction of propagation
+must be $S^z=\pm1$.
+
+\bigskip
+{\it See Bjorken and Drell Chapter 14 for the full version of this argument.}
+}}
+
+\bigskip
+(i) By hypothesis we have
+\begin{align*}
+\epsilon_{\lambda=1}^{\mu=0*}(q)&=0 & \epsilon_{\lambda=2}^{\mu=0*}(q)&=0
+\\
+\epsilon_{\lambda=1}^{\mu=1*}(q)&=1 & \epsilon_{\lambda=2}^{\mu=1*}(q)&=0
+\\
+\epsilon_{\lambda=1}^{\mu=2*}(q)&=0 & \epsilon_{\lambda=2}^{\mu=2*}(q)&=1
+\\
+\epsilon_{\lambda=1}^{\mu=3*}(q)&=0 & \epsilon_{\lambda=2}^{\mu=3*}(q)&=0
+\end{align*}
+
+Hence
+\begin{align*}
+\big[\hat S^z,\hat a_{\mathbf q1}^\dag\big]
+&=i\epsilon_{\lambda=1}^{\mu=1*}(q)\hat a_{\mathbf q2}^\dag
+-i\epsilon_{\lambda=1}^{\mu=2*}(q)\hat a_{\mathbf q1}^\dag
+=i\hat a_{\mathbf q2}^\dag
+\\
+\big[\hat S^z,\hat a_{\mathbf q2}^\dag\big]
+&=i\epsilon_{\lambda=2}^{\mu=1*}(q)\hat a_{\mathbf q2}^\dag
+-i\epsilon_{\lambda=2}^{\mu=2*}(q)\hat a_{\mathbf q1}^\dag
+=-i\hat a_{\mathbf q1}^\dag
+\end{align*}
+
+It follows that
+\begin{align*}
+\big[\hat S^z,\hat b_{\mathbf qR}^\dag\big]
+&=-\frac{1}{\sqrt2}
+\Big(
+\big[\hat S^z,\hat a_{\mathbf q1}^\dag\big]+
+i\big[\hat S^z,\hat a_{\mathbf q2}^\dag\big]
+\Big)
+=-\frac{1}{\sqrt2}\big(i\hat a_{\mathbf q2}^\dag+\hat a_{\mathbf q1}^\dag\big)
+=\hat b_{\mathbf qR}^\dag
+\\
+\big[\hat S^z,\hat b_{\mathbf qL}^\dag\big]
+&=\frac{1}{\sqrt2}
+\Big(
+\big[\hat S^z,\hat a_{\mathbf q1}^\dag\big]-
+i\big[\hat S^z,\hat a_{\mathbf q2}^\dag\big]
+\Big)
+=\frac{1}{\sqrt2}\big(i\hat a_{\mathbf q2}^\dag-\hat a_{\mathbf q1}^\dag\big)
+=-\hat b_{\mathbf qL}^\dag
+\end{align*}
+
+(ii) From part (i) we have the commutators
+\begin{align*}
+\big[\hat S^z,\hat b_{\mathbf qR}^\dag\big]&=\hat b_{\mathbf qR}^\dag
+\\
+\big[\hat S^z,\hat b_{\mathbf qL}^\dag\big]&=-\hat b_{\mathbf qL}^\dag
+\end{align*}
+
+It follows that
+\begin{align*}
+\hat S^z\hat b_{\mathbf qR}^\dag&=\hat b_{\mathbf qR}^\dag\hat S^z+\hat b_{\mathbf qR}^\dag
+\\
+\hat S^z\hat b_{\mathbf qL}^\dag&=\hat b_{\mathbf qL}^\dag\hat S^z-\hat b_{\mathbf qL}^\dag
+\end{align*}
+
+Hence we can write
+\begin{align*}
+\hat S^z|\gamma_{\mathbf qR}\rangle&=\hat S^z\hat b_{\mathbf qR}^\dag|0\rangle
+=\big(\hat b_{\mathbf qR}^\dag\hat S^z+\hat b_{\mathbf qR}^\dag\big)|0\rangle
+\\
+\hat S^z|\gamma_{\mathbf qL}\rangle&=\hat S^z\hat b_{\mathbf qL}^\dag|0\rangle
+=\big(\hat b_{\mathbf qL}^\dag\hat S^z-\hat b_{\mathbf qL}^\dag\big)|0\rangle
+\end{align*}
+
+Noting that $\hat S^z|0\rangle=0$ we obtain
+\begin{align*}
+\hat S^z|\gamma_{\mathbf qR}\rangle&=\hat b_{\mathbf qR}^\dag|0\rangle
+=|\gamma_{\mathbf qR}\rangle
+\\
+\hat S^z|\gamma_{\mathbf qL}\rangle&=-\hat b_{\mathbf qL}^\dag|0\rangle
+=-|\gamma_{\mathbf qL}\rangle
+\end{align*}
+
+Hence
+\begin{equation*}
+\hat S^z|\gamma_{\mathbf q\lambda}\rangle=\pm|\gamma_{\mathbf q\lambda}\rangle
+\end{equation*}
+where the eigenvalue is $+1$ for $\lambda=R$ and $-1$ for $\lambda=L$.
+
+\end{document}

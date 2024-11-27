@@ -1,0 +1,60 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-2. Calculate $\langle x\rangle$, $\langle x^2\rangle$,
+and $\sigma_x$, as well as $\langle p\rangle$, $\langle p^2\rangle$,
+and $\sigma_p$, for the normalized wavefunction
+\begin{equation*}
+\psi(x)=\sqrt{\frac{2a^3}{\pi}}\frac{1}{x^2+a^2}
+\end{equation*}
+
+Use these to find $\sigma_x\sigma_p$.
+Note that $\int_{-\infty}^\infty dx/(x^2+a^2)=\pi/a$.
+}}
+
+\bigskip
+\begin{equation*}
+\langle x\rangle=\int_{-\infty}^\infty\psi^*x\psi\,dx
+=-\frac{a^3}{\pi(x^2+a^2)}\bigg|_{-\infty}^\infty=0
+\end{equation*}
+
+Noting that $\arctan(\pm\infty)=\pm\frac{\pi}{2}$ we have
+\begin{equation*}
+\langle x^2\rangle=\int_{-\infty}^\infty\psi^*x^2\psi\,dx
+=\left(\frac{a^2}{\pi}\arctan\frac{x}{a}
+-\frac{a^3x}{\pi(x^2+a^2)}\right)\bigg|_{-\infty}^\infty
+=a^2
+\end{equation*}
+
+\begin{equation*}
+\langle p\rangle
+=\int_{-\infty}^\infty\psi^*\left(-i\hbar\frac{d}{dx}\psi\right)\,dx
+=-\frac{ia^3\hbar}{\pi\left(x^2+a^2\right)^2}\bigg|_{-\infty}^\infty
+=0
+\end{equation*}
+
+\begin{equation*}
+\langle p^2\rangle
+=\int_{-\infty}^\infty\psi^*\left(-i\hbar\frac{d}{dx}
+\left(-i\hbar\frac{d}{dx}\psi\right)\right)\,dx
+=\frac{\hbar^2}{2a^2}
+\end{equation*}
+
+\begin{align*}
+\sigma_x&=\sqrt{\langle x^2\rangle-\langle x\rangle^2}=a
+\\
+\sigma_p&=\sqrt{\langle p^2\rangle-\langle p\rangle}
+=\frac{\hbar}{a\sqrt2}
+\end{align*}
+
+\begin{equation*}
+\sigma_x\sigma_p=a\left(\frac{\hbar}{a\sqrt2}\right)
+=\frac{\hbar}{\sqrt2}
+\end{equation*}
+
+Note that
+\begin{equation*}
+\sigma_x\sigma_p=\frac{\hbar}{\sqrt2}>\frac{\hbar}{2}
+\end{equation*}
+
+\end{document}

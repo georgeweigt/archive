@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+19-3.
+Show that
+\begin{equation*}
+-\left[\frac{1}{2(n+1)^2}-\frac{1}{2n^2}\right]=\frac{2n+1}{2n^2(n+1)^2}
+\end{equation*}
+
+When $n$ is large, that is approximately $1/n^3$.
+Use this to find a formula for the frequency of the radiation an atom emits, according to the Bohr model, when its energy changes from $\varepsilon_{n+1}$ to $\varepsilon_n$,
+and show that when $n$ is large, this is approximately the same as the frequency of revolution found in the last problem.
+This is an example of what Bohr called the correspondence principle; when $n$ is large, the quantum properties are less important because $\hbar$ is small compared to the magnitude of distance and momentum, as the first problem shows, and then the frequency of the radiation is what classical electrodynamics
+would predict for radiation from an oscillating or periodic motion of a charge.
+}}
+
+\bigskip
+We have
+\begin{align*}
+-\left[\frac{1}{2(n+1)^2}-\frac{1}{2n^2}\right]
+&=-\left[\frac{n^2}{2n^2(n+1)^2}-\frac{(n+1)^2}{2n^2(n+1)^2}\right]
+\\
+&=-\left[\frac{-2n-1}{2n^2(n+1)^2}\right]
+\\
+&=\frac{2n+1}{2n^2(n+1)^2}
+\end{align*}
+
+For the change in energy we have
+\begin{align*}
+\varepsilon_{n+1}-\varepsilon_n
+&=-\frac{m(Ze^2)^2}{2\hbar^2(n+1)^2}+\frac{m(Ze^2)^2}{2\hbar^2n^2}
+\\
+&=-\frac{m(Ze^2)^2}{\hbar^2}\left[\frac{1}{2(n+1)^2}-\frac{1}{2n^2}\right]
+\\
+&=\frac{m(Ze^2)^2}{\hbar^2}\frac{2n+1}{2n^2(n+1)^2}
+\end{align*}
+
+Hence the radiation frequency is
+\begin{equation*}
+\nu=\frac{\varepsilon_{n+1}-\varepsilon_n}{2\pi\hbar}
+=\frac{m(Ze^2)^2}{2\pi\hbar^3}\frac{2n+1}{2n^2(n+1)^2}\tag{1}
+\end{equation*}
+
+For large $n$ we have $2n+1\approx2n$ and $(n+1)^2\approx n^2$ hence
+\begin{equation*}
+\nu\approx\frac{m(Ze^2)^2}{2\pi\hbar^3}\frac{1}{n^3}
+\end{equation*}
+
+\end{document}

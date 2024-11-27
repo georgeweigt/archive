@@ -1,0 +1,78 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+22-1.
+It can be shown, as Pauli did, that
+\begin{multline*}
+\tfrac{1}{2}(A_1Q_1+Q_1A_1+A_2Q_2+Q_2A_2+A_3Q_3+Q_3A_3)
+\\
+=-\frac{1}{mZe^2}\left({L_1}^2+{L_2}^2+{L_3}^2+\frac{3}{2}\hbar^2\right)
++R
+\end{multline*}
+
+Use this and the result of Problem 17-6 to find
+$\langle R\rangle$ for a state where each of the quantities
+represented by $L_1$, $L_2$, $L_3$ and $A_1$, $A_2$, $A_3$ has the
+value 0.
+Show this occurs when the $\varepsilon_n$ for $n=1$;
+the results of Problems 17-4 and 20-7 can be used here.
+Compare $\langle R\rangle$ found here with the
+radius of the Bohr orbit found in Problem 19-1.
+}}
+
+\bigskip
+For $A_1$, $A_2$, and $A_3$ with definite value zero we have zero variance hence
+\begin{equation*}
+\langle{A_1}^2\rangle=\langle A_1\rangle^2=0,\quad
+\langle{A_2}^2\rangle=\langle A_2\rangle^2=0,\quad
+\langle{A_3}^2\rangle=\langle A_3\rangle^2=0
+\end{equation*}
+
+Then by problem 17-6 we have
+\begin{equation*}
+\langle A_1Q_1+Q_1A_1\rangle=0,\quad
+\langle A_2Q_2+Q_2A_2\rangle=0,\quad
+\langle A_3Q_3+Q_3A_3\rangle=0
+\end{equation*}
+
+For $L_1$, $L_2$, and $L_3$ with definite value zero we have zero variance hence
+\begin{equation*}
+\langle{L_1}^2\rangle=\langle L_1\rangle^2=0,\quad
+\langle{L_2}^2\rangle=\langle L_2\rangle^2=0,\quad
+\langle{L_3}^2\rangle=\langle L_3\rangle^2=0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle R\rangle=\frac{3}{2}\frac{\hbar^2}{mZe^2}
+\end{equation*}
+
+For $\langle L^2\rangle=0$ we have $l=0$ and $j=0$ hence
+\begin{equation*}
+n=2j+1=1
+\end{equation*}
+
+From problem 19-1 for $n=1$ we have
+\begin{equation*}
+r=\frac{\hbar^2}{mZe^2}
+\end{equation*}
+
+Note that $\langle R\rangle$ is the expected radius and $r$ is the most likely radius.
+
+\bigskip
+The result for $Z=1$ should be
+\begin{equation*}
+\langle R\rangle=\tfrac{3}{2}a_0
+\end{equation*}
+
+where
+\begin{equation*}
+a_0=\frac{4\pi\epsilon_0\hbar^2}{me^2}
+\end{equation*}
+
+The author is using $4\pi\epsilon_0=1$ hence
+\begin{equation*}
+\langle R\rangle=\frac{3}{2}\frac{\hbar^2}{mZe^2}
+\end{equation*}
+
+\end{document}

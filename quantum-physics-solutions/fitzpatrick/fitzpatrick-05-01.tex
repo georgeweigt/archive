@@ -1,0 +1,59 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+5-1. Show that the wavefunction of a particle of mass $m$ in an infinite
+one-dimensional square-well of width $a$ returns to its original form
+after a quantum revival time $T=4ma^2 /\pi\hbar$.
+}}
+
+\bigskip
+The wavefunction is
+\begin{equation*}
+\Psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x)\exp\left(-\frac{iE_nt}{\hbar}\right)
+\end{equation*}
+
+We want to find the revival time $T$ such that
+\begin{equation*}
+\Psi(x,t+T)=\Psi(x,t)
+\end{equation*}
+
+It follows that at time $t+T$ the $n$th exponentials are equal.
+\begin{equation*}
+\exp\left(-\frac{iE_n(t+T)}{\hbar}\right)
+=\exp\left(-\frac{iE_nt}{\hbar}\right)
+\end{equation*}
+
+Rewrite with $2\pi$ for the revival phase.
+\begin{equation*}
+\exp\left(-i\left(\frac{E_nt}{\hbar}+\frac{E_nT}{\hbar}\right)\right)
+=\exp\left(-i\left(\frac{E_nt}{\hbar}+2\pi\right)\right)
+\end{equation*}
+
+Solve for $T$ in
+\begin{equation*}
+\frac{E_nt}{\hbar}+\frac{E_nT}{\hbar}=\frac{E_nt}{\hbar}+2\pi
+\end{equation*}
+
+to obtain
+\begin{equation*}
+T=\frac{2\pi\hbar}{E_n}
+\tag{1}
+\end{equation*}
+
+For an infinite square well we have
+\begin{equation*}
+E_n=\frac{\pi^2\hbar^2 n^2}{2ma^2}
+\tag{2}
+\end{equation*}
+
+Substitute (2) into (1) to obtain
+\begin{equation*}
+T=\frac{4ma^2}{\pi\hbar n^2}
+\end{equation*}
+
+The maximum $T$ is for $n=1$.
+\begin{equation*}
+T=\frac{4ma^2}{\pi\hbar}
+\end{equation*}
+
+\end{document}

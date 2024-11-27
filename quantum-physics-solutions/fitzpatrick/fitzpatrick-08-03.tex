@@ -1,0 +1,56 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+8-3. Consider a beam of particles with $l=1$.
+A measurement of $L_x$ yields the result $\hbar$.
+What values will be obtained by a subsequent measurement of $L_z$,
+and with what probabilities?
+Repeat the calculation for the cases in which the measurement of $L_x$
+yields the results $0$ and $-\hbar$.
+}}
+
+\bigskip
+After measuring $L_x=\hbar$ the state is $\psi_{1,1}$ where (see exercise 8-2)
+\begin{equation*}
+\psi_{1,1}=\frac{1}{2}Y_{1,1}+\frac{1}{\sqrt2}Y_{1,0}+\frac{1}{2}Y_{1,-1}
+\end{equation*}
+
+Hence the probabilities for $L_z$ are
+\begin{align*}
+\Pr(L_z=1)&=\left|\langle Y_{1,1}|\psi_{1,1}\rangle\right|^2=\tfrac{1}{4}
+\\[1ex]
+\Pr(L_z=0)&=\left|\langle Y_{1,0}|\psi_{1,1}\rangle\right|^2=\tfrac{1}{2}
+\\[1ex]
+\Pr(L_z=-1)&=\left|\langle Y_{1,-1}|\psi_{1,1}\rangle\right|^2=\tfrac{1}{4}
+\end{align*}
+
+After measuring $L_x=0$ the state is $\psi_{1,0}$ where
+\begin{equation*}
+\psi_{1,0}=-\frac{1}{\sqrt2}Y_{1,1}+\frac{1}{\sqrt2}Y_{1,-1}
+\end{equation*}
+
+Hence the probabilities for $L_z$ are
+\begin{align*}
+\Pr(L_z=1)&=\left|\langle Y_{1,1}|\psi_{1,0}\rangle\right|^2=\tfrac{1}{2}
+\\[1ex]
+\Pr(L_z=-1)&=\left|\langle Y_{1,-1}|\psi_{1,0}\rangle\right|^2=\tfrac{1}{2}
+\end{align*}
+
+After measuring $L_x=-\hbar$ the state is $\psi_{1,-1}$ where
+\begin{equation*}
+\psi_{1,-1}=-\frac{1}{2}Y_{1,1}+\frac{1}{\sqrt2}Y_{1,0}-\frac{1}{2}Y_{1,-1}
+\end{equation*}
+
+Hence the probabilities for $L_z$ are
+\begin{align*}
+\Pr(L_z=1)&=\left|\langle Y_{1,1}|\psi_{1,-1}\rangle\right|^2=\tfrac{1}{4}
+\\[1ex]
+\Pr(L_z=0)&=\left|\langle Y_{1,0}|\psi_{1,-1}\rangle\right|^2=\tfrac{1}{2}
+\\[1ex]
+\Pr(L_z=-1)&=\left|\langle Y_{1,-1}|\psi_{1,-1}\rangle\right|^2=\tfrac{1}{4}
+\end{align*}
+
+Note that we had to know $l=1$.
+We could also observe $L_x=\hbar$ for $l=2$, etc.
+
+\end{document}

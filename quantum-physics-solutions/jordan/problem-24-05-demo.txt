@@ -1,0 +1,33 @@
+"Problem 24-5"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+J1(f) = -L2(f) / hbar
+J2(f) = L1(f) / hbar
+J3(f) = L3(f) / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(J1(J2(psi)) - J2(J1(psi)) == i J3(psi))
+check(J2(J3(psi)) - J3(J2(psi)) == i J1(psi))
+check(J3(J1(psi)) - J1(J3(psi)) == i J2(psi))
+
+check(Q1(J2(psi)) - J2(Q1(psi)) == 0)
+check(Q2(J3(psi)) - J3(Q2(psi)) == i Q1(psi))
+check(Q3(J1(psi)) - J1(Q3(psi)) == i Q1(psi))
+
+check(P1(J2(psi)) - J2(P1(psi)) == 0)
+check(P2(J3(psi)) - J3(P2(psi)) == i P1(psi))
+check(P3(J1(psi)) - J1(P3(psi)) == i P1(psi))
+
+"ok"

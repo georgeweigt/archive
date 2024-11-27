@@ -1,0 +1,36 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-1.
+Show that multiplying the matrix
+$1-i\varepsilon M_3-\tfrac{1}{2}\varepsilon^2M_3^2$
+by the similar matrix with $\varepsilon$ replaced by $\varepsilon'$
+gives another matrix of this form where $\varepsilon$ is replaced by
+$\varepsilon+\varepsilon'$, in the approximation where terms quadratic
+in $\varepsilon$ and $\varepsilon'$ are included but terms with higher
+powers are ignored.
+This shows that the product of
+two rotations measured by $\varepsilon$ and $\varepsilon'$
+is the rotation measured by $\varepsilon+\varepsilon'$.
+In the particular case where $\varepsilon'$ is $-\varepsilon$,
+the product is the identity rotation,
+so the second rotation is the inverse of the first.
+}}
+
+\bigskip
+In matrix form
+\begin{multline*}
+\begin{pmatrix}1-\tfrac{1}{2}\varepsilon^2&-\varepsilon&0\\
+\varepsilon&1-\tfrac{1}{2}\varepsilon^2&0\\
+0&0&1\end{pmatrix}
+\begin{pmatrix}1-\tfrac{1}{2}\varepsilon'^2&-\varepsilon'&0\\
+\varepsilon'&1-\tfrac{1}{2}\varepsilon'^2&0\\
+0&0&1\end{pmatrix}
+\\
+{}\approx\begin{pmatrix}
+1-\varepsilon\varepsilon'-\tfrac{1}{2}\varepsilon^2-\tfrac{1}{2}\varepsilon'^2&-\varepsilon-\varepsilon'&0\\
+\varepsilon+\varepsilon'&1-\varepsilon\varepsilon'-\tfrac{1}{2}\varepsilon^2-\tfrac{1}{2}\varepsilon'^2&0\\
+0&0&1\end{pmatrix}
+\end{multline*}
+
+\end{document}

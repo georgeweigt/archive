@@ -1,0 +1,45 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+6-6.
+The possible values of a quantity are
+\begin{equation*}
+x=-2,0,2.
+\end{equation*}
+
+Suppose $\langle x\rangle=0$ and $\langle(x-\langle x\rangle)^2\rangle=4$.
+Find the probabilities $\rho(-2)$, $\rho(0)$, $\rho(2)$.
+}}
+
+\bigskip
+We have
+\begin{equation*}
+\langle x\rangle=\rho(-2)(-2)+\rho(0)(0)+\rho(2)(2)=0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\rho(-2)=\rho(2)\tag{1}
+\end{equation*}
+
+For the variance we have
+\begin{equation*}
+\langle(x-\langle x\rangle)^2\rangle=\rho(-2)(-2-0)^2+\rho(0)(0-0)^2+\rho(2)(2-0)^2=4\tag{2}
+\end{equation*}
+
+Substitute (1) into (2) to obtain
+\begin{equation*}
+2\rho(2)(4)=4
+\end{equation*}
+
+Hence
+\begin{equation*}
+\rho(2)=\rho(-2)=\tfrac{1}{2}
+\end{equation*}
+
+By total probability
+\begin{equation*}
+\rho(0)=1-\rho(2)-\rho(-2)=0
+\end{equation*}
+
+\end{document}

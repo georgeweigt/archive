@@ -1,0 +1,34 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 9.3.
+Show that the right-hand side of Eq.~9.17
+simplifies to the right-hand side of Eq.~9.16.
+{\it Hint:}
+First expand the second term by taking the derivative of the product.
+Then look for cancellations.
+}}
+
+\bigskip
+We are given
+\begin{gather*}
+[\mathbf V(x),\mathbf P]=i\hbar\frac{dV(x)}{dx}\tag{9.16}
+\\[1ex]
+[\mathbf V(x),\mathbf P]\psi(x)=V(x)\left(-i\hbar\frac{d}{dx}\right)\psi(x)
+-\left(-i\hbar\frac{d}{dx}\right)V(x)\psi(x)\tag{9.17}
+\end{gather*}
+
+Expand the derivative of the product in (9.17) to obtain
+\begin{equation*}
+[\mathbf V(x),\mathbf P]\psi(x)
+=\boxed{V(x)\left(-i\hbar\frac{d}{dx}\right)\psi(x)}
++i\hbar\frac{dV(x)}{dx}\psi(x)+
+\boxed{i\hbar V(x)\frac{d\psi(x)}{dx}}
+\end{equation*}
+
+The boxed terms cancel leaving
+\begin{equation*}
+[\mathbf V(x),\mathbf P]\psi(x)=i\hbar\frac{dV(x)}{dx}\psi(x)
+\end{equation*}
+
+\end{document}

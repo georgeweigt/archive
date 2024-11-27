@@ -1,0 +1,25 @@
+"Problem 24-2"
+
+I = ((1,0),(0,1))
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+J1 = 1/2 Sigma1
+J2 = 1/2 Sigma2
+J3 = 1/2 Sigma3
+
+U(x) = I - i x J3 - 1/2 x^2 dot(J3,J3)
+
+a = epsilon
+b = epsilonprime
+
+T = dot(U(a),U(b))
+T = eval(T, a^2 b, 0)
+T = eval(T, a b^2, 0)
+T = eval(T, a^2 b^2, 0)
+
+check(T == U(a + b))
+
+"ok"

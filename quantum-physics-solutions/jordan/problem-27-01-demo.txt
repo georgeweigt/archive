@@ -1,0 +1,13 @@
+"Problem 27-1"
+
+Qe1 = R1 + mn Q1 / (mn + me)
+Qn1 = R1 - me Q1 / (mn + me)
+
+check(R1 == me / (mn + me) Qe1 + mn / (mn + me) Qn1)
+
+Pe1 = me / (mn + me) hbar K1 + P1
+Pn1 = mn / (mn + me) hbar K1 - P1
+
+check(P1 == mn / (mn + me) Pe1 - me / (mn + me) Pn1)
+
+"ok"

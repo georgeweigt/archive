@@ -1,0 +1,70 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+16.2.1
+Consider the two particle wavefunction operator
+\begin{equation*}
+\hat\psi(\mathbf r_1,\mathbf r_2)=\frac{1}{\sqrt2}\sum_{j,n}
+\hat b_n\hat b_j\phi_j(\mathbf r_1)\phi_n(\mathbf r_2)
+\end{equation*}
+and a state
+$|\ldots,1_k,\ldots,1_m,\ldots\rangle\equiv\hat b_k^\dag\hat b_m^\dag|0\rangle$
+that has one fermion in single-particle state $k$ and an identical
+fermion in single-particle state $m$.
+Show that
+\begin{equation*}
+\hat\psi(\mathbf r_1,\mathbf r_2)
+|\ldots,1_k,\ldots,1_m,\ldots\rangle
+=\frac{1}{\sqrt2}\left[
+\phi_k(\mathbf r_1)\phi_m(\mathbf r_2)-\phi_k(\mathbf r_2)\phi_m(\mathbf r_1)
+\right]|0\rangle
+\end{equation*}
+(i.e., this operator correctly constructs the combination of
+wavefunction products that is antisymmetric with respect to
+exchange of identical particles.)
+}}
+
+\bigskip
+By substitution we have
+\begin{equation*}
+\hat\psi(\mathbf r_1,\mathbf r_2)
+|\ldots,1_k,\ldots,1_m,\ldots\rangle
+=\frac{1}{\sqrt2}\sum_{j,n}
+\hat b_n\hat b_j\phi_j(\mathbf r_1)\phi_n(\mathbf r_2)
+\hat b_k^\dag\hat b_m^\dag|0\rangle
+\end{equation*}
+
+Noting that
+\begin{align*}
+\hat b_n\hat b_j\hat b_k^\dag\hat b_m^\dag
+&=\hat b_n(\delta_{jk}-\hat b_k^\dag\hat b_j)\hat b_m^\dag
+\\
+&=\delta_{jk}\hat b_n\hat b_m^\dag-\hat b_n\hat b_k^\dag\hat b_j\hat b_m^\dag
+\\
+&=\delta_{jk}(\delta_{nm}-\hat b_m^\dag\hat b_n)-
+(\delta_{nk}-\hat b_k^\dag\hat b_n)(\delta_{jm}-\hat b_m^\dag\hat b_j)
+\end{align*}
+we have
+\begin{equation*}
+\hat b_n\hat b_j\hat b_k^\dag\hat b_m^\dag|0\rangle
+=(\delta_{jk}\delta_{nm}-\delta_{nk}\delta_{jm})|0\rangle
+\end{equation*}
+
+Hence
+\begin{equation*}
+\hat\psi(\mathbf r_1,\mathbf r_2)
+|\ldots,1_k,\ldots,1_m,\ldots\rangle
+=\frac{1}{\sqrt2}\sum_{j,n}\phi_j(\mathbf r_1)\phi_n(\mathbf r_2)
+(\delta_{jk}\delta_{nm}-\delta_{nk}\delta_{jm})|0\rangle
+\end{equation*}
+
+All terms vanishes except for $j,n=k,m$ and $j,n=m,k$ hence
+\begin{equation*}
+\hat\psi(\mathbf r_1,\mathbf r_2)
+|\ldots,1_k,\ldots,1_m,\ldots\rangle
+=\frac{1}{\sqrt2}\left[
+\phi_k(\mathbf r_1)\phi_m(\mathbf r_2)-\phi_m(\mathbf r_1)\phi_k(\mathbf r_2)
+\right]|0\rangle
+\end{equation*}
+
+\end{document}

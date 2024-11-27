@@ -1,0 +1,173 @@
+"Problem 27-6"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+Pe1(f) = -i hbar d(f,qe1)
+Pe2(f) = -i hbar d(f,qe2)
+Pe3(f) = -i hbar d(f,qe3)
+
+Pn1(f) = -i hbar d(f,qn1)
+Pn2(f) = -i hbar d(f,qn2)
+Pn3(f) = -i hbar d(f,qn3)
+
+Le1(f) = Qe2(Pe3(f)) - Qe3(Pe2(f))
+Le2(f) = Qe3(Pe1(f)) - Qe1(Pe3(f))
+Le3(f) = Qe1(Pe2(f)) - Qe2(Pe1(f))
+
+Ln1(f) = Qn2(Pn3(f)) - Qn3(Pn2(f))
+Ln2(f) = Qn3(Pn1(f)) - Qn1(Pn3(f))
+Ln3(f) = Qn1(Pn2(f)) - Qn2(Pn1(f))
+
+-- Jordan p. 162
+
+Q1(f) = Qe1(f) - Qn1(f)
+Q2(f) = Qe2(f) - Qn2(f)
+Q3(f) = Qe3(f) - Qn3(f)
+
+P1(f) = (mn Pe1(f) - me Pn1(f)) / (mn + me)
+P2(f) = (mn Pe2(f) - me Pn2(f)) / (mn + me)
+P3(f) = (mn Pe3(f) - me Pn3(f)) / (mn + me)
+
+-- Jordan p. 231
+
+K1(f) = (Pe1(f) + Pn1(f)) / hbar
+K2(f) = (Pe2(f) + Pn2(f)) / hbar
+K3(f) = (Pe3(f) + Pn3(f)) / hbar
+
+-- Jordan p. 232
+
+J1(f) = (Le1(f) + Ln1(f)) / hbar
+J2(f) = (Le2(f) + Ln2(f)) / hbar
+J3(f) = (Le3(f) + Ln3(f)) / hbar
+
+-- Jordan p. 240
+
+G1(f) = (me Qe1(f) + mn Qn1(f)) / hbar
+G2(f) = (me Qe2(f) + mn Qn2(f)) / hbar
+G3(f) = (me Qe3(f) + mn Qn3(f)) / hbar
+
+R1(f) = G1(f) hbar / (me + mn)
+R2(f) = G2(f) hbar / (me + mn)
+R3(f) = G3(f) hbar / (me + mn)
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+V(f) = R1(R1(f)) + R2(R2(f)) + R3(R3(f))
+
+check(V(G1(psi)) == G1(V(psi)))
+check(V(G2(psi)) == G2(V(psi)))
+check(V(G3(psi)) == G3(V(psi)))
+
+check(not(V(K1(psi)) == K1(V(psi))))
+check(not(V(K2(psi)) == K2(V(psi))))
+check(not(V(K3(psi)) == K3(V(psi))))
+
+check(V(J1(psi)) == J1(V(psi)))
+check(V(J2(psi)) == J2(V(psi)))
+check(V(J3(psi)) == J3(V(psi)))
+
+V(f) = K1(K1(f)) + K2(K2(f)) + K3(K3(f))
+
+check(not(V(G1(psi)) == G1(V(psi))))
+check(not(V(G2(psi)) == G2(V(psi))))
+check(not(V(G3(psi)) == G3(V(psi))))
+
+check(V(K1(psi)) == K1(V(psi)))
+check(V(K2(psi)) == K2(V(psi)))
+check(V(K3(psi)) == K3(V(psi)))
+
+check(V(J1(psi)) == J1(V(psi)))
+check(V(J2(psi)) == J2(V(psi)))
+check(V(J3(psi)) == J3(V(psi)))
+
+V(f) = Q1(Q1(f)) + Q2(Q2(f)) + Q3(Q3(f))
+
+check(V(G1(psi)) == G1(V(psi)))
+check(V(G2(psi)) == G2(V(psi)))
+check(V(G3(psi)) == G3(V(psi)))
+
+check(V(K1(psi)) == K1(V(psi)))
+check(V(K2(psi)) == K2(V(psi)))
+check(V(K3(psi)) == K3(V(psi)))
+
+check(V(J1(psi)) == J1(V(psi)))
+check(V(J2(psi)) == J2(V(psi)))
+check(V(J3(psi)) == J3(V(psi)))
+
+V(f) = P1(P1(f)) + P2(P2(f)) + P3(P3(f))
+
+check(V(G1(psi)) == G1(V(psi)))
+check(V(G2(psi)) == G2(V(psi)))
+check(V(G3(psi)) == G3(V(psi)))
+
+check(V(K1(psi)) == K1(V(psi)))
+check(V(K2(psi)) == K2(V(psi)))
+check(V(K3(psi)) == K3(V(psi)))
+
+check(V(J1(psi)) == J1(V(psi)))
+check(V(J2(psi)) == J2(V(psi)))
+check(V(J3(psi)) == J3(V(psi)))
+
+V(f) = L3(f)
+
+check(not(V(G1(psi)) == G1(V(psi))))
+check(not(V(G2(psi)) == G2(V(psi))))
+check(not(V(G3(psi)) == G3(V(psi))))
+
+check(not(V(K1(psi)) == K1(V(psi))))
+check(not(V(K2(psi)) == K2(V(psi))))
+check(not(V(K3(psi)) == K3(V(psi))))
+
+check(not(V(J1(psi)) == J1(V(psi))))
+check(not(V(J2(psi)) == J2(V(psi))))
+check(not(V(J3(psi)) == J3(V(psi))))
+
+V(f) = Q3(f)
+
+check(V(G1(psi)) == G1(V(psi)))
+check(V(G2(psi)) == G2(V(psi)))
+check(V(G3(psi)) == G3(V(psi)))
+
+check(V(K1(psi)) == K1(V(psi)))
+check(V(K2(psi)) == K2(V(psi)))
+check(V(K3(psi)) == K3(V(psi)))
+
+check(not(V(J1(psi)) == J1(V(psi))))
+check(not(V(J2(psi)) == J2(V(psi))))
+check(V(J3(psi)) == J3(V(psi)))
+
+V(f) = Q1(L1(f)) + Q2(L2(f)) + Q3(L3(f))
+
+check(not(V(G1(psi)) == G1(V(psi))))
+check(not(V(G2(psi)) == G2(V(psi))))
+check(not(V(G3(psi)) == G3(V(psi))))
+
+check(not(V(K1(psi)) == K1(V(psi))))
+check(not(V(K2(psi)) == K2(V(psi))))
+check(not(V(K3(psi)) == K3(V(psi))))
+
+check(not(V(J1(psi)) == J1(V(psi))))
+check(not(V(J2(psi)) == J2(V(psi))))
+check(not(V(J3(psi)) == J3(V(psi))))
+
+V(f) = Q1(R1(f)) + Q2(R2(f)) + Q3(R3(f))
+
+check(V(G1(psi)) == G1(V(psi)))
+check(V(G2(psi)) == G2(V(psi)))
+check(V(G3(psi)) == G3(V(psi)))
+
+check(not(V(K1(psi)) == K1(V(psi))))
+check(not(V(K2(psi)) == K2(V(psi))))
+check(not(V(K3(psi)) == K3(V(psi))))
+
+check(V(J1(psi)) == J1(V(psi)))
+check(V(J2(psi)) == J2(V(psi)))
+check(V(J3(psi)) == J3(V(psi)))
+
+"ok"

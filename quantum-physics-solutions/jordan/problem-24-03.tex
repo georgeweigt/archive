@@ -1,0 +1,149 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-3.
+Let $A_1$, $A_2$, $A_3$ be matrices that represent projections
+of a vector quantity, so $A_1$, $A_2$, $A_3$ and
+$J_1$, $J_2$, $J_3$ satisfy the commutation relations that
+characterize rotations of a vector quantity.
+Write out the commutation relations between
+$A_1$, $A_2$, $A_3$ and $J_1$, $J_2$ that characterize rotations
+of the vector quantity around the 1 and 2 axes.
+Show that
+\begin{equation*}
+{A_1}^2+{A_2}^2+{A_3}^2
+\end{equation*}
+commutes with $J_1$, $J_2$, $J_3$. This shows that the
+square of the magnitude of any vector quantity
+is a scalar quantity.
+}}
+
+\iffalse
+\bigskip
+Commutation relations between $J_1$ and $A_1$, $A_2$, $A_3$.
+\begin{align*}
+(1+i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)A_1(1-i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)
+&=A_1
+\\
+(1+i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)A_2(1-i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)
+&=\left(1-\tfrac{1}{2}\varepsilon^2\right)A_2-\varepsilon A_3
+\\
+(1+i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)A_3(1-i\varepsilon J_1-\tfrac{1}{2}\epsilon^2{J_1}^2)
+&=\varepsilon A_2+\left(1-\tfrac{1}{2}\varepsilon^2\right)A_3
+\end{align*}
+
+Commutation relations between $J_2$ and $A_1$, $A_2$, $A_3$.
+\begin{align*}
+(1+i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)A_1(1-i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)
+&=\varepsilon A_3+\left(1-\tfrac{1}{2}\varepsilon^2\right)A_1
+\\
+(1+i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)A_2(1-i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)
+&=A_2
+\\
+(1+i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)A_3(1-i\varepsilon J_2-\tfrac{1}{2}\epsilon^2{J_2}^2)
+&=\left(1-\tfrac{1}{2}\varepsilon^2\right)A_3-\varepsilon A_1
+\end{align*}
+\fi
+
+\bigskip
+Commutation relations between $J_1$ and $A_1$, $A_2$, $A_3$.
+\begin{align*}
+A_1J_1-J_1A_1&=0
+\\
+A_2J_1-J_1A_2&=-iA_3
+\\
+A_3J_1-J_1A_3&=iA_2
+\end{align*}
+
+Commutation relations between $J_2$ and $A_1$, $A_2$, $A_3$.
+\begin{align*}
+A_1J_2-J_2A_1&=i A_3
+\\
+A_2J_2-J_2A_2&=0
+\\
+A_3J_2-J_2A_3&=-iA_1
+\end{align*}
+
+From the book, commutation relations between $J_3$ and $A_1$, $A_2$, $A_3$.
+\begin{align*}
+A_1J_3-J_3A_1&=-iA_2
+\\
+A_2J_3-J_3A_2&=iA_1
+\\
+A_3J_3-J_3A_3&=0
+\end{align*}
+
+For the commutation of ${A_1}^2+{A_2}^2+{A_3}^2$ we use the identity
+\begin{align*}
+{A_i}^2J_j-J_j{A_i}^2&=A_iA_iJ_j-J_jA_iA_i
+\\
+&=A_iA_iJ_j-A_iJ_jA_i+A_iJ_jA_i-J_jA_iA_i
+\\
+&=A_i(A_iJ_j-J_jA_i)+(A_iJ_j-J_jA_i)A_i
+\end{align*}
+
+For $J_1$ we have
+\begin{align*}
+{A_1}^2J_1-J_1{A_1}^2&=0
+\\
+{A_2}^2J_1-J_1{A_2}^2&=A_2(-iA_3)+(-iA_3)A_2
+\\
+{A_3}^2J_1-J_1{A_3}^2&=A_3(iA_2)+(iA_2)A_3
+\end{align*}
+
+Hence
+\begin{equation*}
+\left({A_1}^2+{A_2}^2+{A_3}^2\right)J_1-J_1\left({A_1}^2+{A_2}^2+{A_3}^2\right)=0
+\end{equation*}
+
+For $J_2$ we have
+\begin{align*}
+{A_1}^2J_2-J_2{A_1}^2&=A_1(iA_3)+(iA_3)A_1
+\\
+{A_2}^2J_2-J_2{A_2}^2&=0
+\\
+{A_3}^2J_2-J_2{A_3}^2&=A_3(-iA_1)+(-iA_1)A_3
+\end{align*}
+
+Hence
+\begin{equation*}
+\left({A_1}^2+{A_2}^2+{A_3}^2\right)J_2-J_2\left({A_1}^2+{A_2}^2+{A_3}^2\right)=0
+\end{equation*}
+
+For $J_3$ we have
+\begin{align*}
+{A_1}^2J_3-J_3{A_1}^2&=A_1(-iA_2)+(-iA_2)A_1
+\\
+{A_2}^2J_3-J_3{A_2}^2&=A_2(iA_1)+(iA_1)A_2
+\\
+{A_3}^2J_3-J_3{A_3}^2&=0
+\end{align*}
+
+Hence
+\begin{equation*}
+\left({A_1}^2+{A_2}^2+{A_3}^2\right)J_3-J_3\left({A_1}^2+{A_2}^2+{A_3}^2\right)=0
+\end{equation*}
+
+Note to myself: For counter-clockwise rotations we have
+\begin{align*}
+R_1&=\begin{pmatrix}1&0&0\\0&\cos\theta&-\sin\theta\\0&\sin\theta&\cos\theta\end{pmatrix}
+\approx\begin{pmatrix}1&0&0\\0&1-\tfrac{1}{2}\theta^2&-\theta\\0&\theta&1-\tfrac{1}{2}\theta^2\end{pmatrix}
+=1-i\theta M_1-\tfrac{1}{2}\theta^2{M_1}^2
+\\
+R_2&=\begin{pmatrix}\cos\theta&0&\sin\theta\\0&1&0\\-\sin\theta&0&\cos\theta\end{pmatrix}
+\approx\begin{pmatrix}1-\tfrac{1}{2}\theta^2&0&\theta\\0&1&0\\-\theta&0&1-\tfrac{1}{2}\theta^2\end{pmatrix}
+=1-i\theta M_2-\tfrac{1}{2}\theta^2{M_2}^2
+\\
+R_3&=\begin{pmatrix}\cos\theta&-\sin\theta&0\\\sin\theta&\cos\theta&0\\0&0&1\end{pmatrix}
+\approx\begin{pmatrix}1-\tfrac{1}{2}\theta^2&-\theta&0\\\theta&1-\tfrac{1}{2}\theta^2&0\\0&0&1\end{pmatrix}
+=1-i\theta M_3-\tfrac{1}{2}\theta^2{M_3}^2
+\end{align*}
+
+where
+\begin{equation*}
+M_1=\begin{pmatrix}0&0&0\\0&0&-i\\0&i&0\end{pmatrix},\quad
+M_2=\begin{pmatrix}0&0&i\\0&0&0\\-i&0&0\end{pmatrix},\quad
+M_3=\begin{pmatrix}0&-i&0\\i&0&0\\0&0&0\end{pmatrix}
+\end{equation*}
+
+\end{document}

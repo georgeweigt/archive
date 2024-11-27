@@ -1,0 +1,28 @@
+"Problem 23-4"
+
+I = ((1,0),(0,1))
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+-- inverse
+
+check(dot(Sigma1,Sigma1) == I)
+check(dot(-Sigma1,-Sigma1) == I)
+
+check(dot(i Sigma2,-i Sigma2) == I)
+check(dot(-i Sigma2,i Sigma2) == I)
+
+check(dot(Sigma3,Sigma3) == I)
+check(dot(-Sigma3,-Sigma3) == I)
+
+-- associativity
+
+M = (Sigma1, -i Sigma2, Sigma3, I, -Sigma1, i Sigma2, -Sigma3, -I)
+
+for(j1,1,8,for(j2,1,8,for(j3,1,8,
+  check(dot(dot(M[j1],M[j2]),M[j3]) == dot(M[j1],dot(M[j2],M[j3])))
+)))
+
+"ok"

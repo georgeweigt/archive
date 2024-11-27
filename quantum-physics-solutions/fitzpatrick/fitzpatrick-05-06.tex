@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+5-6. Two potential wells of width $a$ are separated by a distance $L\gg a$.
+A particle of mass $m$ and energy $E$ is in one of the wells.
+Estimate the time required for the particle to tunnel to the other well.
+}}
+
+\bigskip
+FIXME
+
+\bigskip
+Recall that $|T|^2$ is the transmission probability.
+
+\bigskip
+The particle velocity is
+\begin{equation*}
+v=\sqrt{\frac{2E}{m}}
+\end{equation*}
+
+The tunneling trial frequency is
+\begin{equation*}
+\nu=\frac{v}{2a}
+\end{equation*}
+
+The tunneling process is a geometric distribution with mean
+\begin{equation*}
+\mu=\frac{1}{|T|^2}
+\end{equation*}
+
+Hence the expected tunneling time is
+\begin{equation*}
+\langle t\rangle=\frac{\mu}{\nu}
+=\frac{2a}{v|T|^2}
+=\frac{2a}{|T|^2}\sqrt{\frac{m}{2E}}
+\end{equation*}
+
+The travel time is distance divided by velocity.
+\begin{equation*}
+t=\frac{L}{v}=L\sqrt{\frac{m}{2E}}
+\end{equation*}
+
+The total time is tunnel time plus travel time.
+\begin{equation*}
+\langle t\rangle+t
+=\left(\frac{2a}{|T|^2}+L\right)\sqrt{\frac{m}{2E}}
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,124 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+11-1. An electron in a hydrogen atom occupies the combined spin
+and position state
+\begin{equation*}
+R_{2,1}\left(\sqrt{1/3}Y_{1,0}\chi_+
++\sqrt{2/3}Y_{1,1}\chi_-\right)
+\end{equation*}
+
+(a) What values would a measurement of $L^2$ yield,
+and with what probabilities?
+
+\bigskip
+(b) Same for $L_z$.
+
+\bigskip
+(c) Same for $S^2$.
+
+\bigskip
+(d) Same for $S_z$.
+
+\bigskip
+(e) Same for $J^2$.
+
+\bigskip
+(f) Same for $J_z$.
+
+\bigskip
+(g) What is the probability density for finding the electron at
+$r$, $\theta$, $\phi$?
+
+\bigskip
+(h) What is the probability density for finding the electron in the
+spin up state (with respect to the $z$-axis) at radius $r$?
+}}
+
+\bigskip
+(a) By $L^2Y_{l,m}=l(l+1)\hbar^2Y_{l,m}$ we have
+\begin{align*}
+\Pr\left(L^2=2\hbar^2\cap m=0\right)
+&=\left|\langle Y_{1,0}|\sqrt{1/3}Y_{1,0}+\sqrt{2/3}Y_{1,1}\rangle\right|^2=\tfrac{1}{3}
+\\[1ex]
+\Pr\left(L^2=2\hbar^2\cap m=1\right)
+&=\left|\langle Y_{1,1}|\sqrt{1/3}Y_{1,0}+\sqrt{2/3}Y_{1,1}\rangle\right|^2=\tfrac{2}{3}
+\end{align*}
+
+By total probability
+\begin{equation*}
+\Pr\left(L^2=2\hbar^2\right)=\tfrac{1}{3}+\tfrac{2}{3}=1
+\end{equation*}
+
+(b) By $L_zY_{l,m}=m\hbar Y_{l,m}$ we have
+\begin{align*}
+\Pr\left(L_z=0\right)=\left|\langle Y_{1,0}|\sqrt{1/3}Y_{1,0}+\sqrt{2/3}Y_{1,1}\rangle\right|^2=\tfrac{1}{3}
+\\[1ex]
+\Pr\left(L_z=\hbar\right)=\left|\langle Y_{1,1}|\sqrt{1/3}Y_{1,0}+\sqrt{2/3}Y_{1,1}\rangle\right|^2=\tfrac{2}{3}
+\end{align*}
+
+(c) Recall
+\begin{equation*}
+\chi_\pm\equiv\chi_{s=\tfrac{1}{2},m_s=\pm\tfrac{1}{2}}
+\end{equation*}
+
+and
+\begin{equation*}
+S^2\chi_\pm=s(s+1)\hbar^2=\tfrac{3}{4}\hbar^2\chi_\pm
+\end{equation*}
+
+Hence
+\begin{align*}
+\Pr\left(S^2=\tfrac{3}{4}\hbar^2\cap m_s=+\tfrac{1}{2}\right)
+&=\left|\langle\chi_+|\sqrt{1/3}\chi_++\sqrt{2/3}\chi_-\rangle\right|^2=\tfrac{1}{3}
+\\[1ex]
+\Pr\left(S^2=\tfrac{3}{4}\hbar^2\cap m_s=-\tfrac{1}{2}\right)
+&=\left|\langle\chi_-|\sqrt{1/3}\chi_++\sqrt{2/3}\chi_-\rangle\right|^2=\tfrac{2}{3}
+\end{align*}
+
+By total probability
+\begin{equation*}
+\Pr\left(S^2=\tfrac{3}{4}\hbar^2\right)=\tfrac{1}{3}+\tfrac{2}{3}=1
+\end{equation*}
+
+(d) By
+\begin{equation*}
+S_z\chi_\pm=\pm\tfrac{1}{2}\hbar\chi_\pm
+\end{equation*}
+
+we have
+\begin{align*}
+\Pr\left(S_z=+\tfrac{1}{2}\hbar\right)
+&=\left|\langle\chi_+|\sqrt{1/3}\chi_++\sqrt{2/3}\chi_-\rangle\right|^2=\tfrac{1}{3}
+\\[1ex]
+\Pr\left(S_z=-\tfrac{1}{2}\hbar\right)
+&=\left|\langle\chi_-|\sqrt{1/3}\chi_++\sqrt{2/3}\chi_-\rangle\right|^2=\tfrac{2}{3}
+\end{align*}
+
+(e)
+
+\bigskip
+(f)
+
+\bigskip
+(g)
+\begin{equation*}
+f(r,\theta,\phi)=|R_{21}|^2\left(\tfrac{1}{3}|Y_{1,0}|^2+\tfrac{2}{3}|Y_{1,1}|^2\right)
+\end{equation*}
+
+(h) The joint probability density function is
+\begin{equation*}
+f(r,S_z)=\tfrac{1}{3}|R_{21}|^2I\left(S_z=\tfrac{1}{2}\hbar\right)
++\tfrac{2}{3}|R_{21}|^2I\left(S_z=-\tfrac{1}{2}\hbar\right)
+\end{equation*}
+
+where $I$ is the indicator function.
+
+\bigskip
+Hence the probability density function for finding the electron in the
+spin up state at radius $r$ is
+\begin{equation*}
+f\left(r,\tfrac{1}{2}\hbar\right)=\tfrac{1}{3}|R_{21}|^2
+\end{equation*}
+
+\end{document}

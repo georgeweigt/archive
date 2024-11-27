@@ -1,0 +1,100 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-6. An electron is at rest in an oscillating magnetic field
+\begin{equation*}
+\mathbf B=B_0\cos(\omega t)\,\mathbf e_z,
+\end{equation*}
+
+where $B_0$ and $\omega$ are real positive constants.
+
+\bigskip
+(a) Find the Hamiltonian of the system.
+
+\bigskip
+(b) If the electron starts in the spin-up state with respect to the
+$x$-axis, determine the spinor
+$\chi(t)$ which represents the state of the system in the Pauli
+representation at all subsequent times.
+
+\bigskip
+(c) Find the probability that a measurement of $S_x$ yields the result
+$-\hbar/2$ as a function of time.
+
+\bigskip
+(d) What is the minimum value of $B_0$ required to force a complete
+flip in $S_x$?
+}}
+
+\bigskip
+(a) The Hamiltonian is
+\begin{equation*}
+H=\frac{geB_0\cos(\omega t+\phi)}{2m_e}\,S_z
+\end{equation*}
+
+(b) Let
+\begin{equation*}
+\chi(t)=\begin{pmatrix}c_+(t)\\c_-(t)\end{pmatrix}
+\end{equation*}
+
+By the Schrodinger equation we have
+\begin{equation*}
+i\hbar\frac{\partial}{\partial t}\chi=H\chi
+\end{equation*}
+
+Hence
+\begin{equation*}
+i\hbar
+\begin{pmatrix}\frac{\partial}{\partial t}c_+(t)\\[1ex]\frac{\partial}{\partial t}c_-(t)\end{pmatrix}
+=\frac{geB_0\cos(\omega t+\phi)}{2m_e}
+\frac{\hbar}{2}\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}c_+(t)\\c_-(t)\end{pmatrix}
+\end{equation*}
+
+The solution is
+\begin{align*}
+c_+(t)&=C\exp\left(-\frac{igeB_0\sin(\omega t+\phi)}{4m_e\omega}\right)
+\end{align*}
+
+and
+\begin{align*}
+c_-(t)&=C\exp\left(\frac{igeB_0\sin(\omega t+\phi)}{4m_e\omega}\right)
+\end{align*}
+
+The electron starts out in the spin-up state with respect
+to the $x$-axis hence
+\begin{equation*}
+\chi(0)=\begin{pmatrix}c_+(0)\\c_-(0)\end{pmatrix}
+=\frac{1}{\sqrt2}\begin{pmatrix}1\\1\end{pmatrix}
+\end{equation*}
+
+Hence $C=1/\sqrt2$ and $\phi=0$.
+
+\bigskip
+(c) From the eigenstate
+\begin{equation*}
+x_-=\frac{1}{\sqrt2}\begin{pmatrix}1\\-1\end{pmatrix}
+\end{equation*}
+
+we have
+\begin{equation*}
+\Pr\left(S_x=-\tfrac{\hbar}{2}\right)=\left|\langle x_-|\chi\rangle\right|^2
+=\frac{1}{2}-\frac{1}{2}\cos\left(\frac{geB_0\sin(\omega t)}{2m_e\omega}\right)
+\end{equation*}
+
+(d) The expectation for $S_x$ is
+\begin{equation*}
+\langle S_x\rangle=\langle\chi|S_x|\chi\rangle
+=\frac{\hbar}{2}\cos\left(\frac{geB_0\sin(\omega t)}{2m_e\omega}\right)
+\end{equation*}
+
+As a result of $-1\le\sin(\omega t)\le1$, the cosine is always positive for
+\begin{equation*}
+\frac{geB_0}{2m_e\omega}\le\frac{\pi}{2}
+\end{equation*}
+
+Hence to change the sign of $\langle S_x\rangle$ requires
+\begin{equation*}
+B_0>\frac{\pi m_e\omega}{ge}
+\end{equation*}
+
+\end{document}

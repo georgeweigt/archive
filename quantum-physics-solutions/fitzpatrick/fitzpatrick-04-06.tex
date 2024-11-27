@@ -1,0 +1,115 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-6. $\psi_1(x)$ and $\psi_2(x)$ are normalized eigenfunctions
+corresponding to the same eigenvalue. If
+\begin{equation*}
+\int_{-\infty}^\infty \psi_1^*\psi_2\,dx=c,
+\end{equation*}
+
+where $c$ is real, find normalized combinations of $\psi_1$
+and $\psi_2$ which are orthogonal to
+(a) $\psi_1$, (b) $\psi_1+\psi_2$.
+}}
+
+\bigskip
+Let
+\begin{equation*}
+\psi=a\psi_1+b\psi_2
+\end{equation*}
+
+By the normalization requirement we have
+\begin{align*}
+1&=\int_{-\infty}^\infty\psi^*\psi\,dx
+\\
+&=\int_{-\infty}^\infty
+\bigl(
+(a\psi_1)^*a\psi_1
++(a\psi_1)^*b\psi_2
++(b\psi_2)^*a\psi_1
++(b\psi_2)^*b\psi_2
+\bigr)\,dx
+\\
+&=|a|^2+ca^*b+cb^*a+|b|^2\tag{1}
+\end{align*}
+
+For part (a) we have
+\begin{align*}
+0&=\int_{-\infty}^\infty
+\psi_1^*(a\psi_1+b\psi_2)\,dx
+\\
+&=\int_{-\infty}^\infty
+\bigl(
+a\psi_1^*\psi_1+b\psi_1^*\psi_2
+\bigr)\,dx
+\\
+&=a+bc
+\end{align*}
+
+Hence
+\begin{equation*}
+a=-bc
+\tag{2}
+\end{equation*}
+
+Substitute (2) into (1) to obtain
+\begin{align*}
+1&=|{-bc}|^2+c(-bc)^*b+cb^*(-bc))+|b|^2
+\\
+&=c^2|b|^2-c^2|b|^2-c^2|b|^2+|b|^2
+\\
+&=|b|^2(1-c^2)
+\end{align*}
+
+It follows that
+\begin{equation*}
+b=\frac{e^{i\phi}}{\sqrt{1-c^2}}
+\end{equation*}
+
+where $\phi$ is any real number.
+For $\phi=0$ we have
+\begin{equation*}
+b=\frac{1}{\sqrt{1-c^2}}
+\end{equation*}
+
+For part (b) we have
+\begin{align*}
+0&=\int_{-\infty}^\infty
+(\psi_1+\psi_2)^*(a\psi_1+b\psi_2)\,dx
+\\
+&=\int_{-\infty}^\infty
+\bigl(
+a\psi_1^*\psi_1
++b\psi_1^*\psi_2
++a\psi_2^*\psi_1
++b\psi_2^*\psi_2
+\bigr)\,dx
+\\
+&=a+bc+ac+b
+\end{align*}
+
+Hence
+\begin{equation*}
+a=-b
+\tag{3}
+\end{equation*}
+
+Substitute (3) into (1) to obtain
+\begin{align*}
+1&=|b|^2-c|b|^2-c|b|^2+|b|^2
+\\
+&=2|b|^2(1-c)
+\end{align*}
+
+It follows that
+\begin{equation*}
+b=\frac{e^{i\phi}}{\sqrt{2(1-c)}}
+\end{equation*}
+
+where $\phi$ is any real number.
+For $\phi=0$ we have
+\begin{equation*}
+b=\frac{1}{\sqrt{2(1-c)}}
+\end{equation*}
+
+\end{document}

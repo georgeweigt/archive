@@ -1,0 +1,82 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-5. Suppose that $V(x)$ is complex.
+Obtain an expression for $\partial P(x,t)/\partial t$
+and $d/dt$ $\int P(x,t)\,dx$ for Schrodinger's equation.
+What does this tell us about a complex $V(x)$?
+}}
+
+\bigskip
+This is Schrodinger's equation.
+\begin{equation*}
+i\hbar\frac{\partial\psi}{\partial t}
+=-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}+V(x)\psi
+\tag{4.1}
+\end{equation*}
+
+Evidently
+\begin{equation*}
+P(x,t)=|\psi(x,t)|^2
+\end{equation*}
+
+Hence
+\begin{equation*}
+\frac{\partial}{\partial t}P(x,t)
+=\frac{\partial\psi^*}{\partial t}\psi
++\psi^*\frac{\partial\psi}{\partial t}
+\end{equation*}
+
+By Schrodinger's equation
+\begin{equation*}
+\frac{\partial\psi}{\partial t}
+=\frac{1}{i\hbar}\left(
+-\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}+V(x)\psi
+\right)
+=\frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2}
+-\frac{i}{\hbar}V(x)\psi
+\end{equation*}
+
+It follows that
+\begin{align*}
+\frac{\partial\psi^*}{\partial t}\psi
++\psi^*\frac{\partial\psi}{\partial t}
+&=\left(\frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2}
+-\frac{i}{\hbar}V(x)\psi\right)^*\psi
++\psi^*\left(\frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2}
+-\frac{i}{\hbar}V(x)\psi\right)
+\\
+&=-\frac{i\hbar}{2m}\frac{\partial^2\psi^*}{\partial x^2}\psi
++\frac{i}{\hbar}V^*(x)\psi^*\psi
++\frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2}\psi^*
+-\frac{i}{\hbar}V(x)\psi^*\psi
+\end{align*}
+
+For the second part of the exercise we have
+\begin{multline*}
+\frac{d}{dt}\int P(x,t)\,dx
+=\int\frac{\partial}{\partial t}P(x,t)\,dx
+\\
+{}=\int
+\left(
+-\frac{i\hbar}{2m}\frac{\partial^2\psi^*}{\partial x^2}\psi
++\frac{i}{\hbar}V^*(x)\psi^*\psi
++\frac{i\hbar}{2m}\frac{\partial^2\psi}{\partial x^2}\psi^*
+-\frac{i}{\hbar}V(x)\psi^*\psi
+\right)\,dx\tag{1}
+\end{multline*}
+
+Consider equation (4.11).
+\begin{equation*}
+\frac{d}{dt}\int_{-\infty}^\infty|\psi(x,t|^2\,dx=0
+\tag{4.11}
+\end{equation*}
+
+By (4.11) the $V(x)$ terms in (1) must cancel hence
+\begin{equation*}
+V^*(x)=V(x)
+\end{equation*}
+
+Therefore $V(x)$ is real.
+
+\end{document}

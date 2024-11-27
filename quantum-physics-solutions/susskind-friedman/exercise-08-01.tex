@@ -1,0 +1,36 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 8.1.
+Prove that $\mathbf X$ and $\mathbf D$ are linear operators.
+}}
+
+\bigskip
+We are given
+\begin{align*}
+\mathbf X\psi(x)&=x\psi(x)\tag{8.5}
+\\[1ex]
+\mathbf D\psi(x)&=\frac{d}{dx}\psi(x)\tag{8.6}
+\end{align*}
+
+For operator $\mathbf X$ we have
+\begin{equation*}
+\mathbf X(f+g)=x(f+g)=xf+xg=\mathbf Xf+\mathbf Xg
+\end{equation*}
+and
+\begin{equation*}
+\mathbf X(af)=x(af)=axf=a\mathbf Xf
+\end{equation*}
+
+For operator $\mathbf D$ we have
+\begin{equation*}
+\mathbf D(f+g)=\frac{d(f+g)}{dx}=\frac{df}{dx}+\frac{dg}{dx}=\mathbf Df+\mathbf Dg
+\end{equation*}
+and
+\begin{equation*}
+\mathbf D(af)=\frac{d(af)}{dx}+a\frac{df}{dx}=a\mathbf Df
+\end{equation*}
+
+Therefore $\mathbf X$ and $\mathbf D$ are linear operators.
+
+\end{document}

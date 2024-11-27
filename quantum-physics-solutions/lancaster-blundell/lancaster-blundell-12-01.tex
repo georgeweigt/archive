@@ -1,0 +1,158 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(12.1)
+Fill in the missing steps of the algebra that led to
+eqn 12.6.
+}}
+
+\bigskip
+Consider equations (12.5) and (12.6).
+\begin{equation*}
+\begin{aligned}
+\hat\psi(x)&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}
+\left(\hat a_p\exp(-ip\cdot x)+\hat b_p^\dag\exp(ip\cdot x)\right)
+\\
+\hat\psi(x)^\dag&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}
+\left(\hat a_p^\dag\exp(ip\cdot x)+\hat b_p\exp(-ip\cdot x)\right)
+\end{aligned}
+\tag{12.5}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+N[\hat H]&=\int d^3p\,E_p\left(\hat a_p^\dag\hat a_p+\hat b_p^\dag\hat b_p\right)
+\\
+&=\int d^3p\,E_p\left(\hat n_p^{(a)}+\hat n_p^{(b)}\right)
+\end{aligned}
+\tag{12.6}
+\end{equation*}
+
+The ``missing steps'' are the substitution of (12.5) into the Hamiltonian to obtain (12.6).
+
+\bigskip
+The Hamiltonian density $\mathcal H$ is given by (12.3).
+\begin{equation*}
+\mathcal H=\partial_0\psi^\dag(x)\partial_0\psi(x)+\nabla\psi^\dag(x)\cdot\nabla\psi(x)+m^2\psi^\dag(x)\psi(x)
+\tag{12.3}
+\end{equation*}
+
+From equation (11.24), the Hamiltonian operator is the volume integral of the Hamiltonian density.
+\begin{equation*}
+\hat H=\int d^3x\,\mathcal H
+\end{equation*}
+
+Recall that
+\begin{equation*}
+p\cdot x=E_pt-p_1x_1-p_2x_2-p_3x_3,\quad E_p=+\sqrt{p_1^2+p_2^2+p_3^2+m^2}
+\end{equation*}
+
+Hence (see equation 11.25)
+\begin{equation*}
+\begin{aligned}
+\partial_\mu\hat\psi(x)
+&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}(-ip_\mu)
+\left(\hat a_p\exp(-ip\cdot x)-\hat b_p^\dag\exp(ip\cdot x)\right)
+\\
+\partial_\mu\hat\psi^\dag(x)
+&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}(ip_\mu)
+\left(\hat a_p^\dag\exp(ip\cdot x)-\hat b_p\exp(-ip\cdot x)\right)
+\end{aligned}
+\end{equation*}
+
+It follows that
+\begin{align*}
+\partial_0\psi(x)&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}(-iE_p)
+\left(\hat a_p\exp(-ip\cdot x)-\hat b_p^\dag\exp(ip\cdot x)\right)
+\\
+\partial_0\psi^\dag(x)&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}(iE_p)
+\left(\hat a_p^\dag\exp(ip\cdot x)-\hat b_p\exp(-ip\cdot x)\right)
+\end{align*}
+and
+\begin{align*}
+\nabla\psi(x)&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}
+\begin{pmatrix}
+ip_1\\ip_2\\ip_3
+\end{pmatrix}
+\left(\hat a_p\exp(-ip\cdot x)-\hat b_p^\dag\exp(ip\cdot x)\right)
+\\
+\nabla\psi^\dag(x)&=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_p)^\frac{1}{2}}
+\begin{pmatrix}
+-ip_1\\-ip_2\\-ip_3
+\end{pmatrix}
+\left(\hat a_p^\dag\exp(ip\cdot x)-\hat b_p\exp(-ip\cdot x)\right)
+\end{align*}
+
+Hence
+\begin{align*}
+&\hat H=\int d^3x\,\mathcal H=\frac{1}{(2\pi)^3}\int\frac{d^3x\,d^3p\,d^3q}{(2E_p)^\frac{1}{2}(2E_q)^\frac{1}{2}}
+\bigg[
+(E_pE_q+p_1q_1+p_2q_2+p_3q_3)
+\\
+&{}\times
+\left(\hat a_p^\dag\exp(ip\cdot x)-\hat b_p\exp(-ip\cdot x)\right)
+\left(\hat a_q\exp(-iq\cdot x)-\hat b_q^\dag\exp(iq\cdot x)\right)
+\\
+&{}+m^2
+\left(\hat a_p^\dag\exp(ip\cdot x)+\hat b_p\exp(-ip\cdot x)\right)
+\left(\hat a_q\exp(-iq\cdot x)+\hat b_q^\dag\exp(iq\cdot x)\right)
+\bigg]
+\end{align*}
+
+Rewrite as
+\begin{multline*}
+\hat H=\frac{1}{(2\pi)^3}\int\frac{d^3x\,d^3p\,d^3q}{(2E_p)^\frac{1}{2}(2E_q)^\frac{1}{2}}
+\bigg[(E_pE_q+p_1q_1+p_2q_2+p_3q_3+m^2)(A+D)
+\\
+-(E_pE_q+p_1q_1+p_2q_2+p_3q_3-m^2)(B+C)\bigg]
+\end{multline*}
+where
+\begin{align*}
+A&=\hat a_p^\dag\hat a_q\exp(i(p-q)\cdot x)
+\\
+B&=\hat a_p^\dag\hat b_q^\dag\exp(i(p+q)\cdot x)
+\\
+C&=\hat b_p\hat a_q\exp(-i(p+q)\cdot x)
+\\
+D&=\hat b_p\hat b_q^\dag\exp(-i(p-q)\cdot x)
+\end{align*}
+
+Integrate over $x$ using $\int d^3x\,\exp(ip\cdot x)=(2\pi)^3\delta^{(3)}(p)$ to obtain
+\begin{multline*}
+\hat H
+=\int\frac{d^3p\,d^3q}{(2E_p)^\frac{1}{2}(2E_q)^\frac{1}{2}}
+\bigg[(E_pE_q+p_1q_1+p_2q_2+p_3q_3+m^2)(A'+D')
+\\
+-(E_pE_q+p_1q_1+p_2q_2+p_3q_3-m^2)(B'+C')\bigg]
+\end{multline*}
+where
+\begin{align*}
+A'&=\delta(p_1-q_1)\delta(p_2-q_2)\delta(p_3-q_3)\,\hat a_p^\dag\hat a_q\exp(i(E_p-E_q)t)
+\\
+B'&=\delta(p_1+q_1)\delta(p_2+q_2)\delta(p_3+q_3)\,\hat a_p^\dag\hat b_q^\dag\exp(i(E_p+E_q)t)
+\\
+C'&=\delta(p_1+q_1)\delta(p_2+q_2)\delta(p_3+q_3)\,\hat b_p\hat a_q\exp(-i(E_p+E_q)t)
+\\
+D'&=\delta(p_1-q_1)\delta(p_2-q_2)\delta(p_3-q_3)\,\hat b_p\hat b_q^\dag\exp(-i(E_p-E_q)t)
+\end{align*}
+
+Integrate over $q$ to obtain
+\begin{multline*}
+\hat H=\int\frac{d^3p}{2E_p}
+\bigg[(E_p^2+p_1^2+p_2^2+p_3^2+m^2)
+\left(\hat a_p^\dag\hat a_p+\hat b_p\hat b_p^\dag\right)
+\\
+-(E_p^2-p_1^2-p_2^2-p_3^2-m^2)
+\left(\hat a_p^\dag\hat b_{-p}^\dag\exp(2iE_pt)+\hat b_p\hat a_{-p}\exp(-2iE_pt)\right)\bigg]
+\end{multline*}
+
+Noting that $E_p^2=p_1^2+p_2^2+p_3^2+m^2$ we have
+\begin{equation*}
+\hat H=\int d^3p\,E_p\left(\hat a_p^\dag\hat a_p+\hat b_p\hat b_p^\dag\right)
+\end{equation*}
+
+Apply normal ordering to interchange $b$ and $b^\dag$.
+\begin{equation*}
+N[\hat H]=\int d^3p\,E_p\left(\hat a_p^\dag\hat a_p+\hat b_p^\dag\hat b_p\right)
+\end{equation*}
+
+\end{document}

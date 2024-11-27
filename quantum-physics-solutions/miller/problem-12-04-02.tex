@@ -1,0 +1,34 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+12.4.2
+Suppose an electron is in the spin state
+$|s\rangle=(1/\sqrt2)(|{\uparrow}\rangle+i|{\uparrow}\rangle)$,
+and the electron spin magnetic moment operator can be written as
+$\hat{\boldsymbol\mu}_e=g\mu_B\hat{\boldsymbol\sigma}$.
+What is the expectation value of the electron spin magnetic moment?
+}}
+
+\bigskip
+For
+\begin{equation*}
+|s\rangle=\frac{1}{\sqrt2}\begin{pmatrix}1+i\\0\end{pmatrix}
+\end{equation*}
+
+we have
+\begin{align*}
+\langle s|\hat\sigma_x|s\rangle&=0
+\\
+\langle s|\hat\sigma_y|s\rangle&=0
+\\
+\langle s|\hat\sigma_z|s\rangle&=1
+\end{align*}
+
+Hence the expectation value is
+\begin{equation*}
+\langle\hat{\boldsymbol\mu}_e\rangle
+=g\mu_B\langle s|\hat{\boldsymbol\sigma}|s\rangle
+=g\mu_B\begin{pmatrix}0\\0\\1\end{pmatrix}
+\end{equation*}
+
+\end{document}

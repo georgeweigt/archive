@@ -1,0 +1,28 @@
+"Problem 20-5"
+
+Sigma1 = ((0,1),(1,0))
+Sigma2 = ((0,-i),(i,0))
+Sigma3 = ((1,0),(0,-1))
+
+J1 = 1/2 Sigma1
+J2 = 1/2 Sigma2
+J3 = 1/2 Sigma3
+
+Jsq = dot(J1,J1) + dot(J2,J2) + dot(J3,J3)
+
+Jp = J1 + i J2
+Jm = J1 - i J2
+
+check(Jp = ((0,1),(0,0)))
+check(Jm = ((0,0),(1,0)))
+
+check(dot(Jm,Jp) == ((0,0),(0,1)))
+check(dot(Jp,Jm) == ((1,0),(0,0)))
+
+check(Jsq - dot(J3,J3) - J3 == ((0,0),(0,1)))
+check(Jsq - dot(J3,J3) + J3 == ((1,0),(0,0)))
+
+check(dot(Jm,Jm,Jp,Jp) == 0)
+check(dot(Jp,Jp,Jm,Jm) == 0)
+
+"ok"

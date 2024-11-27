@@ -1,0 +1,79 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-7. Demonstrate that $p=-i\hbar\partial/\partial x$
+is an Hermitian operator.
+Find the Hermitian conjugate of $a=x+ip$.
+}}
+
+\bigskip
+An operator $O$ is Hermitian if
+\begin{equation*}
+\int_{-\infty}^\infty\psi^*(O\psi)\,dx
+=\int_{-\infty}^\infty(O\psi)^*\psi\,dx
+\tag{4.57}
+\end{equation*}
+
+Consider
+\begin{equation*}
+\langle p\rangle=\int_{-\infty}^\infty\psi^*p\psi\,dx
+\end{equation*}
+
+Since $\langle p\rangle$ is real we can complex conjugate the integrand.
+\begin{align*}
+\langle p\rangle
+&=\int_{-\infty}^\infty(\psi^*p\psi)^*\,dx
+\\
+&=\int_{-\infty}^\infty\psi(p\psi)^*\,dx
+\end{align*}
+
+Hence $p$ is Hermitian by (4.57).
+
+\bigskip
+Hermitian conjugate operator $O^\dag$ is defined to be the operator such that
+\begin{equation*}
+\int_{-\infty}^\infty\psi^*(O\psi)\,dx
+=\int_{-\infty}^\infty(O^\dag\psi)^*\psi\,dx
+\tag{4.58}
+\end{equation*}
+
+Consider
+\begin{equation*}
+\langle a\rangle=\int_{-\infty}^\infty\psi^*(x+ip)\psi\,dx
+\end{equation*}
+
+It follows that
+\begin{equation*}
+\langle a\rangle
+=\int_{-\infty}^\infty\psi^*x\psi\,dx
++i\int_{-\infty}^\infty\psi^*p\psi\,dx
+=\langle x\rangle+i\langle p\rangle
+\end{equation*}
+
+Since $\langle x\rangle$ and $\langle p\rangle$ are
+real we can complex conjugate the integrands.
+\begin{equation*}
+\langle a\rangle=\langle x\rangle+i\langle p\rangle
+=\int_{-\infty}^\infty\psi(x\psi)^*\,dx
++i\int_{-\infty}^\infty\psi(p\psi)^*\,dx
+\end{equation*}
+
+Factor $i$ into the integrand.
+\begin{equation*}
+\langle a\rangle
+=\int_{-\infty}^\infty\psi(x\psi)^*\,dx
++\int_{-\infty}^\infty\psi(-ip\psi)^*\,dx
+\end{equation*}
+
+Combine integrands.
+\begin{equation*}
+\langle a\rangle
+=\int_{-\infty}^\infty\psi\bigl((x-ip)\psi\bigr)^*\,dx
+\end{equation*}
+
+By (4.58)
+\begin{equation*}
+a^\dag=x-ip
+\end{equation*}
+
+\end{document}

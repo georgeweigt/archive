@@ -1,0 +1,28 @@
+"Problem 25-1"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+K1(f) = P1(f) / hbar
+K2(f) = P2(f) / hbar
+K3(f) = P3(f) / hbar
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+U(f) = f - i epsilon K2(f) - 1/2 epsilon^2 K2(K2(f))
+V(f) = f + i epsilon K2(f) - 1/2 epsilon^2 K2(K2(f))
+
+psi = Psi(q1,q2,q3)
+
+T = V(L3(U(psi)))
+T = eval(T, epsilon^4, 0, epsilon^3, 0)
+check(T == L3(psi) - epsilon P1(psi))
+
+"ok"

@@ -1,0 +1,65 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-3. Suppose that a spin-1/2 particle has a spin vector which lies
+in the $x$-$z$ plane, making an angle $\theta$ with the $z$-axis.
+Demonstrate that a measurement of $S_z$ yields $\hbar/2$ with probability
+$\cos^2(\theta/2)$, and $-\hbar/2$ with probability $\sin^2(\theta/2)$.
+}}
+
+\bigskip
+For a spin which lies in the $x$-$z$ plane
+making an angle $\theta$ with the $z$-axis we have
+\begin{align*}
+\langle S_x\rangle&=\frac{\hbar}{2}\sin\theta
+\\
+\langle S_y\rangle&=0
+\\
+\langle S_z\rangle&=\frac{\hbar}{2}\cos\theta
+\end{align*}
+
+Let
+\begin{equation*}
+\chi=\begin{pmatrix}c_+\\c_-\end{pmatrix}
+\end{equation*}
+
+Then by
+\begin{equation*}
+\langle S_z\rangle=\frac{\hbar}{2}\chi^\dag
+\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+\chi=\frac{\hbar}{2}\cos\theta
+\end{equation*}
+
+we have
+\begin{equation*}
+|c_+|^2-|c_-|^2=\cos\theta\tag{1}
+\end{equation*}
+
+By normalization we have
+\begin{equation*}
+|c_+|^2+|c_-|^2=1\tag{2}
+\end{equation*}
+
+Add (1) and (2) to obtain
+\begin{equation*}
+2|c_+|^2=\cos\theta+1
+\end{equation*}
+
+Subtract (1) from (2) to obtain
+\begin{equation*}
+2|c_-|^2=1-\cos\theta
+\end{equation*}
+
+Hence the probability of observing $\hbar/2$ is
+\begin{equation*}
+\Pr\left(S_z=+\tfrac{\hbar}{2}\right)=\langle z_+|\chi\rangle
+=|c_+|^2=\frac{\cos\theta+1}{2}=\cos^2(\theta/2)
+\end{equation*}
+
+and the probability of observing $-\hbar/2$ is
+\begin{equation*}
+\Pr\left(S_z=-\tfrac{\hbar}{2}\right)=\langle z_-|\chi\rangle
+=|c_-|^2=\frac{1-\cos\theta}{2}=\sin^2(\theta/2)
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,41 @@
+"Problem 28-1"
+
+"Single particle"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+G1(f) = Q1(f) m / hbar
+G2(f) = Q2(f) m / hbar
+G3(f) = Q3(f) m / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(G1(G2(psi)) == G2(G1(psi)))
+check(G1(G3(psi)) == G3(G1(psi)))
+check(G2(G3(psi)) == G3(G2(psi)))
+
+"ok"
+
+"Two particles"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+G1(f) = (me Qe1(f) + mn Qn1(f)) / hbar
+G2(f) = (me Qe2(f) + mn Qn2(f)) / hbar
+G3(f) = (me Qe3(f) + mn Qn3(f)) / hbar
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+check(G1(G2(psi)) == G2(G1(psi)))
+check(G1(G3(psi)) == G3(G1(psi)))
+check(G2(G3(psi)) == G3(G2(psi)))
+
+"ok"

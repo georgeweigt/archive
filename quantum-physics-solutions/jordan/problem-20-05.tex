@@ -1,0 +1,76 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+20-5.
+For the case where
+\begin{equation*}
+J_1=\tfrac{1}{2}\Sigma_1,\quad
+J_2=\tfrac{1}{2}\Sigma_2,\quad
+J_3=\tfrac{1}{2}\Sigma_3,
+\end{equation*}
+
+write out explicitly the $2\times2$ matrices for
+\begin{gather*}
+J_+,\quad J_-,\quad J_-J_+,\quad J_+J_-,
+\\[1ex]
+J^2-J_3^2-J_3,\quad J^2-J_3^2+J_3
+\end{gather*}
+
+and
+\begin{equation*}
+(J_-)^n(J_+)^n,\quad(J_+)^n(J_-)^n
+\end{equation*}
+
+for $n=2,3,4,\ldots$
+Check that your answers give
+\begin{equation*}
+J_-J_+=J^2-J_3^2-J_3
+\end{equation*}
+
+and
+\begin{equation*}
+J_+J_-=J^2-J_3^2+J_3.
+\end{equation*}
+
+Here $j$ is $\frac{1}{2}$ and $k$ can be either $-\frac{1}{2}$ or $\frac{1}{2}$.
+How big can $n$ and $n'$ be?
+Thus for what value of $n$ do you know the quantities represented by
+$(J_-)^{n+1}(J_+)^{n+1}$ and $(J_+)^{n+1}(J_-)^{n+1}$
+are zero regardless of what $k$ is?
+Do the matrices you found agree with that?
+}}
+
+\bigskip
+\begin{equation*}
+\Sigma_1=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+\Sigma_2=\begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad
+\Sigma_3=\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+\end{equation*}
+
+Hence
+\begin{align*}
+J_+=J_1+iJ_2&=\begin{pmatrix}0&1\\0&0\end{pmatrix}
+\\
+J_-=J_1-iJ_2&=\begin{pmatrix}0&0\\1&0\end{pmatrix}
+\\
+J_-J_+&=\begin{pmatrix}0&0\\0&1\end{pmatrix}
+\\
+J_+J_-&=\begin{pmatrix}1&0\\0&0\end{pmatrix}
+\\
+J^2-J_3^2-J_3&=\begin{pmatrix}0&0\\0&1\end{pmatrix}=J_-J_+
+\\
+J^2-J_3^2+J_3&=\begin{pmatrix}1&0\\0&0\end{pmatrix}=J_+J_-
+\\
+(J_-)^2(J_+)^2&=\begin{pmatrix}0&0\\0&0\end{pmatrix}
+\\
+(J_+)^2(J_-)^2&=\begin{pmatrix}0&0\\0&0\end{pmatrix}
+\end{align*}
+
+For $n\ge3$
+\begin{align*}
+(J_-)^n(J_+)^n=(J_-)^{n-2}(J_-)^2(J_+)^2(J_+)^{n-2}&=\begin{pmatrix}0&0\\0&0\end{pmatrix}
+\\
+(J_+)^n(J_-)^n=(J_+)^{n-2}(J_+)^2(J_-)^2(J_-)^{n-2}&=\begin{pmatrix}0&0\\0&0\end{pmatrix}
+\end{align*}
+
+\end{document}

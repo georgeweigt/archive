@@ -1,0 +1,36 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 9.2.
+Prove Eq.~9.10 by expanding each side and comparing the results.
+}}
+
+\bigskip
+We are given
+\begin{equation*}
+[\mathbf P^2,\mathbf X]
+=\mathbf P[\mathbf P,\mathbf X]+[\mathbf P,\mathbf X]\mathbf P\tag{9.10}
+\end{equation*}
+
+Expanding the commutators in (9.10) we have
+\begin{align*}
+[\mathbf P^2,\mathbf X]
+&=\mathbf P\mathbf P\mathbf X-\mathbf X\mathbf P\mathbf P
+\\[1ex]
+\mathbf P[\mathbf P,\mathbf X]
+&=\mathbf P\mathbf P\mathbf X-\mathbf P\mathbf X\mathbf P
+\\[1ex]
+[\mathbf P,\mathbf X]\mathbf P
+&=\mathbf P\mathbf X\mathbf P-\mathbf X\mathbf P\mathbf P
+\end{align*}
+
+Substitute the expansions back into (9.10) to obtain
+\begin{equation*}
+\mathbf P\mathbf P\mathbf X-\mathbf X\mathbf P\mathbf P
+=\mathbf P\mathbf P\mathbf X-\mathbf P\mathbf X\mathbf P
++\mathbf P\mathbf X\mathbf P-\mathbf X\mathbf P\mathbf P
+\end{equation*}
+
+The $\mathbf P\mathbf X\mathbf P$ cancel and (9.10) is proved.
+
+\end{document}

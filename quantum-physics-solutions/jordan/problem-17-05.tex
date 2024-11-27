@@ -1,0 +1,37 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+17-5.
+Suppose $A$, $B$, and $C$ represent real quantities, and
+\begin{equation*}
+AB-BA=iC.
+\end{equation*}
+
+Show the uncertainty-relation inequalities imply $\langle C\rangle$ is 0
+for any state where the quantity represented by either $A$ or $B$ has a
+definite value.
+}}
+
+\bigskip
+By the inequality on p.~132 we have
+\begin{align*}
+\left[\langle A^2\rangle-\langle A\rangle^2\right]
+\left[\langle B^2\rangle-\langle B\rangle^2\right]
+&\ge\left|\tfrac{1}{2}\langle AB-BA\rangle\right|^2
+\end{align*}
+
+Substitute $iC$ for $AB-BA$ to obtain
+\begin{equation*}
+\left[\langle A^2\rangle-\langle A\rangle^2\right]
+\left[\langle B^2\rangle-\langle B\rangle^2\right]
+\ge\left|\tfrac{i}{2}\langle C\rangle\right|^2\tag{1}
+\end{equation*}
+
+Suppose $A$ has a definite value. Then the variance of $A$ is zero.
+\begin{equation*}
+\langle A^2\rangle-\langle A\rangle^2=0
+\end{equation*}
+
+Hence $\langle C\rangle=0$ by equation (1). Repeat for $B$.
+
+\end{document}

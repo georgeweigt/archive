@@ -1,0 +1,34 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+23-2.
+Write out the multiplication rules for the three matrices
+$U^{-1}\Sigma_jU$ for $j=1,2,3$, and thus
+show they are the same as for the three Pauli
+matrices $\Sigma_j$. Everything that follows from the
+multiplication rules is therefore the same for
+the matrices $U^{-1}\Sigma_jU$ as for the matrices $\Sigma_j$.
+For example, the possible values of the quantities
+the matrices represent are the same.
+}}
+
+\bigskip
+\begin{equation*}
+(\Sigma_j')^2=U^{-1}\Sigma_jUU^{-1}\Sigma_jU=U^{-1}{\Sigma_j}^2U=U^{-1}U=1
+\end{equation*}
+%
+\begin{align*}
+\Sigma_1'\Sigma_2'&=U^{-1}\Sigma_1UU^{-1}\Sigma_2U=U^{-1}\Sigma_1\Sigma_2U=iU^{-1}\Sigma_3U=i\Sigma_3'
+\\
+\Sigma_2'\Sigma_1'&=U^{-1}\Sigma_2UU^{-1}\Sigma_1U=U^{-1}\Sigma_2\Sigma_1U=-iU^{-1}\Sigma_3U=-i\Sigma_3'
+\\[1ex]
+\Sigma_2'\Sigma_3'&=U^{-1}\Sigma_2UU^{-1}\Sigma_3U=U^{-1}\Sigma_2\Sigma_3U=iU^{-1}\Sigma_1U=i\Sigma_1'
+\\
+\Sigma_3'\Sigma_2'&=U^{-1}\Sigma_3UU^{-1}\Sigma_2U=U^{-1}\Sigma_3\Sigma_2U=-iU^{-1}\Sigma_1U=-i\Sigma_1'
+\\[1ex]
+\Sigma_3'\Sigma_1'&=U^{-1}\Sigma_3UU^{-1}\Sigma_1U=U^{-1}\Sigma_3\Sigma_1U=iU^{-1}\Sigma_2U=i\Sigma_2'
+\\
+\Sigma_1'\Sigma_3'&=U^{-1}\Sigma_1UU^{-1}\Sigma_3U=U^{-1}\Sigma_1\Sigma_3U=-iU^{-1}\Sigma_2U=-i\Sigma_2'
+\end{align*}
+
+\end{document}

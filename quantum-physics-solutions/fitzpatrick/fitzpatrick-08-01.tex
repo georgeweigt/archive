@@ -1,0 +1,82 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+8-1. A system is in the state $\psi=Y_{l,m}(\theta,\phi)$.
+Calculate $\langle L_x\rangle$ and $\langle L_x^2\rangle$.
+}}
+
+\bigskip
+From equations (8.36) and (8.37) we have
+\begin{align*}
+(L_x+iL_y)Y_{l,m}&=c_{l,m}^+Y_{l,m+1}
+\\
+(L_x-iL_y)Y_{l,m}&=c_{l,m}^-Y_{l,m-1}
+\end{align*}
+
+Add together to obtain
+\begin{equation*}
+2L_xY_{l,m}=c_{l,m}^+Y_{l,m+1}+c_{l,m}^-Y_{l,m-1}
+\tag{1}
+\end{equation*}
+
+By orthogonality of $Y_{l,m}$ we have
+\begin{align*}
+\langle L_x\rangle&=\oint Y_{lm}L_xY_{lm}\,d\Omega
+\\
+&=\frac{1}{2}\oint Y_{lm}\left(c_{l,m}^+Y_{l,m+1}+c_{l,m}^-Y_{l,m-1}\right)\,d\Omega
+\\
+&=0
+\end{align*}
+
+For $L_x^2$ we need to extend (1) as follows.
+\begin{align*}
+2L_xY_{l,m+1}&=c_{l,m+1}^+Y_{l,m+2}+c_{l,m+1}^-Y_{l,m}
+\\
+2L_xY_{l,m-1}&=c_{l,m-1}^+Y_{l,m}+c_{l,m-1}^-Y_{l,m-2}
+\end{align*}
+
+Then for $L_x^2$ we have
+\begin{multline*}
+L_x^2Y_{l,m}=L_xL_xY_{l,m}
+=\frac{1}{2}L_x\left(c_{l,m}^+Y_{l,m+1}+c_{l,m}^-Y_{l,m-1}\right)
+\\
+{}=\frac{1}{4}\biggl(
+ c_{l,m+1}^+c_{l,m}^+Y_{l,m+2}
++c_{l,m+1}^-c_{l,m}^+Y_{l,m}
+\\
+{}+c_{l,m-1}^+c_{l,m}^-Y_{l,m}
++c_{l,m-1}^-c_{l,m}^-Y_{l,m-2}
+\biggr)
+\end{multline*}
+
+Hence
+\begin{equation*}
+\langle L_x^2\rangle=\oint Y_{l,m}L_x^2Y_{l,m}\,d\Omega=\frac{1}{4}
+\left(c_{l,m+1}^-c_{l,m}^++c_{l,m-1}^+c_{l,m}^-\right)
+\end{equation*}
+
+Then by equations (8.40) and (8.41)
+\begin{align*}
+c_{l,m}^+c_{l,m+1}^-&=(l(l+1)-m(m+1))\hbar^2\tag{8.40}
+\\
+c_{l,m-1}^+c_{l,m}^-&=(l(l+1)-m(m-1))\hbar^2\tag{8.41}
+\end{align*}
+
+we have
+\begin{equation*}
+\langle L_x^2\rangle=\frac{1}{2}\left(l(l+1)-m^2\right)\hbar^2
+\end{equation*}
+
+Note that
+\begin{multline*}
+\langle L_x^2\rangle+\langle L_y^2\rangle+\langle L_z^2\rangle
+=\frac{1}{2}\left(l(l+1)-m^2\right)\hbar^2
++\frac{1}{2}\left(l(l+1)-m^2\right)\hbar^2
++m^2\hbar^2
+\\
+{}=l(l+1)\hbar^2
+\end{multline*}
+
+as expected.
+
+\end{document}

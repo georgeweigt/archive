@@ -1,0 +1,53 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+17-1.
+Find
+\begin{gather*}
+\left\langle(\Sigma_1-\langle\Sigma_1\rangle)^2\right\rangle,
+\\
+\left\langle(\Sigma_2-\langle\Sigma_2\rangle)^2\right\rangle,
+\end{gather*}
+
+and
+\begin{equation*}
+\left\langle(\Sigma_3-\langle\Sigma_3\rangle)^2\right\rangle
+\end{equation*}
+
+for a state where the quantity represented by $\Sigma_3$ has
+the definite value 1.
+}}
+
+\bigskip
+If $\Sigma_3$ has the definite value 1 then $\langle\Sigma_3\rangle=1$ and by
+\begin{equation*}
+\langle\Sigma_1\rangle^2+\langle\Sigma_2\rangle^2+\langle\Sigma_3\rangle^2\le1
+\end{equation*}
+
+we have
+\begin{equation*}
+\langle\Sigma_2\rangle=0,\quad\langle\Sigma_3\rangle=0
+\end{equation*}
+
+Hence
+\begin{align*}
+\left\langle(\Sigma_1-\langle\Sigma_1\rangle)^2\right\rangle
+&=\left\langle\Sigma_1^2\right\rangle=1
+\\
+\left\langle(\Sigma_2-\langle\Sigma_2\rangle)^2\right\rangle
+&=\left\langle\Sigma_2^2\right\rangle=1
+\end{align*}
+
+and
+\begin{align*}
+\left\langle(\Sigma_3-\langle\Sigma_3\rangle)^2\right\rangle
+&=\left\langle(\Sigma_3-1)^2\right\rangle
+\\
+&=\left\langle\Sigma_3^2-2\Sigma_3+1\right\rangle
+\\
+&=2-2\langle\Sigma_3\rangle
+\\
+&=0
+\end{align*}
+
+\end{document}

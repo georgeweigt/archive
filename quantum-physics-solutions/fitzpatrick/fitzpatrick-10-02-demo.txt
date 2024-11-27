@@ -1,0 +1,27 @@
+"Verify eigenstates for Sx and Sy"
+
+xp = sqrt(1/2) exp(i phi) (1,1)
+xm = sqrt(1/2) exp(i phi) (1,-1)
+
+yp = sqrt(1/2) exp(i phi) (1,i)
+ym = sqrt(1/2) exp(i phi) (1,-i)
+
+check(dot(conj(xp),xp) == 1)
+check(dot(conj(xm),xm) == 1)
+
+check(dot(conj(yp),yp) == 1)
+check(dot(conj(ym),ym) == 1)
+
+Sx = hbar / 2 sigmax
+Sy = hbar / 2 sigmay
+
+sigmax = ((0,1),(1,0))
+sigmay = ((0,-i),(i,0))
+
+check(dot(Sx,xp) == hbar / 2 xp)
+check(dot(Sx,xm) == -hbar / 2 xm)
+
+check(dot(Sy,yp) == hbar / 2 yp)
+check(dot(Sy,ym) == -hbar / 2 ym)
+
+"ok"

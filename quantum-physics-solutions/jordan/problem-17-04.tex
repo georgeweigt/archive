@@ -1,0 +1,46 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+17-4.
+Suppose $A$ represents a real quantity.
+Then $\langle(A-\langle A\rangle)^2\rangle$ is real and non-negative.
+Show this implies
+\begin{equation*}
+\langle A^2\rangle\ge\langle A\rangle^2.
+\end{equation*}
+
+Show that if $\langle A^2\rangle$ is 0, then $\langle A\rangle$ is 0 and
+$\langle(A-\langle A\rangle)^2\rangle$ is 0, which means the quantity
+represented by $A$ has the definite value 0.
+}}
+
+\bigskip
+Recall that
+\begin{equation*}
+\langle(A-\langle A\rangle)^2\rangle=\langle A^2\rangle-\langle A\rangle^2
+\end{equation*}
+
+Hence if $\langle(A-\langle A\rangle)^2\rangle$ is non-negative then
+$\langle A^2\rangle-\langle A\rangle^2$ is also non-negative.
+\begin{equation*}
+\langle A^2\rangle-\langle A\rangle^2\ge0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle A^2\rangle\ge\langle A\rangle^2\tag{1}
+\end{equation*}
+
+Since $A$ represents a real quantity then $\langle A\rangle^2$ is a non-negative quantity.
+\begin{equation*}
+\langle A\rangle^2\ge0\tag{2}
+\end{equation*}
+
+If $\langle A^2\rangle=0$ then by (1) and (2)
+\begin{equation*}
+0\ge\langle A\rangle^2\ge0
+\end{equation*}
+
+Hence $\langle A\rangle^2=0$ and $\langle(A-\langle A\rangle)^2\rangle=0$.
+
+\end{document}

@@ -1,0 +1,60 @@
+"Problem 11.1.1"
+
+C = (kappa - i k) / (2 kappa) F exp(i k L + kappa L)
+D = (kappa + i k) / (2 kappa) F exp(i k L - kappa L)
+
+A = (i k - kappa) / (2 i k) C + (i k + kappa) / (2 i k) D
+B = (-i k - kappa) / (-2 i k) C + (-i k + kappa) / (-2 i k) D
+
+psiL = A exp(i k z) + B exp(-i k z)
+psiB = C exp(-kappa z) + D exp(kappa z)
+psiR = F exp(i k z)
+
+-- check
+
+check(eval(psiB,z,L) == eval(psiR,z,L))
+check(eval(d(psiB,z),z,L) == eval(d(psiR,z),z,L))
+
+check(eval(psiL,z,0) == eval(psiB,z,0))
+check(eval(d(psiL,z),z,0) == eval(d(psiB,z),z,0))
+
+A = (i k - kappa) / (2 i k) C
+check(A ==
+(i k - kappa) (kappa - i k) / (4 i k kappa) F exp(i k L + kappa L))
+
+R = A / F -- to cancel F
+eta = 1 / (R conj(R))
+check(eta == 16 k^2 kappa^2 exp(-2 kappa L) / (k^2 + kappa^2)^2)
+
+C2 = C conj(C)
+D2 = D conj(D)
+check(C2 / D2 == exp(4 kappa L))
+
+"ok"
+
+-- example
+
+e = 1.602176634 10^(-19) coulomb     -- elementary charge
+h = 6.62607015 10^(-34) joule second -- Planck constant
+hbar = h / float(2 pi)               -- reduced Planck constant
+me = 9.1093837015 10^(-31) kilogram  -- electron mass
+mp = 1.67262192369 10^(-27) kilogram -- proton mass
+
+electronvolt = e joule / coulomb
+joule = kilogram meter^2 / second^2
+kilogram = "kilogram"
+meter = "meter"
+second = "second"
+
+mo = me
+L = 10^(-9) meter
+E = 1 electronvolt
+V = 1.5 electronvolt
+
+k = sqrt(2 mo E / hbar^2)
+kappa = sqrt(2 mo (V - E) / hbar^2)
+
+exp(2 kappa L)
+
+eta = 16 k^2 kappa^2 exp(-2 kappa L) / (k^2 + kappa^2)^2
+eta

@@ -1,0 +1,55 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+17-6.
+Suppose $K$ and $L$ represent real quantities.
+Show
+\begin{equation*}
+\langle K^2\rangle\langle L^2\rangle
+\ge\left|\tfrac{1}{2}\langle KL+LK\rangle\right|^2
+\end{equation*}
+
+for any state. This implies $\langle KL+LK\rangle$ is 0
+if either $\langle K^2\rangle$ or $\langle L^2\rangle$ is 0.
+}}
+
+\bigskip
+From p.~131
+\begin{equation*}
+\langle K^2\rangle\langle L^2\rangle
+\ge|\langle KL\rangle|^2
+\tag{1}
+\end{equation*}
+
+Write $\langle KL\rangle$ as
+\begin{equation*}
+\langle KL\rangle=i(-i)\tfrac{1}{2}\langle KL+LK\rangle+\tfrac{1}{2}\langle KL-LK\rangle
+\end{equation*}
+
+Note that for real numbers $x$ and $y$
+\begin{equation*}
+|x+iy|^2=x^2+y^2\ge y^2,\quad y^2=|iy|^2
+\end{equation*}
+
+Hence for
+\begin{equation*}
+y=(-i)\tfrac{1}{2}\langle KL+LK\rangle
+\end{equation*}
+
+we have
+\begin{equation*}
+|\langle KL\rangle|^2\ge|iy|^2,\quad|iy|^2=\left|\tfrac{1}{2}\langle KL+LK\rangle\right|^2
+\end{equation*}
+
+Combine with (1) to obtain
+\begin{equation*}
+\langle K^2\rangle\langle L^2\rangle\ge|\langle KL\rangle|^2
+\ge\left|\tfrac{1}{2}\langle KL+LK\rangle\right|^2
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle K^2\rangle\langle L^2\rangle\ge\left|\tfrac{1}{2}\langle KL+LK\rangle\right|^2
+\end{equation*}
+
+\end{document}

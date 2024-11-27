@@ -1,0 +1,68 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-7.
+Let $A_1$, $A_2$, $A_3$ be matrices that represent a vector
+quantity, so with $J_1$, $J_2$, $J_3$ they satisfy the
+commutation relations that characterize rotations
+of a vector quantity. For example, $A_1$, $A_2$,
+$A_3$ could be matrices $Q_1$, $Q_2$, $Q_3$ representing
+position coordinates. Let
+\begin{align*}
+U&=\left(1+i\varepsilon J_2-\tfrac{1}{2}\varepsilon^2{J_2}^2\right)
+\left(1+i\varepsilon J_1-\tfrac{1}{2}\varepsilon^2{J_1}^2\right)
+\\&\qquad{}\times
+\left(1-i\varepsilon J_2-\tfrac{1}{2}\varepsilon^2{J_2}^2\right)
+\left(1-i\varepsilon J_1-\tfrac{1}{2}\varepsilon^2{J_1}^2\right),
+\\[1ex]
+N&=\left(1+i\varepsilon M_2-\tfrac{1}{2}\varepsilon^2{M_2}^2\right)
+\left(1+i\varepsilon M_1-\tfrac{1}{2}\varepsilon^2{M_1}^2\right)
+\\&\qquad\times
+\left(1-i\varepsilon M_2-\tfrac{1}{2}\varepsilon^2{M_2}^2\right)
+\left(1-i\varepsilon M_1-\tfrac{1}{2}\varepsilon^2{M_1}^2\right)
+\end{align*}
+
+and
+\begin{equation*}
+X=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}.
+\end{equation*}
+
+Consider the single-column matrix $NX$
+obtained multiplying the single-column
+matrix $X$ with the $3\times3$ matrix $N$. Show that
+the formulas for $U^{-1}A_1U$, $U^{-1}A_2U$, $U^{-1}A_3U$ in
+terms of $A_1$, $A_2$, $A_3$ and $\varepsilon$ are the same as the
+formulas for the three elements of $NX$ in
+terms of $x_1$, $x_2$, $x_3$ and $\varepsilon$. You do not need to
+write out the complete formulas to see they
+are the same. This shows why the order of the
+factors in $U$ and $N$ is the same rather than
+opposite, even though they are used so differently
+that the factors enter $U$ in succession
+from left to right and $N$ from right to left.
+}}
+
+\bigskip
+We have
+\begin{align*}
+U^{-1}A_1U&=A_1+\varepsilon^2 A_2
+\\
+U^{-1}A_2U&=A_2-\varepsilon^2 A_1
+\\
+U^{-1}A_3U&=A_3
+\end{align*}
+
+and
+\begin{equation*}
+NX=\begin{pmatrix}
+x_1+\varepsilon^2 x_2
+\\
+x_2-\varepsilon^2 x_1
+\\
+x_3
+\end{pmatrix}
+\end{equation*}
+
+FIXME Solved using brute force, but what is the trick?
+
+\end{document}

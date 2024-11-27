@@ -1,0 +1,93 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(37.3)
+{\it A one-line derivation of the Dirac equation.}
+
+\bigskip
+(a) Given that the left- and right-handed parts of
+the Dirac spinor for a fermion at rest are identical,
+explain why we may write $(\gamma^0-1)u(p^0)=0$.
+
+\bigskip
+(b) Prove that $e^{i\mathbf K\cdot\boldsymbol\phi}
+\gamma^0e^{-i\mathbf K\cdot\boldsymbol\phi}=\slashed p/m$.
+
+\bigskip
+(c) Use the result in (b) to boost
+\begin{equation*}
+(\gamma^0-1)u(p^0)=0
+\end{equation*}
+and show that you recover the Dirac equation.
+}}
+
+\bigskip
+(a) Consider equation (36.29).
+\begin{equation*}
+u(p^0)\equiv\begin{pmatrix}u_L(p^0)\\u_R(p^0)\end{pmatrix}
+=\sqrt m\begin{pmatrix}\xi\\\xi\end{pmatrix}
+\tag{36.29}
+\end{equation*}
+
+It follows that
+\begin{equation*}
+\gamma^0u(p^0)=\sqrt m\begin{pmatrix}0&I\\I&0\end{pmatrix}\begin{pmatrix}\xi\\ \xi\end{pmatrix}
+=\sqrt m\begin{pmatrix}\xi\\ \xi\end{pmatrix}=u(p^0)
+\end{equation*}
+
+Hence
+\begin{equation*}
+(\gamma^0-1)u(p^0)=u(p^0)-u(p^0)=0
+\end{equation*}
+
+(b) Let $\exp(-i\mathbf K\cdot\boldsymbol\sigma)$ be the negative boost such that
+\begin{equation*}
+\exp(-i\mathbf K\cdot\boldsymbol\sigma)u(p)=u(p^0)
+\tag{1}
+\end{equation*}
+
+Trivially we have
+\begin{equation*}
+\exp(i\mathbf K\cdot\boldsymbol\sigma)\exp(-i\mathbf K\cdot\boldsymbol\sigma)u(p)=u(p)
+\tag{2}
+\end{equation*}
+
+Combine (1) and (2) with the result from part (a) to obtain
+\begin{equation*}
+\exp(i\mathbf K\cdot\boldsymbol\sigma)\gamma^0\exp(-i\mathbf K\cdot\boldsymbol\sigma)u(p)=u(p)
+\tag{3}
+\end{equation*}
+
+Substitute (3) into the Dirac equation $\slashed pu(p)=mu(p)$ to obtain
+\begin{equation*}
+\slashed pu(p)=m\exp(i\mathbf K\cdot\boldsymbol\sigma)\gamma^0\exp(-i\mathbf K\cdot\boldsymbol\sigma)u(p)
+\end{equation*}
+
+Divide through by $m$ and cancel $u(p)$ to obtain
+\begin{equation*}
+\slashed p/m=\exp(i\mathbf K\cdot\boldsymbol\sigma)\gamma^0\exp(-i\mathbf K\cdot\boldsymbol\sigma)
+\end{equation*}
+
+(c) Boost $(\gamma^0-1)u(p^0)=0$.
+\begin{equation*}
+\exp(i\mathbf K\cdot\boldsymbol\phi)(\gamma^0-1)u(p^0)
+=\exp(i\mathbf K\cdot\boldsymbol\phi)\gamma^0u(p^0)-u(p)=0
+\tag{4}
+\end{equation*}
+
+Substitute (1) into (4) to obtain
+\begin{equation*}
+\exp(i\mathbf K\cdot\boldsymbol\phi)\gamma^0\exp(-i\mathbf K\cdot\boldsymbol\phi)u(p)-u(p)=0
+\end{equation*}
+
+Then by the result from part (b) we have
+\begin{equation*}
+m^{-1}\slashed pu(p)-u(p)=0
+\end{equation*}
+
+Multiply through by $m$ to obtain the Dirac equation.
+\begin{equation*}
+(\slashed p-m)u(p)=0
+\end{equation*}
+
+\end{document}

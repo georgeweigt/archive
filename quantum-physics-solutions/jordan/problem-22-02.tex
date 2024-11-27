@@ -1,0 +1,212 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+22-2.
+Show that
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)({P_1}^2+{P_2}^2+{P_3}^2)
+\\
+{}-({P_1}^2+{P_2}^2+{P_3}^2)(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=i\hbar4({P_1}^2+{P_2}^2+{P_3}^2).
+\end{multline*}
+
+Use the facts that $R^{-1}$ commutes with $Q_1$, $Q_2$, $Q_3$ and that
+\begin{equation*}
+P_jR^{-1}-R^{-1}P_j=i\hbar Q_j(R^3)^{-1}
+\end{equation*}
+
+for $j=1,2,3$ to show that
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)R^{-1}
+\\
+{}-R^{-1}(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+=i\hbar2R^{-1}.
+\end{multline*}
+
+Use these to show that
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)H
+\\
+{}-H(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=i\hbar2\left[\frac{1}{m}({P_1}^2+{P_2}^2+{P_3}^2)-Ze^2R^{-1}\right].
+\end{multline*}
+
+Use that and the result of Problem 17-5 to find
+\begin{equation*}
+\frac{1}{2m}\langle {P_1}^2+{P_2}^2+{P_3}^2\rangle,\quad
+-Ze^2\langle R^{-1}\rangle
+\end{equation*}
+
+and
+\begin{equation*}
+\langle {P_1}^2+{P_2}^2+{P_3}^2\rangle,\quad
+\langle R^{-1}\rangle
+\end{equation*}
+
+for each state where the energy has a value $\varepsilon_n$.
+Compare the answers with $\langle R\rangle$ found in the
+last problem and with the radius and momentum
+of the Bohr orbit found in Problem 19-1.
+The difference between $1/\langle R^{-1}\rangle$ and $\langle R\rangle$ when
+$n$ is 1 shows there are substantial probabilities
+distributed over a range of possible values of
+the radius that is fairly large compared to $\langle R\rangle$.
+}}
+
+\bigskip
+For the first part we have
+\begin{align*}
+(Q_jP_j){P_j}^2-{P_j}^2(Q_jP_j)
+&=Q_jP_jP_jP_j-P_jP_jQ_jP_j
+\\
+&=Q_jP_jP_jP_j-P_j(Q_jP_j-i\hbar)P_j
+\\
+&=Q_jP_jP_jP_j-P_jQ_jP_jP_j+i\hbar P_jP_j
+\\
+&=2i\hbar P_jP_j
+\end{align*}
+
+and
+\begin{align*}
+(P_jQ_j){P_j}^2-{P_j}^2(P_jQ_j)
+&=P_jQ_jP_jP_j-P_jP_jP_jQ_j
+\\
+&=P_j(i\hbar+P_jQ_j)P_j-P_jP_jP_jQ_j
+\\
+&=i\hbar P_jP_j+P_jP_jQ_jP_j-P_jP_jP_jQ_j
+\\
+&=2i\hbar P_jP_j
+\end{align*}
+
+All other cross terms vanish by commutation.
+Sum for $j=1,2,3$ to obtain
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)({P_1}^2+{P_2}^2+{P_3}^2)
+\\
+{}-({P_1}^2+{P_2}^2+{P_3}^2)(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=4i\hbar{P_1}^2+4i\hbar{P_2}^2+4i\hbar{P_3}^2
+\end{multline*}
+
+For the second part we have
+\begin{align*}
+(Q_jP_j)R^{-1}-R^{-1}(Q_jP_j)
+&=Q_jP_jR^{-1}-Q_jR^{-1}P_j
+\\
+&=i\hbar Q_j^2(R^3)^{-1}
+\end{align*}
+
+and
+\begin{align*}
+(P_jQ_j)R^{-1}-R^{-1}(P_jQ_j)
+&=P_jR^{-1}Q_j-R^{-1}P_jQ_j
+\\
+&=i\hbar Q_j^2(R^3)^{-1}
+\end{align*}
+
+Sum for $j=1,2,3$ to obtain
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)R^{-1}
+\\
+{}-R^{-1}(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=2i\hbar(Q_1^2+Q_2^2+Q_3^2)(R^3)^{-1}=2i\hbar R^2(R^3)^{-1}=2i\hbar R^{-1}
+\end{multline*}
+
+For the third part we have
+\begin{equation*}
+H=\frac{1}{2m}\left({P_1}^2+{P_2}^2+{P_3}^2\right)-Ze^2R^{-1}
+\end{equation*}
+
+Hence the result is $1/(2m)$ times the first part plus $-Ze^2$ times the second part.
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)H
+\\
+{}-H(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=\frac{1}{2m}\left(4i\hbar{P_1}^2+4i\hbar{P_2}^2+4i\hbar{P_3}^2\right)
+-Ze^2\left(2i\hbar R^{-1}\right)
+\end{multline*}
+
+Factor $2i\hbar$ to obtain
+\begin{multline*}
+(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)H
+\\
+{}-H(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)
+\\
+{}=2i\hbar\left[\frac{1}{m}\left({P_1}^2+{P_2}^2+{P_3}^2\right)-Ze^2R^{-1}\right]
+\end{multline*}
+
+For a definite energy $\varepsilon_n$ the Hamiltonian matrix $H$ represents a definite value.
+Then by problem 17-5 we have
+\begin{multline*}
+\langle(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)H
+\\
+{}-H(Q_1P_1+P_1Q_1+Q_2P_2+P_2Q_2+Q_3P_3+P_3Q_3)\rangle=0
+\end{multline*}
+
+Hence for a definite energy value
+\begin{equation*}
+\frac{1}{m}\left({P_1}^2+{P_2}^2+{P_3}^2\right)-Ze^2R^{-1}=0
+\end{equation*}
+
+For energy
+\begin{equation*}
+\varepsilon_n
+=-\frac{m(Ze^2)^2}{2\hbar^2n^2}
+=-\tfrac{1}{2}Ze^2\langle R^{-1}\rangle
+\end{equation*}
+
+we have
+\begin{equation*}
+\frac{1}{2m}\langle{P_1}^2+{P_2}^2+{P_3}^2\rangle=-\varepsilon_n
+\end{equation*}
+
+and
+\begin{equation*}
+-Ze^2\langle R^{-1}\rangle=2\varepsilon_n
+\end{equation*}
+
+We also have
+\begin{equation*}
+\langle{P_1}^2+{P_2}^2+{P_3}^2\rangle=\frac{m^2(Ze^2)^2}{\hbar^2n^2}
+\end{equation*}
+
+and
+\begin{equation*}
+\langle R^{-1}\rangle=\frac{mZe^2}{\hbar^2n^2}
+\end{equation*}
+
+From problem 19-1
+\begin{equation*}
+r=\frac{\hbar^2n^2}{mZe^2}
+\end{equation*}
+
+and
+\begin{equation*}
+p=\frac{mZe^2}{\hbar n}
+\end{equation*}
+
+It follows that
+\begin{equation*}
+r=\frac{1}{\langle R^{-1}\rangle}
+\end{equation*}
+
+and
+\begin{equation*}
+p^2=\langle{P_1}^2+{P_2}^2+{P_3}^2\rangle
+\end{equation*}
+
+From problem 22-1
+\begin{equation*}
+\langle R\rangle=\frac{3}{2}\frac{\hbar^2}{mZe^2}
+\end{equation*}
+
+Hence for $n=1$ we have
+\begin{equation*}
+\frac{1}{\langle R^{-1}\rangle}=\tfrac{2}{3}\langle R\rangle
+\end{equation*}
+
+\end{document}

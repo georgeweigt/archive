@@ -1,0 +1,32 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-5. Consider a spin-1/2 system represented by the normalized spinor
+\begin{equation*}
+\chi=\begin{pmatrix}\cos\alpha\\\sin\alpha\exp(i\beta)\end{pmatrix}
+\end{equation*}
+
+in the Pauli representation, where $\alpha$ and $\beta$ are real.
+What is the probability that a measurement of $S_y$ yields $-\hbar/2$?
+}}
+
+\bigskip
+The spin-1/2 eigenstates are
+\begin{align*}
+|x_+\rangle&=\tfrac{1}{\sqrt2}(1,1) &
+|y_+\rangle&=\tfrac{1}{\sqrt2}(1,i) &
+|z_+\rangle&=(1,0)
+\\
+|x_-\rangle&=\tfrac{1}{\sqrt2}(1,-1) &
+|y_-\rangle&=\tfrac{1}{\sqrt2}(1,-i) &
+|z_-\rangle&=(0,1)
+\end{align*}
+
+Hence
+\begin{equation*}
+\Pr\left(S_y=-\tfrac{\hbar}{2}\right)
+=|\langle y_-|\chi\rangle|^2
+=\tfrac{1}{2}-\tfrac{1}{2}\sin(2\alpha)\sin\beta
+\end{equation*}
+
+\end{document}

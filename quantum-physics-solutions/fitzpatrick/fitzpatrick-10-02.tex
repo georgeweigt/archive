@@ -1,0 +1,77 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-2. Find the Pauli representations of the normalized eigenstates
+of $S_x$ and $S_y$ for a spin-1/2 particle.
+}}
+
+\bigskip
+Let $x_+$ and $x_-$ be the eigenstates of $S_x$. Then
+\begin{equation*}
+S_xx_+=\frac{\hbar}{2}x_+
+\tag{1}
+\end{equation*}
+
+and
+\begin{equation*}
+S_xx_-=-\frac{\hbar}{2}x_-
+\tag{2}
+\end{equation*}
+
+By (1) we have
+\begin{equation*}
+x_+=\begin{pmatrix}c_+\\c_-\end{pmatrix}=\begin{pmatrix}c_-\\c_+\end{pmatrix}
+\end{equation*}
+
+Hence $c_+=c_-$ and
+by the normalization requirement $|c_+|^2+|c_-|^2=1$ we have
+\begin{equation*}
+x_+=\frac{1}{\sqrt2}\begin{pmatrix}1\\1\end{pmatrix}
+\end{equation*}
+
+By (2) we have
+\begin{equation*}
+x_-=\begin{pmatrix}c_+\\c_-\end{pmatrix}=-\begin{pmatrix}c_-\\c_+\end{pmatrix}
+\end{equation*}
+
+Hence $c_-=-c_+$ and
+by the normalization requirement $|c_+|^2+|c_-|^2=1$ we have
+\begin{equation*}
+x_-=\frac{1}{\sqrt2}\begin{pmatrix}1\\-1\end{pmatrix}
+\end{equation*}
+
+Let $y_+$ and $y_-$ be the eigenstates of $S_y$. Then
+\begin{equation*}
+S_yy_+=\frac{\hbar}{2}y_+
+\tag{3}
+\end{equation*}
+
+and
+\begin{equation*}
+S_yy_-=-\frac{\hbar}{2}y_-
+\tag{4}
+\end{equation*}
+
+By (3) we have
+\begin{equation*}
+y_+=\begin{pmatrix}c_+\\c_-\end{pmatrix}=\begin{pmatrix}-ic_-\\ic_+\end{pmatrix}
+\end{equation*}
+
+Hence $c_-=ic_+$ and
+by the normalization requirement $|c_+|^2+|c_-|^2=1$ we have
+\begin{equation*}
+y_+=\frac{1}{\sqrt2}\begin{pmatrix}1\\i\end{pmatrix}
+\end{equation*}
+
+By (4) we have
+\begin{equation*}
+y_-=\begin{pmatrix}c_+\\c_-\end{pmatrix}=-\begin{pmatrix}-ic_-\\ic_+\end{pmatrix}
+\end{equation*}
+
+Hence $c_-=-ic_+$ and
+by the normalization requirement $|c_+|^2+|c_-|^2=1$ we have
+\begin{equation*}
+y_-=\frac{1}{\sqrt2}\begin{pmatrix}1\\-i\end{pmatrix}
+\end{equation*}
+
+\end{document}

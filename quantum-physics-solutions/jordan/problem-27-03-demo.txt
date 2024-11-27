@@ -1,0 +1,58 @@
+"Problem 27-3"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+Q1(f) = Qe1(f) - Qn1(f)
+Q2(f) = Qe2(f) - Qn2(f)
+Q3(f) = Qe3(f) - Qn3(f)
+
+Pe1(f) = -i hbar d(f,qe1)
+Pe2(f) = -i hbar d(f,qe2)
+Pe3(f) = -i hbar d(f,qe3)
+
+Pn1(f) = -i hbar d(f,qn1)
+Pn2(f) = -i hbar d(f,qn2)
+Pn3(f) = -i hbar d(f,qn3)
+
+P1(f) = mn / (mn + me) Pe1(f) - me / (mn + me) Pn1(f)
+P2(f) = mn / (mn + me) Pe2(f) - me / (mn + me) Pn2(f)
+P3(f) = mn / (mn + me) Pe3(f) - me / (mn + me) Pn3(f)
+
+R1(f) = me / (mn + me) Qe1(f) + mn / (mn + me) Qn1(f)
+R2(f) = me / (mn + me) Qe2(f) + mn / (mn + me) Qn2(f)
+R3(f) = me / (mn + me) Qe3(f) + mn / (mn + me) Qn3(f)
+
+Le1(f) = Qe2(Pe3(f)) - Qe3(Pe2(f))
+Le2(f) = Qe3(Pe1(f)) - Qe1(Pe3(f))
+Le3(f) = Qe1(Pe2(f)) - Qe2(Pe1(f))
+
+Ln1(f) = Qn2(Pn3(f)) - Qn3(Pn2(f))
+Ln2(f) = Qn3(Pn1(f)) - Qn1(Pn3(f))
+Ln3(f) = Qn1(Pn2(f)) - Qn2(Pn1(f))
+
+J1(f) = (Le1(f) + Ln1(f)) / hbar
+J2(f) = (Le2(f) + Ln2(f)) / hbar
+J3(f) = (Le3(f) + Ln3(f)) / hbar
+
+K1(f) = (Pe1(f) + Pn1(f)) / hbar
+K2(f) = (Pe2(f) + Pn2(f)) / hbar
+K3(f) = (Pe3(f) + Pn3(f)) / hbar
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+check(hbar J1(psi) ==
+R2(hbar K3(psi)) - R3(hbar K2(psi)) + Q2(P3(psi)) - Q3(P2(psi)))
+
+check(hbar J2(psi) ==
+R3(hbar K1(psi)) - R1(hbar K3(psi)) + Q3(P1(psi)) - Q1(P3(psi)))
+
+check(hbar J3(psi) ==
+R1(hbar K2(psi)) - R2(hbar K1(psi)) + Q1(P2(psi)) - Q2(P1(psi)))
+
+"ok"

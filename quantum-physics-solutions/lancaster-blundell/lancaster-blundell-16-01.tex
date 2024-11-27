@@ -1,0 +1,113 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(16.1) (a) Solve the Schrodinger equation to find the wave
+functions $\phi_n(x)$ for a particle in a one-dimensional
+square well defined by $V(x)=0$ for $0\le x\le a$ and
+$V(x)=\infty$ for $x<0$ and $x>a$.
+
+\bigskip
+(b) Show that the retarded Green's function for this
+particle is given by
+\begin{equation*}
+G^+(n,t_2,t_1)=\theta(t_2-t_1)e^{-i\big(\frac{n^2\pi^2}{2ma^2}\big)(t_2-t_1)}
+\tag{16.39}
+\end{equation*}
+
+(c) Find $G^+(n,\omega)$ for the particle.
+}}
+
+\bigskip
+(a) Let $m$ be the mass of the particle.
+The Schrodinger equation is
+\begin{equation*}
+-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\phi_n(x)+V(x)\phi_n(x)=E_n\phi_n(x)
+\end{equation*}
+
+In the region $0\le x\le a$ we have $V(x)=0$ hence we can write
+\begin{equation*}
+-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\phi_n(x)=E_n\phi_n(x),
+\quad
+0\le x\le a
+\tag{1}
+\end{equation*}
+
+Equation (1) has the following well-known solution.
+\begin{equation*}
+\phi_n(x)=A\sin(kx)+B\cos(kx),
+\quad
+k=\frac{\sqrt{2mE_n}}{\hbar}
+\tag{2}
+\end{equation*}
+
+For boundary conditions we have $\phi_n(0)=0$ and $\phi_n(a)=0$ because
+there is no possibility of finding the particle outside the well.
+The boundary condition $\phi_n(0)=0$ forces $B=0$ because $\cos(0)=1$.
+The boundary condition $\phi_n(a)=0$ forces $kx$ to be a multiple of $\pi$ at $x=a$ hence
+\begin{equation*}
+kx=\frac{n\pi x}{a}
+\end{equation*}
+
+It follows from the definition of $k$ in (2) that
+\begin{equation*}
+\frac{\sqrt{2mE_n}}{\hbar}=\frac{n\pi}{a}
+\end{equation*}
+
+Solve for $E_n$ to obtain
+\begin{equation*}
+E_n=\frac{\hbar^2k^2}{2m}=\frac{\hbar^2}{2m}\bigg(\frac{n\pi}{a}\bigg)^2
+\end{equation*}
+
+Hence the solution to (1) is
+\begin{equation*}
+\phi_n(x)=A\sin\bigg(\frac{n\pi x}{a}\bigg),
+\quad
+E_n=\frac{\hbar^2}{2m}\bigg(\frac{n\pi}{a}\bigg)^2
+\end{equation*}
+
+Normalize the wavefunction.
+(Note that $A$ can be complex hence $|A|$.)
+\begin{equation*}
+1=\int_0^a\phi_n^*(x)\phi_n(x)\,dx=\tfrac{1}{2}|A|^2a
+\end{equation*}
+
+Hence
+\begin{equation*}
+|A|=\sqrt\frac{2}{a}
+\end{equation*}
+
+(b) Let $\psi_n(x,t)$ be the following solution to the time-dependent Schrodinger equation.
+\begin{equation*}
+\psi_n(x,t)=\phi_n(x)\exp\bigg({-}\frac{iE_nt}{\hbar}\bigg)
+\end{equation*}
+
+We want $G^+(n,t_2,t_1)$ such that
+\begin{equation*}
+\psi_n(x,t_2)=G^+(n,t_2,t_1)\psi_n(x,t_1)
+\end{equation*}
+
+The $\phi_n(x)$ cancel leaving just the time-dependent exponentials.
+\begin{equation*}
+\exp\bigg({-}\frac{iE_nt_2}{\hbar}\bigg)=G^+(n,t_2,t_1)\exp\bigg({-}\frac{iE_nt_1}{\hbar}\bigg)
+\end{equation*}
+
+Hence
+\begin{align*}
+G^+(n,t_2,t_1)
+&=\theta(t_2-t_1)\exp\bigg({-}\frac{iE_nt_2}{\hbar}\bigg)\exp\bigg(\frac{iE_nt_1}{\hbar}\bigg)
+\\
+&=\theta(t_2-t_1)\exp\bigg({-}\frac{iE_n(t_2-t_1)}{\hbar}\bigg)
+\end{align*}
+
+(c) Take the Fourier transform of $G^+(n,t,0)$.
+\begin{align*}
+G^+(n,\omega)&=\int_0^\infty G^+(n,t,0)\exp\bigg(\frac{i(\omega+i\epsilon)t}{\hbar}\bigg)\,dt
+\\
+&=\int_0^\infty\exp\bigg({-}\frac{iE_nt}{\hbar}\bigg)\exp\bigg(\frac{i(\omega+i\epsilon)t}{\hbar}\bigg)\,dt
+\\
+&=\frac{i\hbar}{E_n-\omega-i\epsilon}\exp\bigg({-}\frac{i(E_n-\omega-i\epsilon)t}{\hbar}\bigg)\bigg|_0^\infty
+\\
+&=\frac{i\hbar}{\omega-E_n+i\epsilon}
+\end{align*}
+
+\end{document}

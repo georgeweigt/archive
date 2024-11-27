@@ -1,0 +1,17 @@
+-- Fitzpatrick exercise 4-2
+
+psi = sqrt(2 a^3 / pi) / (x^2 + a^2)
+
+p(f) = -i hbar d(f)
+
+"Momentum integral"
+f = psi p(psi)
+F = integral(f)
+check(f == d(F))
+F
+
+"Momentum squared integral"
+f = psi p(p(psi))
+F = integral(f)
+check(f == d(F))
+F

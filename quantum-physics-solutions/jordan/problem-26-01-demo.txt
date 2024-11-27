@@ -1,0 +1,47 @@
+"Problem 26-1"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+J1(f) = L1(f) / hbar
+J2(f) = L2(f) / hbar
+J3(f) = L3(f) / hbar
+
+K1(f) = P1(f) / hbar
+K2(f) = P2(f) / hbar
+K3(f) = P3(f) / hbar
+
+H(f) = (P1(P1(f)) + P2(P2(f)) + P3(P3(f))) / (2 m)
+
+Omega(f) = H(f) / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(H(J1(psi)) == J1(H(psi)))
+check(H(J2(psi)) == J2(H(psi)))
+check(H(J3(psi)) == J3(H(psi)))
+
+check(H(K1(psi)) == K1(H(psi)))
+check(H(K2(psi)) == K2(H(psi)))
+check(H(K3(psi)) == K3(H(psi)))
+
+check(H(L1(psi)) == L1(H(psi)))
+check(H(L2(psi)) == L2(H(psi)))
+check(H(L3(psi)) == L3(H(psi)))
+
+-- show that angular momentum is constant in time
+
+check(L1(Omega(psi)) == Omega(L1(psi)))
+check(L2(Omega(psi)) == Omega(L2(psi)))
+check(L3(Omega(psi)) == Omega(L3(psi)))
+
+"ok"

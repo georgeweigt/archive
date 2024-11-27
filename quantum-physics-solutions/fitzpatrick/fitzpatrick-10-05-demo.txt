@@ -1,0 +1,12 @@
+"Verify 10-5"
+
+chi = (cos(alpha), sin(alpha) exp(i beta))
+
+ym = sqrt(1/2) (1,-i)
+
+Pr(a,b) = mag(dot(conj(a),b))^2
+
+check(Pr(ym,chi) == 1/2 - 1/2 sin(2 alpha) sin(beta))
+
+"ok"
+

@@ -1,0 +1,152 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(13.1)
+(a) Show that the conserved charge in eqn 13.16
+may be written
+\begin{equation*}
+\hat{\mathbf Q}_{N_c}=\int d^3p\,\hat{\mathbf A}_{\mathbf p}^\dag\mathbf J\hat{\mathbf A}_{\mathbf p}
+\tag{13.41}
+\end{equation*}
+where $\hat{\mathbf A}_{\mathbf p}=(\hat a_{1\mathbf p},\hat a_{2\mathbf p},\hat a_{3\mathbf p})$
+and $\mathbf J=(J_x,J_y,J_z)$ are the spin-1 angular momentum
+matrices from Chapter 9.
+
+\bigskip
+(b) Use the transformations from Exercise 3.3 to
+find the form of the angular momentum matrices
+appropriate to express the charge as
+$\hat{\mathbf Q}_{N_c}=\int d^3p\,
+\hat{\mathbf B}_{\mathbf p}^\dag\mathbf J\hat{\mathbf B}_{\mathbf p}$
+where $\hat{\mathbf B}_{\mathbf p}=(\hat b_{1\mathbf p},\hat b_{0\mathbf p},\hat b_{-1\mathbf p})$.
+}}
+
+\bigskip
+(a) Here is equation (13.16).
+\begin{equation*}
+\mathbf Q_{N_c}=\int d^3x\,(\mathbf\Phi\times\partial_0\mathbf\Phi)
+\quad\text{and}\quad
+\hat Q_{N_c}^a=-i\int d^3p\,\varepsilon^{abc}\hat a_{b\mathbf p}^\dag\hat a_{c\mathbf p}
+\tag{13.16}
+\end{equation*}
+
+Recall that $\varepsilon^{abc}$ is the Levi-Civita symbol
+\begin{equation*}
+\varepsilon^1=\begin{pmatrix}
+0&0&0
+\\
+0&0&1
+\\
+0&-1&0
+\end{pmatrix},
+\quad
+\varepsilon^2=\begin{pmatrix}
+0&0&-1
+\\
+0&0&0
+\\
+1&0&0
+\end{pmatrix},
+\quad
+\varepsilon^3=\begin{pmatrix}
+0&1&0
+\\
+-1&0&0
+\\
+0&0&0
+\end{pmatrix}
+\end{equation*}
+
+Scalars commute with operators hence $\varepsilon^{abc}$ and $\hat a_{b\mathbf p}^\dag$ can be interchanged.
+\begin{equation*}
+\hat Q_{N_c}^a=-i\int d^3p\,\hat a_{b\mathbf p}^\dag\varepsilon^{abc}\hat a_{c\mathbf p}
+\end{equation*}
+
+The sum over $b$ and sum over $c$ are inner products hence we can write
+\begin{equation*}
+\hat Q_{N_c}^a=-i\int d^3p\,\hat{\mathbf A}_{\mathbf p}^\dag\varepsilon^a\hat{\mathbf A}_{\mathbf p}
+\end{equation*}
+
+Let
+\begin{equation*}
+J_x=-i\varepsilon^1,
+\quad
+J_y=-i\varepsilon^2,
+\quad
+J_z=-i\varepsilon^3
+\end{equation*}
+
+Then
+\begin{equation*}
+\hat{\mathbf Q}_{N_c}=\begin{pmatrix}Q_{N_c}^1\\Q_{N_c}^2\\Q_{N_c}^3\end{pmatrix}
+=\int d^3p\,\hat{\mathbf A}_{\mathbf p}^\dag\begin{pmatrix}J_x\\J_y\\J_z\end{pmatrix}\hat{\mathbf A}_{\mathbf p}
+=\int d^3p\,\hat{\mathbf A}_{\mathbf p}^\dag\mathbf J\hat{\mathbf A}_{\mathbf p}
+\end{equation*}
+
+(b) From Exercise 3.3 we have
+\begin{align*}
+\hat b_{1\mathbf p}&=\frac{1}{\sqrt2}\big({-\hat a_{1\mathbf p}}+i\hat a_{2\mathbf p}\big)
+\\
+\hat b_{0\mathbf p}&=\hat a_{3\mathbf p}
+\\
+\hat b_{-1\mathbf p}&=\frac{1}{\sqrt2}\big(\hat a_{1\mathbf p}+i\hat a_{2\mathbf p}\big)
+\end{align*}
+
+We need a unitary matrix $U$ such that
+\begin{equation*}
+\hat{\mathbf B}_{\mathbf p}=
+\begin{pmatrix}
+\frac{1}{\sqrt2}\big({-\hat a_{1\mathbf p}}+i\hat a_{2\mathbf p}\big)
+\\
+\hat a_{3\mathbf p}
+\\
+\frac{1}{\sqrt2}\big(\hat a_{1\mathbf p}+i\hat a_{2\mathbf p}\big)
+\end{pmatrix}
+=U\begin{pmatrix}
+\hat a_{1\mathbf p}
+\\
+\hat a_{2\mathbf p}
+\\
+\hat a_{3\mathbf p}
+\end{pmatrix}
+=U\hat{\mathbf A}_{\mathbf p}
+\end{equation*}
+
+Hence
+\begin{equation*}
+U=\begin{pmatrix}
+-\frac{1}{\sqrt2}&\frac{i}{\sqrt2}&0
+\\
+0&0&1
+\\
+\frac{1}{\sqrt2}&\frac{i}{\sqrt2}&0
+\end{pmatrix}
+\end{equation*}
+
+It follows that
+\begin{equation*}
+\hat{\mathbf B}_{\mathbf p}^\dag\mathbf J'\hat{\mathbf B}_{\mathbf p}
+=\big(\hat{\mathbf A}_{\mathbf p}^\dag U^\dag\big)\mathbf J'\big(U\hat{\mathbf A}_{\mathbf p}\big)
+=\hat{\mathbf A}_{\mathbf p}^\dag\big(U^\dag\mathbf J'U\big)\hat{\mathbf A}_{\mathbf p}
+\end{equation*}
+
+By equivalence of (13.41) with hypothesis in (b) we have
+\begin{equation*}
+U^\dag\mathbf J'U=\mathbf J
+\end{equation*}
+
+Then by unitarity property $U^{-1}=U^\dag$ we can write
+\begin{equation*}
+\mathbf J'=U\mathbf JU^\dag
+\end{equation*}
+
+Hence the components of $\mathbf J'$ are
+\begin{align*}
+J_x'&=UJ_xU^\dag=\frac{1}{\sqrt2}\begin{pmatrix}0&1&0\\1&0&1\\0&1&0\end{pmatrix}
+\\
+J_y'&=UJ_yU^\dag=\frac{i}{\sqrt2}\begin{pmatrix}0&-1&0\\1&0&-1\\0&1&0\end{pmatrix}
+\\
+J_z'&=UJ_zU^\dag=\begin{pmatrix}1&0&0\\0&0&0\\0&0&-1\end{pmatrix}
+\end{align*}
+
+\end{document}

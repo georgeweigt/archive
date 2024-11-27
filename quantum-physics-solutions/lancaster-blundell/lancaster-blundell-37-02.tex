@@ -1,0 +1,85 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(37.2)
+Show that both choices of sign $\mathbf K=\pm\frac{i\boldsymbol\sigma}{2}$ obey the
+necessary commutation relations.
+}}
+
+\bigskip
+These are the commutation relations from page 336.
+\begin{align*}
+[J^i,K^j]&=i\varepsilon^{ijk}K^k
+\\
+[K^i,K^j]&=-i\varepsilon^{ijk}J^k
+\end{align*}
+
+On page 337 we are given
+\begin{equation*}
+\mathbf J=\tfrac{1}{2}\boldsymbol\sigma
+\end{equation*}
+and
+\begin{equation*}
+[\sigma^i,\sigma^j]=2i\varepsilon^{ijk}\sigma^k
+\tag{1}
+\end{equation*}
+
+For the first commutation relation we have
+\begin{equation*}
+[J^i,\pm K^j]
+=\big[\tfrac{1}{2}\sigma^i,\pm\tfrac{i}{2}\sigma^j\big]
+=\pm\tfrac{i}{4}[\sigma^i,\sigma^j]
+\end{equation*}
+
+By equation (1)
+\begin{equation*}
+\pm\tfrac{i}{4}[\sigma^i,\sigma^j]
+=\pm\tfrac{i}{4}\big(2i\varepsilon^{ijk}\sigma^k\big)
+=\mp\tfrac{1}{2}\varepsilon^{ijk}\sigma^k
+=\pm i\varepsilon^{ijk}K^k
+\end{equation*}
+
+For the second commutation relation we have
+\begin{equation*}
+[K^i,K^j]=\big[\tfrac{i}{2}\sigma^i,\tfrac{i}{2}\sigma^j\big]
+=\big[{-}\tfrac{i}{2}\sigma^i,-\tfrac{i}{2}\sigma^j\big]
+=-\tfrac{1}{4}[\sigma^i,\sigma^j]
+\end{equation*}
+
+By equation (1)
+\begin{equation*}
+-\tfrac{1}{4}[\sigma^i,\sigma^j]
+=-\tfrac{1}{4}\big(2i\varepsilon^{ijk}\sigma^k\big)
+=-i\varepsilon^{ijk}J^k
+\end{equation*}
+
+\end{document}
+
+Recall that $\varepsilon^{ijk}$ is the Levi-Civita symbol
+\begin{equation*}
+\varepsilon^1=\begin{pmatrix}
+0&0&0
+\\
+0&0&1
+\\
+0&-1&0
+\end{pmatrix},
+\quad
+\varepsilon^2=\begin{pmatrix}
+0&0&-1
+\\
+0&0&0
+\\
+1&0&0
+\end{pmatrix},
+\quad
+\varepsilon^3=\begin{pmatrix}
+0&1&0
+\\
+-1&0&0
+\\
+0&0&0
+\end{pmatrix}
+\end{equation*}
+
+\end{document}

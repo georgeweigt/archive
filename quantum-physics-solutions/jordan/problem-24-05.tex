@@ -1,0 +1,57 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-5.
+Let $L_1$, $L_2$, $L_3$ be the matrices that represent
+orbital angular momentum, and let
+\begin{equation*}
+{J_1}'=-\frac{1}{\hbar}L_2,\quad
+{J_2}'=\frac{1}{\hbar}L_1,\quad
+{J_3}'=\frac{1}{\hbar}L_3.
+\end{equation*}
+
+Show that ${J_1}'$, ${J_2}'$, ${J_3}'$ satisfy the commutation
+relations characteristic of matrices $J_1$, $J_2$, $J_3$
+that correspond to rotations, but with the
+matrices $Q_1$, $Q_2$, $Q_3$ and $P_1$, $P_2$, $P_3$ that represent
+position and momentum, ${J_1}'$, ${J_2}'$, ${J_3}'$ do
+not satisfy the commutation relations that
+characterize rotations of vector quantities.
+}}
+
+\bigskip
+We have
+\begin{align*}
+{J_1}'{J_2}'-{J_2}'{J_1}'&=-\frac{1}{\hbar^2}L_2L_1+\frac{1}{\hbar^2}L_1L_2
+\\
+&=\frac{1}{\hbar^2}(L_1L_2-L_2L_1)
+\\
+&=\frac{1}{\hbar^2}(i\hbar L_3)
+\\
+&=i{J_3}'
+\end{align*}
+
+and similarly for the remaining commutation relations.
+
+\bigskip
+For the second part of the problem the requirement for a rotation is
+\begin{align*}
+Q_1{J_2}'-{J_2}'Q_1&=iQ_3
+\\
+Q_2{J_3}'-{J_3}'Q_2&=iQ_1
+\\
+Q_3{J_1}'-{J_1}'Q_3&=iQ_2
+\end{align*}
+
+However what we get is
+\begin{align*}
+Q_1{J_2}'-{J_2}'Q_1&=0
+\\
+Q_2{J_3}'-{J_3}'Q_2&=iQ_1
+\\
+Q_3{J_1}'-{J_1}'Q_3&=iQ_1
+\end{align*}
+
+and similarly with $P_1$, $P_2$, and $P_3$.
+
+\end{document}

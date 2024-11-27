@@ -1,0 +1,117 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10-2.
+For each of the matrices (a)--(f):
+
+(i) determine whether the matrix represents a physical quantity; if it does, then
+
+(ii) find the possible values of the quantity;
+
+(iii) determine whether the quantity is real; and
+
+(iv) determine whether the matrix has an inverse.
+\begin{align*}
+(a)&\quad 2+2\Sigma_1 & (d)&\quad i+3\Sigma_1+4\Sigma_2
+\\
+(b)&\quad 3\Sigma_1+4\Sigma_2 & (e)&\quad i(3\Sigma_1+4\Sigma_2)
+\\
+(c)&\quad 5+3\Sigma_1+4\Sigma_2 & (f)&\quad 5\Sigma_1+i4\Sigma_2
+\end{align*}
+}}
+
+\bigskip
+(a) The matrix $2+2\Sigma_1$ represents a physical quantity with
+\begin{equation*}
+x_0=2,\quad r=\sqrt{2^2+0^2+0^2}=2
+\end{equation*}
+
+The possible values are
+\begin{equation*}
+\begin{aligned}
+x_0+r&=4
+\\
+x_0-r&=0
+\end{aligned}
+\end{equation*}
+
+This quantity is real.
+This matrix does not have an inverse because one of the values is zero.
+
+\bigskip
+(b) The matrix $3\Sigma_1+4\Sigma_2$ represents a physical quantity with
+\begin{equation*}
+x_0=0,\quad r=\sqrt{3^2+4^2+0^2}=5
+\end{equation*}
+
+The possible values are
+\begin{equation*}
+\begin{aligned}
+x_0+r&=5
+\\
+x_0-r&=-5
+\end{aligned}
+\end{equation*}
+
+This quantity is real.
+This matrix has an inverse because both values are nonzero.
+
+\bigskip
+(c) The matrix $5+3\Sigma_1+4\Sigma_2$ represents a physical quantity with
+\begin{equation*}
+x_0=5,\quad r=\sqrt{3^2+4^2+0^2}=5
+\end{equation*}
+
+The possible values are
+\begin{equation*}
+\begin{aligned}
+x_0+r&=10
+\\
+x_0-r&=0
+\end{aligned}
+\end{equation*}
+
+This quantity is real.
+This matrix does not have an inverse because one of the values is zero.
+
+\bigskip
+(d) The matrix $i+3\Sigma_1+4\Sigma_2$ represents a physical quantity with
+\begin{equation*}
+z_0=i,\quad c=1,\quad r=\sqrt{3^2+4^2+0^2}=5
+\end{equation*}
+
+The possible values are
+\begin{equation*}
+\begin{aligned}
+z_0+cr&=i+5
+\\
+z_0-cr&=i-5
+\end{aligned}
+\end{equation*}
+
+This quantity is not real.
+This matrix has an inverse because both values are nonzero.
+
+\bigskip
+(e) The matrix $i(3\Sigma_1+4\Sigma_2)$ represents a physical quantity with
+\begin{equation*}
+z_0=0,\quad c=i,\quad r=\sqrt{3^2+4^2+0^2}=5
+\end{equation*}
+
+The possible values are
+\begin{equation*}
+\begin{aligned}
+z_0+cr&=5i
+\\
+z_0-cr&=-5i
+\end{aligned}
+\end{equation*}
+
+This quantity is not real.
+This matrix has an inverse because both values are nonzero.
+
+\bigskip
+(f) The matrix $5\Sigma_1+i4\Sigma_2$ does not represent a physical quantity
+because the imaginary unit cannot be factored as $c$.
+
+\end{document}

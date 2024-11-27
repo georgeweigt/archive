@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+27-1.
+Starting with the equations for $R_1$, $R_2$, $R_3$ in this
+chapter, those for $K_1$, $K_2$, $K_3$ for two particles
+from the last chapter, and the equations for
+the relative position and momentum matrices
+$Q_1$, $Q_2$, $Q_3$; and $P_1$, $P_2$, $P_3$ given in Chapter 20,
+find the formulas for $Q_{e1}$, $Q_{e2}$, $Q_{e3}$; $P_{e1}$, $P_{e2}$,
+$P_{e3}$ and $Q_{n1}$, $Q_{n2}$, $Q_{n3}$; $P_{n1}$, $P_{n2}$, $P_{n3}$
+in terms of $R_1$, $R_2$, $R_3$; $\hbar K_1$, $\hbar K_2$, $\hbar K_3$
+and $Q_1$, $Q_2$, $Q_3$; $P_1$, $P_2$, $P_3$. You
+can check that your answers are correct by
+substituting them into the equations you
+started with and seeing that those equations
+are satisfied.
+}}
+
+\bigskip
+For the 1 direction we have
+\begin{align*}
+R_1&=\frac{m_e}{m_n+m_e}Q_{e1}+\frac{m_n}{m_n+m_e}Q_{n1}
+\\
+Q_1&=Q_{e1}-Q_{n1}
+\end{align*}
+
+and
+\begin{align*}
+P_1&=\frac{m_n}{m_n+m_e}P_{e1}-\frac{m_e}{m_n+m_e}P_{n1}
+\\
+\hbar K_1&=P_{e1}+P_{n1}
+\end{align*}
+
+Substitute $Q_1$ into $R_1$ to obtain
+\begin{align*}
+Q_{e1}&=R_1+\frac{m_n}{m_n+m_e}Q_1
+\\
+Q_{n1}&=R_1-\frac{m_e}{m_n+m_e}Q_1
+\end{align*}
+
+Substitute $\hbar K_1$ into $P_1$ to obtain
+\begin{align*}
+P_{e1}&=\frac{m_e}{m_n+m_e}\hbar K_1+P_1
+\\
+P_{n1}&=\frac{m_n}{m_n+m_e}\hbar K_1-P_1
+\end{align*}
+
+\end{document}

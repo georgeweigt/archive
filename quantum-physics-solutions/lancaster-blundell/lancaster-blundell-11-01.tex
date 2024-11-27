@@ -1,0 +1,78 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+(11.1)
+One of the criteria we had for a successful theory
+of a scalar field was that the commutator for space-like
+separations would be zero. Let's see if our scalar
+field has this feature. Show that
+\begin{equation*}
+[\hat\phi(x),\hat\phi(y)]=\int
+\frac{d^3p}{(2\pi)^3}\frac{1}{2E_p}
+\Big(
+\exp\big(-ip\cdot(x-y))-\exp(-ip\cdot(y-x)\big)
+\Big)
+\tag{11.51}
+\end{equation*}
+
+For space-like separation we are able to swap $(y-x)$
+in the second term to $(x-y)$. This gives us zero,
+as required.
+}}
+
+\bigskip
+Consider equation (11.12).
+\begin{equation*}
+\hat\phi(x)=\int\frac{d^3p}{(2\pi)^\frac{3}{2}}\frac{1}{(2E_{\mathbf p})^\frac{1}{2}}
+\big(\hat a_{\mathbf p}\exp(-ip\cdot x)+\hat a_{\mathbf p}^\dag\exp(ip\cdot x)\big)
+\tag{11.12}
+\end{equation*}
+
+It follows from (11.12) that
+\begin{equation*}
+[\hat\phi(x),\hat\phi(y)]=\frac{1}{(2\pi)^3}
+\int\frac{d^3p}{(2E_p)^\frac{1}{2}}\int\frac{d^3q}{(2E_q)^\frac{1}{2}}(PQ-QP)
+\tag{1}
+\end{equation*}
+
+where
+\begin{align*}
+P&=\hat a_{\mathbf p}\exp(-ip\cdot x)+\hat a_{\mathbf p}^\dag\exp(ip\cdot x)
+\\
+Q&=\hat a_{\mathbf q}\exp(-iq\cdot y)+\hat a_{\mathbf q}^\dag\exp(iq\cdot y)
+\end{align*}
+
+Expanding the commutator in (1) we have
+\begin{multline*}
+PQ-QP=
+[\hat a_{\mathbf p},\hat a_{\mathbf q}]\exp(-ip\cdot x-iq\cdot y)
++[\hat a_{\mathbf p},\hat a_{\mathbf q}^\dag]\exp(-ip\cdot x+iq\cdot y)
+\\
+{}+[\hat a_{\mathbf p}^\dag,\hat a_{\mathbf q}]\exp(ip\cdot x-iq\cdot y)
++[\hat a_{\mathbf p}^\dag,\hat a_{\mathbf q}^\dag]\exp(ip\cdot x+iq\cdot y)
+\end{multline*}
+
+Then from the commutation relations
+\begin{equation*}
+[\hat a_{\mathbf p},\hat a_{\mathbf q}]=0,
+\quad
+[\hat a_{\mathbf p}^\dag,\hat a_{\mathbf q}^\dag]=0,
+\quad
+[\hat a_{\mathbf p},\hat a_{\mathbf q}^\dag]=\delta(\mathbf p-\mathbf q)
+\end{equation*}
+
+we have
+\begin{equation*}
+PQ-QP=\delta(\mathbf p-\mathbf q)\big(\exp(-ip\cdot x+iq\cdot y)-\exp(ip\cdot x-iq\cdot y)\big)
+\tag{2}
+\end{equation*}
+
+Substitute (2) into (1) to obtain
+\begin{equation*}
+[\hat\phi(x),\hat\phi(y)]=\frac{1}{(2\pi)^3}
+\int\frac{d^3p}{2E_p}\Big(\exp\big({-}ip\cdot(x-y)\big)-\exp\big({-}ip\cdot(y-x)\big)\Big)
+\end{equation*}
+
+% The notation $\hat a(p)$ instead of $\hat a_p$ would be more symmetrical with $\hat\phi(x)$.
+
+\end{document}

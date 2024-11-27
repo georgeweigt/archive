@@ -1,0 +1,121 @@
+"Problem 28-2"
+
+"Single particle"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+J1(f) = L1(f) / hbar
+J2(f) = L2(f) / hbar
+J3(f) = L3(f) / hbar
+
+G1(f) = Q1(f) m / hbar
+G2(f) = Q2(f) m / hbar
+G3(f) = Q3(f) m / hbar
+
+psi = Psi(q1,q2,q3)
+
+check(G1(J1(psi)) - J1(G1(psi)) == 0)
+check(G1(J2(psi)) - J2(G1(psi)) == i G3(psi))
+check(G1(J3(psi)) - J3(G1(psi)) == -i G2(psi))
+
+check(G2(J1(psi)) - J1(G2(psi)) == -i G3(psi))
+check(G2(J2(psi)) - J2(G2(psi)) == 0)
+check(G2(J3(psi)) - J3(G2(psi)) == i G1(psi))
+
+check(G3(J1(psi)) - J1(G3(psi)) == i G2(psi))
+check(G3(J2(psi)) - J2(G3(psi)) == -i G1(psi))
+check(G3(J3(psi)) - J3(G3(psi)) == 0)
+
+-- commutation relations are the same when G is replaced by Q
+
+check(Q1(J1(psi)) - J1(Q1(psi)) == 0)
+check(Q1(J2(psi)) - J2(Q1(psi)) == i Q3(psi))
+check(Q1(J3(psi)) - J3(Q1(psi)) == -i Q2(psi))
+
+check(Q2(J1(psi)) - J1(Q2(psi)) == -i Q3(psi))
+check(Q2(J2(psi)) - J2(Q2(psi)) == 0)
+check(Q2(J3(psi)) - J3(Q2(psi)) == i Q1(psi))
+
+check(Q3(J1(psi)) - J1(Q3(psi)) == i Q2(psi))
+check(Q3(J2(psi)) - J2(Q3(psi)) == -i Q1(psi))
+check(Q3(J3(psi)) - J3(Q3(psi)) == 0)
+
+"ok"
+
+"Two particles"
+
+Qe1(f) = qe1 f
+Qe2(f) = qe2 f
+Qe3(f) = qe3 f
+
+Qn1(f) = qn1 f
+Qn2(f) = qn2 f
+Qn3(f) = qn3 f
+
+Pe1(f) = -i hbar d(f,qe1)
+Pe2(f) = -i hbar d(f,qe2)
+Pe3(f) = -i hbar d(f,qe3)
+
+Pn1(f) = -i hbar d(f,qn1)
+Pn2(f) = -i hbar d(f,qn2)
+Pn3(f) = -i hbar d(f,qn3)
+
+Le1(f) = Qe2(Pe3(f)) - Qe3(Pe2(f))
+Le2(f) = Qe3(Pe1(f)) - Qe1(Pe3(f))
+Le3(f) = Qe1(Pe2(f)) - Qe2(Pe1(f))
+
+Ln1(f) = Qn2(Pn3(f)) - Qn3(Pn2(f))
+Ln2(f) = Qn3(Pn1(f)) - Qn1(Pn3(f))
+Ln3(f) = Qn1(Pn2(f)) - Qn2(Pn1(f))
+
+J1(f) = (Le1(f) + Ln1(f)) / hbar
+J2(f) = (Le2(f) + Ln2(f)) / hbar
+J3(f) = (Le3(f) + Ln3(f)) / hbar
+
+G1(f) = (me Qe1(f) + mn Qn1(f)) / hbar
+G2(f) = (me Qe2(f) + mn Qn2(f)) / hbar
+G3(f) = (me Qe3(f) + mn Qn3(f)) / hbar
+
+psi = Psi(qe1,qe2,qe3,qn1,qn2,qn3)
+
+check(G1(J1(psi)) - J1(G1(psi)) == 0)
+check(G1(J2(psi)) - J2(G1(psi)) == i G3(psi))
+check(G1(J3(psi)) - J3(G1(psi)) == -i G2(psi))
+
+check(G2(J1(psi)) - J1(G2(psi)) == -i G3(psi))
+check(G2(J2(psi)) - J2(G2(psi)) == 0)
+check(G2(J3(psi)) - J3(G2(psi)) == i G1(psi))
+
+check(G3(J1(psi)) - J1(G3(psi)) == i G2(psi))
+check(G3(J2(psi)) - J2(G3(psi)) == -i G1(psi))
+check(G3(J3(psi)) - J3(G3(psi)) == 0)
+
+-- commutation relations are the same when G is replaced by Q
+
+Q1(f) = Qe1(f) - Qn1(f)
+Q2(f) = Qe2(f) - Qn2(f)
+Q3(f) = Qe3(f) - Qn3(f)
+
+check(Q1(J1(psi)) - J1(Q1(psi)) == 0)
+check(Q1(J2(psi)) - J2(Q1(psi)) == i Q3(psi))
+check(Q1(J3(psi)) - J3(Q1(psi)) == -i Q2(psi))
+
+check(Q2(J1(psi)) - J1(Q2(psi)) == -i Q3(psi))
+check(Q2(J2(psi)) - J2(Q2(psi)) == 0)
+check(Q2(J3(psi)) - J3(Q2(psi)) == i Q1(psi))
+
+check(Q3(J1(psi)) - J1(Q3(psi)) == i Q2(psi))
+check(Q3(J2(psi)) - J2(Q3(psi)) == -i Q1(psi))
+check(Q3(J3(psi)) - J3(Q3(psi)) == 0)
+
+"ok"

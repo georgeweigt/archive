@@ -1,0 +1,27 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 4.1.
+Prove that if $\mathbf U$ is unitary, and if $|A\rangle$ and $|B\rangle$
+are any two state vectors, then the inner product of $\mathbf U|A\rangle$
+and $\mathbf U|B\rangle$ is the same as the inner product of
+$|A\rangle$ and $|B\rangle$.
+One could call this the {\it conservation of overlaps.}
+It expresses the fact that the logical relation between states is preserved
+with time.
+}}
+
+\bigskip
+If $\mathbf U$ is unitary then
+\begin{equation*}
+\mathbf U^\dag\mathbf U=I
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle A|\mathbf U^\dag\mathbf U|B\rangle
+=\langle A|I|B\rangle
+=\langle A|B\rangle
+\end{equation*}
+
+\end{document}

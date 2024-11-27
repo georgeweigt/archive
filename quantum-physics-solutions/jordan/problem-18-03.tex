@@ -1,0 +1,95 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+18-3.
+Show that
+\begin{equation*}
+H=\tfrac{1}{2}m\omega^2SR-\tfrac{1}{2}\hbar\omega
+\end{equation*}
+
+Use this to show that
+\begin{equation*}
+RH-HR=-\hbar\omega R
+\end{equation*}
+
+Show also that
+\begin{equation*}
+HS-SH=-\hbar\omega S
+\end{equation*}
+
+Use the last two equations and the result of Problem 17-5 to find
+$\langle R\rangle$, $\langle S\rangle$ and
+$\langle Q\rangle$, $\langle P\rangle$ for any state where the
+oscillator energy has a definite value.
+}}
+
+\bigskip
+Start with
+\begin{equation*}
+H=\tfrac{1}{4}m\omega^2(RS+SR)
+\tag{1}
+\end{equation*}
+
+Substitute
+\begin{equation*}
+RS=SR-\frac{2\hbar}{m\omega}
+\tag{2}
+\end{equation*}
+
+into (1) to obtain
+\begin{equation*}
+H=\tfrac{1}{4}m\omega^2\left(SR-\frac{2\hbar}{m\omega}+SR\right)
+=\tfrac{1}{2}m\omega^2SR-\tfrac{1}{2}\hbar\omega
+\tag{3}
+\end{equation*}
+
+From (3) we have
+\begin{align*}
+RH&=\tfrac{1}{2}m\omega^2RSR-\tfrac{1}{2}\hbar\omega R
+\\
+HR&=\tfrac{1}{2}m\omega^2SRR-\tfrac{1}{2}\hbar\omega R
+\end{align*}
+
+Subtract to obtain
+\begin{equation*}
+RH-HR=\tfrac{1}{2}m\omega^2(RSR-SRR)
+\end{equation*}
+
+From equation (2)
+\begin{equation*}
+RSR=SRR-\frac{2\hbar}{m\omega}R
+\end{equation*}
+
+Hence
+\begin{equation*}
+RH-HR=\tfrac{1}{2}m\omega^2\left(SRR-\frac{2\hbar}{m\omega}R-SRR\right)=-\hbar\omega R\tag{4}
+\end{equation*}
+
+From (3) we have
+\begin{align*}
+HS&=\tfrac{1}{2}m\omega^2SRS-\tfrac{1}{2}\hbar\omega S
+\\
+SH&=\tfrac{1}{2}m\omega^2SSR-\tfrac{1}{2}\hbar\omega S
+\end{align*}
+
+Subtract to obtain
+\begin{equation*}
+HS-SH=\tfrac{1}{2}m\omega^2(SRS-SSR)
+\end{equation*}
+
+From equation (2)
+\begin{equation*}
+SRS=SSR-\frac{2\hbar}{m\omega}S
+\end{equation*}
+
+Hence
+\begin{equation*}
+HS-SH=\tfrac{1}{2}m\omega^2\left(SSR-\frac{2\hbar}{m\omega}S-SSR\right)=-\hbar\omega S\tag{5}
+\end{equation*}
+
+By the result of problem 17-5 and equations (4) and (5) we have
+$\langle R\rangle=0$ and $\langle S\rangle=0$ if $H$ has a definite
+value.
+Hence $\langle Q\rangle=0$ and $\langle P\rangle=0$ if $H$ has a definite value.
+
+\end{document}

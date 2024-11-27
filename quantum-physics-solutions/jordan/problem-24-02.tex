@@ -1,0 +1,53 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+24-2.
+Do the same as in the last problem for the matrix
+\begin{equation*}
+1-i\varepsilon J_3-\tfrac{1}{2}\varepsilon^2{J_3}^2
+\end{equation*}
+}}
+
+\bigskip
+Using algebra instead of matrix multiplication we have
+\begin{multline*}
+\left(1-i\varepsilon J_3-\tfrac{1}{2}\varepsilon^2{J_3}^2\right)
+\left(1-i\varepsilon' J_3-\tfrac{1}{2}\varepsilon'^2{J_3}^2\right)
+\\
+{}\approx1-i\varepsilon J_3-i\varepsilon'J_3
+-\tfrac{1}{2}\varepsilon^2J_3^2-\varepsilon\varepsilon'J_3^2-\varepsilon'^2J_3^2
+\\
+{}=1-i(\varepsilon+\varepsilon')J_3-\tfrac{1}{2}(\varepsilon+\varepsilon')^2{J_3}^2
+\end{multline*}
+
+\iffalse
+For example, using
+\begin{equation*}
+J_3=\tfrac{1}{2}\Sigma_3
+\end{equation*}
+
+we have
+\begin{multline*}
+\left(1-i\varepsilon J_3-\tfrac{1}{2}\varepsilon^2{J_3}^2\right)
+\left(1-i\varepsilon' J_3-\tfrac{1}{2}\varepsilon'^2{J_3}^2\right)
+\\
+{}=\begin{pmatrix}
+1-\tfrac{1}{2}i\varepsilon-\tfrac{1}{8}\varepsilon^2&0\\
+0&1+\tfrac{1}{2}i\varepsilon-\tfrac{1}{8}\varepsilon^2
+\end{pmatrix}
+\begin{pmatrix}
+1-\tfrac{1}{2}i\varepsilon'-\tfrac{1}{8}\varepsilon'^2&0\\
+0&1+\tfrac{1}{2}i\varepsilon'-\tfrac{1}{8}\varepsilon'^2
+\end{pmatrix}
+\\
+\approx
+\begin{pmatrix}
+1-\tfrac{1}{2}i(\varepsilon+\varepsilon')-\tfrac{1}{8}(\varepsilon+\varepsilon')^2&0\\
+0&1+\tfrac{1}{2}i(\varepsilon+\varepsilon')-\tfrac{1}{8}(\varepsilon+\varepsilon')^2
+\end{pmatrix}
+\\
+{}=1-i(\varepsilon+\varepsilon')J_3-\tfrac{1}{2}(\varepsilon+\varepsilon')^2{J_3}^2
+\end{multline*}
+\fi
+
+\end{document}

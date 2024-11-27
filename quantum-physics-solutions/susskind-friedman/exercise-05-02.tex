@@ -1,0 +1,126 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 5.2.
+
+\bigskip
+1) Show that $\Delta\mathbf A^2=\langle\bar{\mathbf A}^2\rangle$
+and $\Delta\mathbf B^2=\langle\bar{\mathbf B}^2\rangle$.
+
+\bigskip
+2) Show that $[\bar{\mathbf A},\bar{\mathbf B}]=[\mathbf A,\mathbf B]$.
+
+\bigskip
+3) Using these relations, show that
+\begin{equation*}
+\Delta\mathbf A\,\Delta\mathbf B\ge
+\tfrac{1}{2}|\langle\Psi|[\mathbf A,\mathbf B]|\Psi\rangle|
+\end{equation*}
+}}
+
+\bigskip
+1) Recall that $\Delta\mathbf A$ is standard deviation and $\Delta\mathbf A^2=(\Delta\mathbf A)^2$ is variance.
+
+\bigskip
+From page 147 we have
+\begin{equation*}
+\bar{\mathbf A}=\mathbf A-\langle\mathbf A\rangle
+\tag{1}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\bar{\mathbf A}^2=\mathbf A^2-2\langle\mathbf A\rangle\mathbf A+\langle\mathbf A\rangle^2
+\end{equation*}
+
+It follows that the expectation of $\bar{\mathbf A}^2$ is
+\begin{equation*}
+\langle\bar{\mathbf A}^2\rangle
+=\langle\mathbf A^2\rangle-\langle\mathbf A\rangle^2
+\end{equation*}
+
+Noting that $\langle\mathbf A^2\rangle-\langle\mathbf A\rangle^2$ is the variance of $\mathbf A$, we have
+\begin{equation*}
+(\Delta\mathbf A)^2=\langle\mathbf A^2\rangle-\langle\mathbf A\rangle^2=\langle\bar{\mathbf A}^2\rangle
+\end{equation*}
+
+\bigskip
+By the same argument
+\begin{equation*}
+(\Delta\mathbf B)^2=\langle\mathbf B^2\rangle-\langle\mathbf B\rangle^2=\langle\bar{\mathbf B}^2\rangle
+\end{equation*}
+
+\bigskip
+2) We have
+\begin{equation*}
+[\bar{\mathbf A},\bar{\mathbf B}]=\bar{\mathbf A}\bar{\mathbf B}-\bar{\mathbf B}\bar{\mathbf A}
+\end{equation*}
+
+By substitution from (1)
+\begin{equation*}
+[\bar{\mathbf A},\bar{\mathbf B}]
+=(\mathbf A-\langle\mathbf A\rangle)(\mathbf B-\langle\mathbf B\rangle)
+-(\mathbf B-\langle\mathbf B\rangle)(\mathbf A-\langle\mathbf A\rangle)
+\end{equation*}
+
+Expand products of sums.
+\begin{multline*}
+[\bar{\mathbf A},\bar{\mathbf B}]
+=\mathbf A\mathbf B
+-\underset{\text{cancel a}}{\mathbf A\langle\mathbf B\rangle}
+-\underset{\text{cancel b}}{\langle\mathbf A\rangle\mathbf B}
++\underset{\text{cancel c}}{\langle\mathbf A\rangle\langle\mathbf B\rangle}
+\\
+{}-\mathbf B\mathbf A
++\underset{\text{term b}}{\mathbf B\langle\mathbf A\rangle}
++\underset{\text{term a}}{\langle\mathbf B\rangle\mathbf A}
+-\underset{\text{term c}}{\langle\mathbf B\rangle\langle\mathbf A\rangle}
+\end{multline*}
+
+Hence
+\begin{equation*}
+[\bar{\mathbf A},\bar{\mathbf B}]=\mathbf A\mathbf B-\mathbf B\mathbf A=[\mathbf A,\mathbf B]
+\end{equation*}
+
+\bigskip
+3) By simple algebra we have
+\begin{equation*}
+\Delta\mathbf A\,\Delta\mathbf B
+=\sqrt{(\Delta\mathbf A)^2(\Delta\mathbf B)^2}
+\end{equation*}
+
+By the result from step 1 we can write this as
+\begin{equation*}
+\Delta\mathbf A\,\Delta\mathbf B
+=\sqrt{\langle\bar{\mathbf A}^2\rangle\langle\bar{\mathbf B}^2\rangle}
+\tag{2}
+\end{equation*}
+
+Consider equation (5.12).
+\begin{equation*}
+2\sqrt{\langle\mathbf A^2\rangle\langle\mathbf B^2\rangle}
+\ge|\langle\Psi|[\mathbf A,\mathbf B]|\Psi\rangle|
+\tag{5.12}
+\end{equation*}
+
+Equation (5.12) is valid for any linear operator, hence we can put bars over
+$\mathbf A$ and $\mathbf B$ and obtain
+\begin{equation*}
+2\sqrt{\langle\bar{\mathbf A}^2\rangle\langle\bar{\mathbf B}^2\rangle}
+\ge|\langle\Psi|[\bar{\mathbf A},\bar{\mathbf B}]|\Psi\rangle|
+\end{equation*}
+
+By the result from step 2 we can unbar $\mathbf A$ and $\mathbf B$ on the right hand side.
+\begin{equation*}
+2\sqrt{\langle\bar{\mathbf A}^2\rangle\langle\bar{\mathbf B}^2\rangle}
+\ge|\langle\Psi|[\mathbf A,\mathbf B]|\Psi\rangle|
+\tag{3}
+\end{equation*}
+
+By equations (2) and (3) we have
+\begin{equation*}
+2\Delta\mathbf A\,\Delta\mathbf B
+\ge|\langle\Psi|[\mathbf A,\mathbf B]|\Psi\rangle|
+\end{equation*}
+
+\end{document}

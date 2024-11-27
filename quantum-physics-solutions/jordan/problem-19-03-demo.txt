@@ -1,0 +1,8 @@
+"Problem 19-3"
+
+E(n) = -m (Z e^2)^2 / (2 hbar^2 n^2)
+
+"Verify equation (1)"
+nu = (E(n + 1) - E(n)) / (2 pi hbar)
+check(nu == m (Z e^2)^2 / (2 pi hbar^3) (2 n + 1) / (2 n^2 (n + 1)^2))
+"ok"

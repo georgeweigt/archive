@@ -1,0 +1,18 @@
+"Verify 12.14.2"
+
+s = sqrt(1/2) (1 + i) (1,0)
+
+sigmax = ((0,1),(1,0))
+sigmay = ((0,-i),(i,0))
+sigmaz = ((1,0),(0,-1))
+
+check(dot(conj(s),sigmax,s) == 0)
+check(dot(conj(s),sigmay,s) == 0)
+check(dot(conj(s),sigmaz,s) == 1)
+
+sigma = (sigmax,sigmay,sigmaz)
+
+mue = g muB dot(conj(s),transpose(sigma),s)
+mue
+
+"ok"

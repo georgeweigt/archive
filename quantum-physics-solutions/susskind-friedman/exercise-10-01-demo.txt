@@ -1,0 +1,7 @@
+"Exercise 10.1"
+
+x = A cos(omega t) + B sin(omega t)
+
+check(-omega^2 x == d(x,t,t))
+
+"ok"

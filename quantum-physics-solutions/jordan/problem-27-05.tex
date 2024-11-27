@@ -1,0 +1,79 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+27-5.
+Let
+\begin{equation*}
+U=1-i\varepsilon G_1-\tfrac{1}{2}\varepsilon^2{G_1}^2
+\end{equation*}
+
+and calculate $U^{-1}HU$, where
+\begin{equation*}
+H=\frac{1}{2m}\left({P_1}^2+{P_2}^2+{P_3}^2\right)
+\end{equation*}
+
+for a single particle. Do this two different
+ways. First use this formula for $H$, the formulas
+for $U^{-1}P_1U$, $U^{-1}P_2U$, $U^{-1}P_3U$, and the fact that
+for each matrix $P$
+\begin{equation*}
+U^{-1}P^2U=U^{-1}PUU^{-1}PU=(U^{-1}PU)^2.
+\end{equation*}
+
+Then use
+\begin{equation*}
+U^{-1}HU=H-i\varepsilon(HG_1-G_1H)-\tfrac{1}{2}\varepsilon^2
+[(HG_1-G_1H)G_1-G_1(HG_1-G_1H)],
+\end{equation*}
+
+the commutation relation
+\begin{equation*}
+\Omega G_1-G_1\Omega=-iK_1,
+\end{equation*}
+
+which can be written here as
+\begin{equation*}
+HG_1-G_1H=-iP_1,
+\end{equation*}
+
+and the commutation relation
+\begin{equation*}
+P_1G_1-G_1P_1=-im,
+\end{equation*}
+
+which corresponds to the way $P_1$ is changed
+by Galilei transformations. If you get the same
+answer, it shows the commutation relation of
+$\Omega$ and $G_1$ does correspond to the way energy is
+changed by a Galilei transformation.
+}}
+
+\bigskip
+We have
+\begin{equation*}
+U^{-1}P_1U=P_1-\varepsilon m,\quad
+U^{-1}P_2U=P_2,\quad
+U^{-1}P_3U=P_3
+\tag{1}
+\end{equation*}
+
+Hence
+\begin{equation*}
+U^{-1}HU
+=\frac{1}{2m}\left[(P_1-\varepsilon m)^2+{P_2}^2+{P_3}^2\right]
+=H-\varepsilon P_1+\tfrac{1}{2}\varepsilon^2m
+\tag{2}
+\end{equation*}
+
+By the second method
+\begin{align*}
+U^{-1}HU&=H-i\varepsilon(HG_1-G_1H)-\tfrac{1}{2}\varepsilon^2
+[(HG_1-G_1H)G_1-G_1(HG_1-G_1H)]
+\\
+&=H-i\varepsilon(-iP_1)-\tfrac{1}{2}\varepsilon^2
+[(-iP_1)G_1-G_1(-iP_1)]
+\\
+&=H-\varepsilon P_1+\tfrac{1}{2}\varepsilon^2m
+\end{align*}
+
+\end{document}

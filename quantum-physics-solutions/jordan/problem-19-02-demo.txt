@@ -1,0 +1,9 @@
+"Problem 19-2"
+
+r = hbar^2 n^2 / (m Z e^2)
+v = Z e^2 / (n hbar)
+
+"Verify equation (1)"
+t = 2 pi r / v
+check(t == 2 pi hbar^3 n^3 / (m (Z e^2)^2))
+"ok"

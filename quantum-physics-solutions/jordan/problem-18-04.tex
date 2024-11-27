@@ -1,0 +1,123 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+18-4.
+Show that
+\begin{equation*}
+R^2H-HR^2=-2\hbar\omega R^2
+\end{equation*}
+
+and
+\begin{equation*}
+HS^2-S^2H=-2\hbar\omega S^2
+\end{equation*}
+
+Use these and the result of Problem 17-5 to find
+$\langle R^2\rangle$, $\langle S^2\rangle$, $\langle Q^2\rangle$,
+$\langle P^2\rangle$ and
+$(\frac{1}{2})m\omega^2\langle Q^2\rangle$,
+$(1/2m)\langle P^2\rangle$ for the state where
+the oscillator energy has the value $(n+\frac{1}{2})\hbar\omega$.
+}}
+
+\bigskip
+From problem 18-3
+\begin{equation*}
+RH-HR=-\hbar\omega R
+\end{equation*}
+
+Hence
+\begin{align*}
+R^2H-RHR=-\hbar\omega R^2
+\\
+RHR-HR^2=-\hbar\omega R^2
+\end{align*}
+
+Add together to obtain
+\begin{equation*}
+R^2H-HR^2=-2\hbar\omega R^2
+\end{equation*}
+
+From problem 18-3
+\begin{equation*}
+HS-SH=-\hbar\omega S
+\end{equation*}
+
+Hence
+\begin{align*}
+HS^2-SHS=-\hbar\omega S^2
+\\
+SHS-S^2H=-\hbar\omega S^2
+\end{align*}
+
+Add together to obtain
+\begin{equation*}
+HS^2-S^2H=-2\hbar\omega S^2
+\end{equation*}
+
+If $H$ has a definite value then by the result of problem 17-5 we have
+\begin{equation*}
+\langle R^2\rangle=0,\quad\langle S^2\rangle=0
+\end{equation*}
+
+Noting that
+\begin{equation*}
+Q^2=\tfrac{1}{4}(R+S)^2
+\end{equation*}
+
+we have
+\begin{equation*}
+\langle Q^2\rangle=\tfrac{1}{4}\left(\langle R^2\rangle
++\langle RS\rangle+\langle SR\rangle+\langle S^2\rangle\right)
+\end{equation*}
+
+If $H$ has a definite value then
+\begin{equation*}
+\langle Q^2\rangle=\tfrac{1}{4}\left(\langle RS\rangle+\langle SR\rangle\right)\tag{1}
+\end{equation*}
+
+For the oscillator energy we have
+\begin{equation*}
+\langle H\rangle=\tfrac{1}{4}m\omega^2(\langle RS\rangle+\langle SR\rangle)
+=\left(n+\tfrac{1}{2}\right)\hbar\omega
+\tag{2}
+\end{equation*}
+
+Substitute (2) into (1) to obtain
+\begin{equation*}
+\langle Q^2\rangle=\left(n+\tfrac{1}{2}\right)\frac{\hbar}{m\omega}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\tfrac{1}{2}m\omega^2\langle Q^2\rangle=\left(n+\tfrac{1}{2}\right)\frac{\hbar\omega}{2}
+\end{equation*}
+
+Noting that
+\begin{equation*}
+P^2=-\tfrac{1}{4}m^2\omega^2(R-S)^2
+\end{equation*}
+
+we have
+\begin{equation*}
+\langle P^2\rangle=-\tfrac{1}{4}m^2\omega^2\left(\langle R^2\rangle
+-\langle RS\rangle-\langle SR\rangle
++\langle S^2\rangle\right)
+\end{equation*}
+
+If $H$ has a definite value then
+\begin{equation*}
+\langle P^2\rangle=\tfrac{1}{4}m^2\omega^2(\langle RS\rangle+\langle SR\rangle)\tag{3}
+\end{equation*}
+
+Substitute (2) into (3) to obtain
+\begin{equation*}
+\langle P^2\rangle=\left(n+\tfrac{1}{2}\right)m\hbar\omega
+\end{equation*}
+
+Hence
+\begin{equation*}
+\frac{1}{2m}\langle P^2\rangle=\left(n+\tfrac{1}{2}\right)\frac{\hbar\omega}{2}
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,51 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+Exercise 7.1.
+Write the tensor product $I\otimes\tau_x$ as a matrix,
+and apply that matrix to each of the
+$|uu\rangle$, $|ud\rangle$, $|du\rangle$, and $|dd\rangle$
+column vectors.
+Show that Alice's half of the state vector is unchanged in each case.
+Recall that $I$ is the $2\times2$ unit matrix.
+}}
+
+\bigskip
+We have
+\begin{equation*}
+I\otimes\tau_x
+=\begin{pmatrix}\tau_x&0\\0&\tau_x\end{pmatrix}
+=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\end{equation*}
+
+Alice's spin $u$ remains unchanged.
+\begin{equation*}
+(I\otimes\tau_x)|uu\rangle
+=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\begin{pmatrix}1\\0\\0\\0\end{pmatrix}
+=\begin{pmatrix}0\\1\\0\\0\end{pmatrix}=|ud\rangle
+\end{equation*}
+
+\begin{equation*}
+(I\otimes\tau_x)|ud\rangle
+=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\begin{pmatrix}0\\1\\0\\0\end{pmatrix}
+=\begin{pmatrix}1\\0\\0\\0\end{pmatrix}=|uu\rangle
+\end{equation*}
+
+Alice's spin $d$ remains unchanged.
+\begin{equation*}
+(I\otimes\tau_x)|du\rangle
+=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\begin{pmatrix}0\\0\\1\\0\end{pmatrix}
+=\begin{pmatrix}0\\0\\0\\1\end{pmatrix}=|dd\rangle
+\end{equation*}
+
+\begin{equation*}
+(I\otimes\tau_x)|dd\rangle
+=\begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}
+\begin{pmatrix}0\\0\\0\\1\end{pmatrix}
+=\begin{pmatrix}0\\0\\1\\0\end{pmatrix}=|du\rangle
+\end{equation*}
+
+\end{document}

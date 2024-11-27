@@ -1,0 +1,99 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+4-8. An operator $A$, corresponding to a physical quantity $\alpha$,
+has two normalized eigenfunctions $\psi_1(x)$ and $\psi_2(x)$,
+with eigenvalues $a_1$ and $a_2$.
+An operator $B$, corresponding to another physical quantity $\beta$,
+has normalized eigenfunctions $\phi_1(x)$ and $\phi_2(x)$,
+with eigenvalues $b_1$ and $b_2$.
+The eigenfunctions are related via
+\begin{align*}
+\psi_1&=(2\phi_1+3\phi_2)/\sqrt{13},
+\\
+\psi_2&=(3\phi_1-2\phi_2)/\sqrt{13}.
+\end{align*}
+
+$\alpha$ is measured and the value $a_1$ is obtained.
+If $\beta$ is then measured and then $\alpha$ again, show
+that the probability of obtaining $a_1$ a second time is $97/169$.
+}}
+
+\bigskip
+In matrix form we have
+\begin{equation*}
+\begin{pmatrix}\psi_1\\\psi_2\end{pmatrix}
+=\frac{1}{\sqrt{13}}
+\begin{pmatrix}2&3\\3&-2\end{pmatrix}
+\begin{pmatrix}\phi_1\\\phi_2\end{pmatrix}
+\end{equation*}
+
+Noting that
+\begin{equation*}
+\begin{pmatrix}2&3\\3&-2\end{pmatrix}^{-1}
+=\frac{1}{13}\begin{pmatrix}2&3\\3&-2\end{pmatrix}
+\end{equation*}
+
+we have for $\phi$ in terms of $\psi$
+\begin{equation*}
+\begin{pmatrix}\phi_1\\\phi_2\end{pmatrix}
+=\frac{1}{\sqrt{13}}
+\begin{pmatrix}2&3\\3&-2\end{pmatrix}
+\begin{pmatrix}\psi_1\\\psi_2\end{pmatrix}
+\end{equation*}
+
+After the first measurement $\alpha=a_1$ the system is in state $\psi_1$.
+Noting that
+\begin{equation*}
+\psi_1=\frac{2}{\sqrt{13}}\phi_1+\frac{3}{\sqrt{13}}\phi_2
+\end{equation*}
+
+the probabilities for the measurement of $\beta$ are
+\begin{align*}
+P(\beta=b_1)&=\left(\frac{2}{\sqrt{13}}\right)^2=\frac{4}{13}
+\\[1ex]
+P(\beta=b_2)&=\left(\frac{3}{\sqrt{13}}\right)^2=\frac{9}{13}
+\end{align*}
+
+Suppose $\beta=b_1$ is measured.
+Then the system is now in state $\phi_1$ and
+\begin{equation*}
+\phi_1=\frac{2}{\sqrt{13}}\psi_1+\frac{3}{\sqrt{13}}\psi_2
+\end{equation*}
+
+Hence the probabilities for the second measurement of $\alpha$ are
+\begin{align*}
+P(\alpha=a_1\cap\beta=b_1)
+&=\left(\frac{2}{\sqrt{13}}\right)^2P(\beta=b_1)
+=\frac{16}{169}
+\\[1ex]
+P(\alpha=a_2\cap\beta=b_1)
+&=\left(\frac{3}{\sqrt{13}}\right)^2P(\beta=b_1)
+=\frac{36}{169}
+\end{align*}
+
+Suppose $\beta=b_2$ is measured.
+Then the system is now in state $\phi_2$ and
+\begin{equation*}
+\phi_2=\frac{3}{\sqrt{13}}\psi_1-\frac{2}{\sqrt{13}}\psi_2
+\end{equation*}
+
+Hence the probabilities for the second measurement of $\alpha$ are
+\begin{align*}
+P(\alpha=a_1\cap\beta=b_2)
+&=\left(\frac{3}{\sqrt{13}}\right)^2P(\beta=b_2)
+=\frac{81}{169}
+\\[1ex]
+P(\alpha=a_2\cap\beta=b_2)
+&=\left(\frac{-2}{\sqrt{13}}\right)^2P(\beta=b_2)
+=\frac{36}{169}
+\end{align*}
+
+By total probability
+\begin{equation*}
+P(\alpha=a_1)
+=P(\alpha=a_1\cap\beta=b_1)+P(\alpha=a_1\cap\beta=b_2)
+=\frac{16}{169}+\frac{81}{169}=\frac{97}{169}
+\end{equation*}
+
+\end{document}

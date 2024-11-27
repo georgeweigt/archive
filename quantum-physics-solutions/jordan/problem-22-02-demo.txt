@@ -1,0 +1,39 @@
+"Problem 22-2"
+
+Q1(f) = q1 f
+Q2(f) = q2 f
+Q3(f) = q3 f
+
+P1(f) = -i hbar d(f,q1)
+P2(f) = -i hbar d(f,q2)
+P3(f) = -i hbar d(f,q3)
+
+L1(f) = Q2(P3(f)) - Q3(P2(f))
+L2(f) = Q3(P1(f)) - Q1(P3(f))
+L3(f) = Q1(P2(f)) - Q2(P1(f))
+
+Y1(f) = Q1(P1(f)) + P1(Q1(f))
+Y2(f) = Q2(P2(f)) + P2(Q2(f))
+Y3(f) = Q3(P3(f)) + P3(Q3(f))
+
+Y(f) = Y1(f) + Y2(f) + Y3(f)
+
+Z(f) = P1(P1(f)) + P2(P2(f)) + P3(P3(f))
+
+psi = Psi(q1,q2,q3)
+
+check(Y(Z(psi)) - Z(Y(psi)) == 4 i hbar Z(psi))
+
+check(Q1(P1(P1(P1(psi)))) - P1(P1(Q1(P1(psi)))) ==
+2 i hbar P1(P1(psi)))
+
+check(P1(Q1(P1(P1(psi)))) - P1(P1(P1(Q1(psi)))) ==
+2 i hbar P1(P1(psi)))
+
+check(Q1(P1(P2(P2(psi)))) - P2(P2(Q1(P1(psi)))) == 0)
+check(P1(Q1(P2(P2(psi)))) - P2(P2(P1(Q1(psi)))) == 0)
+
+check(Q1(P1(P3(P3(psi)))) - P3(P3(Q1(P1(psi)))) == 0)
+check(P1(Q1(P3(P3(psi)))) - P3(P3(P1(Q1(psi)))) == 0)
+
+"ok"

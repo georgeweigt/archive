@@ -1,0 +1,118 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+10.1. Find the Pauli representation of $S_x$, $S_y$, and $S_z$
+for a spin-1 particle.
+}}
+
+\bigskip
+For a spin-1 particle we have
+\begin{equation*}
+s=1,\quad m_s=1,0,-1
+\end{equation*}
+
+Let
+\begin{equation*}
+\chi_{1,1}=\begin{pmatrix}1\\0\\0\end{pmatrix},
+\quad
+\chi_{1,0}=\begin{pmatrix}0\\1\\0\end{pmatrix},
+\quad
+\chi_{1,-1}=\begin{pmatrix}0\\0\\1\end{pmatrix}
+\end{equation*}
+
+Then by
+\begin{equation*}
+S_z\chi_{1,1}=\hbar\chi_{1,1},
+\quad
+S_z\chi_{1,0}=0,
+\quad
+S_z\chi_{1,-1}=-\hbar\chi_{1,-1}
+\end{equation*}
+
+we have
+\begin{equation*}
+S_z=\hbar\begin{pmatrix}1&0&0\\0&0&0\\0&0&-1\end{pmatrix}
+\end{equation*}
+
+For ladder operators we have
+\begin{align*}
+S_+\chi_{s,m_s}&=c_{s,m_s}^+\chi_{s,m_s+1}
+\\
+S_-\chi_{s,m_s}&=c_{s,m_s}^-\chi_{s,m_s-1}
+\end{align*}
+
+where
+\begin{align*}
+c_{s,m_s}^+&=\sqrt{s(s+1)-m_s(m_s+1)}\hbar
+\\
+c_{s,m_s}^-&=\sqrt{s(s+1)-m_s(m_s-1)}\hbar
+\end{align*}
+
+It follows that
+\begin{equation*}
+S_+=\begin{pmatrix}
+0 & c_{1,0}^+ & 0
+\\
+0 & 0 & c_{1,-1}^+
+\\
+0 & 0 & 0
+\end{pmatrix}
+=\begin{pmatrix}
+0 & \sqrt2\hbar & 0
+\\
+0 & 0 & \sqrt2\hbar
+\\
+0 & 0 & 0
+\end{pmatrix}
+\end{equation*}
+
+and
+\begin{equation*}
+S_-=\begin{pmatrix}
+0 & 0 & 0
+\\
+c_{1,1}^- & 0 & 0
+\\
+0 & c_{1,0}^- & 0
+\end{pmatrix}
+=\begin{pmatrix}
+0 & 0 & 0
+\\
+\sqrt2\hbar & 0 & 0
+\\
+0 & \sqrt2\hbar & 0
+\end{pmatrix}
+\end{equation*}
+
+Then by
+\begin{equation*}
+S_\pm=S_x\pm iS_y
+\end{equation*}
+
+we have
+\begin{equation*}
+S_x=\frac{1}{2}(S_++S_-)
+=\frac{\hbar}{\sqrt2}
+\begin{pmatrix}
+0 & 1 & 0
+\\
+1 & 0 & 1
+\\
+0 & 1 & 0
+\end{pmatrix}
+\end{equation*}
+
+and
+\begin{equation*}
+S_y=\frac{1}{2i}(S_+-S_-)
+=\frac{i\hbar}{\sqrt2}
+\begin{pmatrix}
+0 & -1 & 0
+\\
+1 & 0 & -1
+\\
+0 & 1 & 0
+\end{pmatrix}
+\end{equation*}
+
+\end{document}

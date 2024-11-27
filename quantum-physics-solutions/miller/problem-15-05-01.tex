@@ -1,0 +1,49 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.5.1
+Find the commutator $[\hat\xi_\lambda,\hat\pi_\lambda]$
+starting from the operator definitions
+\begin{equation*}
+\hat\xi_\lambda\equiv\frac{1}{\sqrt2}
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\quad\text{and}\quad
+\hat\pi_\lambda\equiv\frac{i}{\sqrt2}
+\left(\hat a_\lambda^\dag-\hat a_\lambda\right)
+\end{equation*}
+}}
+
+\bigskip
+We have
+\begin{equation*}
+\hat\xi_\lambda\hat\pi_\lambda=\frac{i}{2}
+\left(\hat a_\lambda\hat a_\lambda^\dag-\hat a_\lambda \hat a_\lambda
++\hat a_\lambda^\dag\hat a_\lambda^\dag-\hat a_\lambda^\dag\hat a_\lambda\right)
+\tag{1}
+\end{equation*}
+and
+\begin{equation*}
+\hat\pi_\lambda\hat\xi_\lambda=\frac{i}{2}
+\left(\hat a_\lambda^\dag\hat a_\lambda+\hat a_\lambda^\dag\hat a_\lambda^\dag
+-\hat a_\lambda\hat a_\lambda-\hat a_\lambda\hat a_\lambda^\dag\right)
+\tag{2}
+\end{equation*}
+
+Subtract (2) from (1) to obtain the commutator.
+\begin{equation*}
+[\hat\xi_\lambda,\hat\pi_\lambda]
+=i\left(\hat a_\lambda\hat a_\lambda^\dag
+-\hat a_\lambda^\dag\hat a_\lambda\right)
+\end{equation*}
+
+From
+\begin{equation*}
+[\hat a_\lambda,\hat a_\lambda^\dag]
+=\hat a_\lambda\hat a_\lambda^\dag-\hat a_\lambda^\dag\hat a_\lambda=1
+\end{equation*}
+we have
+\begin{equation*}
+[\hat\xi_\lambda,\hat\pi_\lambda]=i
+\end{equation*}
+
+\end{document}

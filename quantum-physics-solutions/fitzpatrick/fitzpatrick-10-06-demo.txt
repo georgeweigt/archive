@@ -1,0 +1,38 @@
+"Verify exercise 10-6"
+
+H = g e B0 cos(omega t + phi) / (2 me) Sz
+
+Sx = hbar / 2 ((0,1),(1,0))
+Sy = hbar / 2 ((0,-i),(i,0))
+Sz = hbar / 2 ((1,0),(0,-1))
+
+cp = C exp(-i g e B0 sin(omega t + phi) / (4 me omega))
+cm = C exp(i g e B0 sin(omega t + phi) / (4 me omega))
+
+chi = (cp,cm)
+
+check(i hbar d(chi,t) == dot(H,chi))
+
+C = sqrt(1/2)
+phi = 0
+
+check(eval(chi,t,0) == sqrt(1/2) (1,1))
+
+xp = sqrt(1/2) (1,1)
+xm = sqrt(1/2) (1,-1)
+
+yp = sqrt(1/2) (1,i)
+ym = sqrt(1/2) (1,-i)
+
+zp = (1,0)
+zm = (0,1)
+
+Pr(a,b) = mag(dot(conj(a),b))^2
+
+check(Pr(xm,chi) ==
+1/2 - 1/2 cos(g e B0 sin(omega t) / (2 me omega)))
+
+check(dot(conj(chi),Sx,chi) ==
+hbar / 2 cos(g e B0 sin(omega t) / (2 me omega)))
+
+"ok"

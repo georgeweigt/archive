@@ -1,0 +1,179 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+18-2.
+Remember
+\begin{align*}
+\left\langle(Q-\langle Q\rangle)^2\right\rangle
+&=\langle Q^2\rangle-\langle Q\rangle^2
+\\
+\left\langle(P-\langle P\rangle)^2\right\rangle
+&=\langle P^2\rangle-\langle P\rangle^2.
+\end{align*}
+
+Use this to show Heisenberg's uncertainty relation implies
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle\ge\left(\frac{\hbar}{2}\right)^2
+\end{equation*}
+
+for any state. By working out the square in
+\begin{equation*}
+\left(\langle Q^2\rangle-\frac{\hbar}{2m\omega}\right)^2\ge0
+\end{equation*}
+
+show that
+\begin{equation*}
+\langle Q^2\rangle
+\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)\le
+\left(\frac{\hbar}{2}\right)^2
+\end{equation*}
+
+for any state and show the equality holds in the latter only if it
+holds in the former.
+Now consider a state where the oscillator energy has the value
+$\hbar\omega/2$.
+Show that
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle=\langle Q^2\rangle
+\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)
+\end{equation*}
+
+for that state. Use all this to find
+\begin{align*}
+\langle Q^2\rangle,&\quad\langle P^2\rangle,
+\\
+\tfrac{1}{2}m\omega^2\langle Q^2\rangle,&\quad\frac{1}{2m}\langle P^2\rangle,
+\\
+\langle Q\rangle,&\quad\langle P\rangle
+\end{align*}
+
+for that state.
+}}
+
+\bigskip
+This is Heisenberg's uncertainty relation.
+\begin{equation*}
+\left[\langle Q^2\rangle-\langle Q\rangle^2\right]
+\left[\langle P^2\rangle-\langle P\rangle^2\right]
+\ge\left(\frac{\hbar}{2}\right)^2
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle\ge\left(\frac{\hbar}{2}\right)^2
++\langle Q^2\rangle\langle P\rangle^2
++\langle Q\rangle^2\left[\langle P^2\rangle-\langle P\rangle^2\right]
+\end{equation*}
+
+Since matrices $P$ and $Q$ represent real quantities we have
+\begin{equation*}
+\langle Q^2\rangle\ge0,\quad\langle Q\rangle^2\ge0,\quad
+\langle P^2\rangle\ge0,\quad\langle P\rangle^2\ge0
+\end{equation*}
+
+and
+\begin{equation*}
+\langle P^2\rangle-\langle P\rangle^2\ge0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle\ge\left(\frac{\hbar}{2}\right)^2\tag{1}
+\end{equation*}
+
+For the second part we have
+\begin{equation*}
+\langle Q^2\rangle^2-\frac{\hbar}{m\omega}\langle Q^2\rangle+\frac{\hbar^2}{4m^2\omega^2}\ge0
+\end{equation*}
+
+Multiply by $-m^2\omega^2$.
+\begin{equation*}
+-m^2\omega^2\langle Q^2\rangle^2+\hbar m\omega\langle Q^2\rangle-\frac{\hbar^2}{4}\le0
+\end{equation*}
+
+Factor $\langle Q^2\rangle$.
+\begin{equation*}
+\langle Q^2\rangle\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)-\frac{\hbar^2}{4}\le0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\langle Q^2\rangle\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)\le\left(\frac{\hbar}{2}\right)^2
+\tag{2}
+\end{equation*}
+
+Suppose
+\begin{equation*}
+\langle Q^2\rangle\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)=\left(\frac{\hbar}{2}\right)^2
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+m\hbar\omega\langle Q^2\rangle-m^2\omega^2\langle Q^2\rangle^2-\frac{\hbar^2}{4}=0
+\end{equation*}
+
+Divide by $-m^2\omega^2$.
+\begin{equation*}
+-\frac{\hbar}{m\omega}\langle Q^2\rangle+\langle Q^2\rangle^2+\frac{\hbar^2}{4m^2\omega^2}=0
+\end{equation*}
+
+Factor.
+\begin{equation*}
+\left(\langle Q^2\rangle-\frac{\hbar}{2m\omega}\right)^2=0
+\tag{3}
+\end{equation*}
+
+Hence equality in (2) implies the equality in (3).
+
+\bigskip
+For the energy state $\hbar\omega/2$ we have
+\begin{equation*}
+\frac{1}{2m}P^2+\tfrac{1}{2}m\omega^2Q^2=\frac{\hbar\omega}{2}I_0
+\end{equation*}
+
+Hence
+\begin{equation*}
+\frac{1}{2m}\langle P^2\rangle+\tfrac{1}{2}m\omega^2\langle Q^2\rangle=\frac{\hbar\omega}{2}
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+\langle P^2\rangle=m\hbar\omega-m^2\omega^2\langle Q^2\rangle
+\tag{4}
+\end{equation*}
+
+Multiply by $\langle Q^2\rangle$.
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle=\langle Q^2\rangle
+\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)
+\end{equation*}
+
+By equations (1) and (2) we have
+\begin{equation*}
+\langle Q^2\rangle\langle P^2\rangle=\langle Q^2\rangle
+\left(m\hbar\omega-m^2\omega^2\langle Q^2\rangle\right)=\left(\frac{\hbar}{2}\right)^2
+\tag{5}
+\end{equation*}
+
+Hence by equation (3)
+\begin{equation*}
+\langle Q^2\rangle=\frac{\hbar}{2m\omega}
+\end{equation*}
+
+By equation (4)
+\begin{equation*}
+\langle P^2\rangle=m\hbar\omega-\frac{m\hbar\omega}{2}=\frac{m\hbar\omega}{2}
+\end{equation*}
+
+Hence
+\begin{equation*}
+\tfrac{1}{2}m\omega^2\langle Q^2\rangle=\tfrac{1}{4}\hbar\omega,\quad
+\frac{1}{2m}\langle P^2\rangle=\tfrac{1}{4}\hbar\omega
+\end{equation*}
+
+By equation (5) and Heisenberg's uncertainty relation we have
+\begin{equation*}
+\langle Q\rangle=0,\quad\langle P\rangle=0
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,73 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+15.7.1
+Consider a set of modes of the electromagnetic field in which the electric
+field is polarized along the $x$ direction and the magnetic field is polarized
+in the $y$ direction.
+Restricting consideration only to those modes, find the simplest expression
+you can for the commutation relation $[\hat E_x,\hat B_y]$
+for this multimode field.
+}}
+
+\bigskip
+Consider the following formulas.
+\begin{align*}
+\hat{\mathbf E}(\mathbf r,t)
+&=i\sum_\lambda\left(\hat a_\lambda-\hat a_\lambda^\dag\right)
+\sqrt\frac{\hbar\omega_\lambda}{2\epsilon_0}
+\mathbf u_\lambda(\mathbf r)
+\tag{15.132}
+\\
+\hat{\mathbf B}(\mathbf r,t)
+&=\sum_\lambda\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\sqrt\frac{\hbar\omega_\lambda\mu_0}{2}
+\mathbf v_\lambda(\mathbf r)
+\tag{15.135}
+\end{align*}
+
+By hypothesis we have for the polarization vectors
+\begin{equation*}
+\mathbf u_\lambda(\mathbf r)=\begin{pmatrix}1\\0\\0\end{pmatrix},
+\quad
+\mathbf v_\lambda(\mathbf r)=\begin{pmatrix}0\\1\\0\end{pmatrix}
+\end{equation*}
+
+Hence
+\begin{align*}
+\hat E_x(\mathbf r,t)
+&=i\sum_\lambda\left(\hat a_\lambda-\hat a_\lambda^\dag\right)
+\sqrt\frac{\hbar\omega_\lambda}{2\epsilon_0}
+\\
+\hat B_y(\mathbf r,t)
+&=\sum_\lambda\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\sqrt\frac{\hbar\omega_\lambda\mu_0}{2}
+\end{align*}
+
+It follows that
+\begin{align*}
+\hat E_x\hat B_y&=i\frac{\hbar}{2}\sqrt{\frac{\mu_0}{\epsilon_0}}\sum_\lambda\omega_\lambda
+\left(\hat a_\lambda-\hat a_\lambda^\dag\right)
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\tag{1}
+\\
+\hat B_y\hat E_x&=i\frac{\hbar}{2}\sqrt{\frac{\mu_0}{\epsilon_0}}\sum_\lambda\omega_\lambda
+\left(\hat a_\lambda+\hat a_\lambda^\dag\right)
+\left(\hat a_\lambda-\hat a_\lambda^\dag\right)
+\tag{2}
+\end{align*}
+
+Subtract (2) from (1) to obtain the commutator.
+\begin{equation*}
+[\hat E_x,\hat B_y]
+=i\frac{\hbar}{2}\sqrt{\frac{\mu_0}{\epsilon_0}}\sum_\lambda\omega_\lambda
+\left(2\hat a_\lambda\hat a_\lambda^\dag-2\hat a_\lambda^\dag\hat a_\lambda\right)
+\end{equation*}
+
+Recalling that $\hat a_\lambda\hat a_\lambda^\dag-\hat a_\lambda^\dag\hat a_\lambda=1$ we have
+\begin{equation*}
+[\hat E_x,\hat B_y]
+=i\hbar\sqrt\frac{\mu_0}{\epsilon_0}\sum_\lambda\omega_\lambda
+\end{equation*}
+
+\end{document}

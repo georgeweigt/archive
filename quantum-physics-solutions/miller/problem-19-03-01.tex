@@ -1,0 +1,122 @@
+\input{preamble}
+
+\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{
+19.3.1
+Derive the relations
+\begin{equation*}
+\text{(i) }\frac{\partial S}{\partial t}+\frac{(\nabla S)^2}{2m}+V+Q=0
+\quad\text{and}\quad\text{(ii) }
+\frac{\partial R^2}{\partial t}+\nabla\cdot
+\left(R^2\frac{\nabla S}{m}\right)=0
+\end{equation*}
+
+from Schrodinger's time-dependent equation, where
+\begin{equation*}
+Q=-\frac{h^2}{2m}\frac{\nabla^2R}{R}
+\end{equation*}
+
+and the wavefunction is written in the form
+\begin{equation*}
+\psi(\mathbf r,t)=R(\mathbf r,t)\exp\bigl(iS(\mathbf r,t)\bigr)
+\end{equation*}
+
+(Note: The second relation (ii) corresponds to conservation of particles or
+probability density because $(\nabla S)/m$ can be interpreted as velocity;
+hence, $R^2(\nabla S)/m$ represents the flow of probability density.)
+}}
+
+\bigskip
+Time-dependent Schrodinger equation.
+\begin{equation*}
+-\frac{\hbar^2}{2m}\nabla^2\psi+V\psi=i\hbar\frac{\partial\psi}{\partial t}
+\end{equation*}
+
+For the derivatives we have
+\begin{equation*}
+\nabla^2\psi=(\nabla^2R)\exp(iS)+iR(\nabla^2S)\exp(iS)-R(\nabla S)^2\exp(iS)
++2i(\nabla R\cdot\nabla S)\exp(iS)
+\tag{1}
+\end{equation*}
+
+and
+\begin{equation*}
+\frac{\partial\psi}{\partial t}
+=\frac{\partial R}{\partial t}\exp(iS)+iR\frac{\partial S}{\partial t}\exp(iS)
+\end{equation*}
+
+Substitute into the Schrodinger equation and cancel $\exp(iS)$.
+\begin{equation*}
+-\frac{\hbar^2}{2m}\left(\nabla^2R+iR\nabla^2S-R(\nabla S)^2+2i\nabla R\cdot\nabla S\right)
++VR=i\hbar\frac{\partial R}{\partial t}-\hbar R\frac{\partial S}{\partial t}
+\tag{2}
+\end{equation*}
+
+This is the real part of equation (2).
+\begin{equation*}
+-\frac{\hbar^2}{2m}\left(\nabla^2R-R(\nabla S)^2\right)
++VR=-\hbar R\frac{\partial S}{\partial t}
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+-\frac{\hbar^2}{2m}\nabla^2R+\frac{\hbar^2}{2m}R(\nabla S)^2
++VR+\hbar R\frac{\partial S}{\partial t}=0
+\end{equation*}
+
+Divide through by $R$ and rewrite with $Q$.
+\begin{equation*}
+Q+\frac{\hbar^2}{2m}(\nabla S)^2+V
++\hbar\frac{\partial S}{\partial t}=0
+\tag{3}
+\end{equation*}
+
+Hence for $\hbar=1$ we have
+\begin{equation*}
+\frac{\partial S}{\partial t}+\frac{(\nabla S)^2}{2m}+V+Q=0
+\end{equation*}
+
+This is the imaginary part of equation (2).
+\begin{equation*}
+-\frac{\hbar^2}{2m}R\nabla^2S-\frac{\hbar^2}{m}\nabla R\cdot\nabla S
+=\hbar\frac{\partial R}{\partial t}
+\end{equation*}
+
+Rewrite as
+\begin{equation*}
+\frac{\hbar^2}{2m}R\nabla^2S+\frac{\hbar^2}{m}\nabla R\cdot\nabla S
++\hbar\frac{\partial R}{\partial t}=0
+\tag{4}
+\end{equation*}
+
+It turns out that
+\begin{equation*}
+\frac{\partial R^2}{\partial t}+\nabla\cdot
+\left(R^2\frac{\nabla S}{m}\right)
+=2R\left(\frac{1}{2m}R\nabla^2S+\frac{1}{m}\nabla R\cdot\nabla S+\frac{\partial R}{\partial t}\right)
+\tag{5}
+\end{equation*}
+
+Hence by equation (4) and $\hbar=1$ we have
+\begin{equation*}
+\frac{\partial R^2}{\partial t}+\nabla\cdot
+\left(R^2\frac{\nabla S}{m}\right)=0
+\end{equation*}
+
+Notes:
+\begin{equation*}
+\nabla^2(fg)=\left(\nabla^2f\right)g+f\left(\nabla^2g\right)+2\nabla f\cdot\nabla g
+\end{equation*}
+
+\begin{equation*}
+\nabla^2\exp(iS)=i\nabla^2S\exp(iS)-(\nabla S)^2\exp(iS)
+\tag{6}
+\end{equation*}
+
+\begin{equation*}
+(\nabla S)^2=\nabla S\cdot\nabla S
+=\left(\frac{\partial S}{\partial x}\right)^2
++\left(\frac{\partial S}{\partial y}\right)^2
++\left(\frac{\partial S}{\partial z}\right)^2
+\end{equation*}
+
+\end{document}
