@@ -1,10 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
-\usepackage{amssymb} % mathbb
-\usepackage{mathrsfs} % mathscr
-\usepackage{slashed}
-\usepackage{tikz}
 \parindent=0pt
 \pdfinfoomitdate=1
 \pdftrailerid{}
