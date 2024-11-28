@@ -9,7 +9,7 @@ DIRS =	feynman-hibbs \
 	susskind-friedman
 
 default:
-	for FILE in $(DIRS) ; do make -C $$FILE ; done
+	for DIR in $(DIRS) ; do make -C $$DIR ; done
 
 clean:
-	for FILE in $(DIRS) ; do make -C $$FILE clean ; done
+	for DIR in $(DIRS) ; do make -C $$DIR clean ; done
