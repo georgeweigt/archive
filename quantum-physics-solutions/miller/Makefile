@@ -7,8 +7,8 @@
 	cat ../text1 $< ../text2 > $@
 
 default:
-	for file in $$(basename -a -s .tex *.tex) ; do make $$file.pdf ; done
-	for file in $$(basename -a -s .txt *.txt) ; do make $$file.html ; done
+	for FILE in $$(basename -a -s .tex *.tex) ; do make $$FILE.pdf ; done
+	for FILE in $$(basename -a -s .txt *.txt) ; do make $$FILE.html ; done
 
 clean:
 	rm -f *.aux *.log *.synctex.gz
