@@ -1,6 +1,3 @@
-ctool
-certificate-tool.pdf
-wcheck
-make-prototypes
-*.der
-*.pem
+.DS_Store
+*.swp
+*.tmp
