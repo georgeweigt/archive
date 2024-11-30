@@ -1,7 +1,3 @@
-demo
-wcheck
-make-prototypes
-ssl-notes.pdf
-starting-apache.pdf
-*.der
-*.pem
+.DS_Store
+*.swp
+*.tmp
