@@ -1,4 +1,3 @@
-pingpong
-pingpong.pdf
-wcheck
-make-prototypes
+.DS_Store
+*.swp
+*.tmp
