@@ -5,6 +5,10 @@ To build and run:
      gcc reg.c -lm
      ./a.out infile
 
+To run a self test:
+
+     ./a.out reg-infile | diff - reg-outfile
+
 Infile has the following format:
 
 1. The first line has a model statement such as Y = A B A*B
@@ -963,7 +967,6 @@ compute_param_table()
 void
 print_results()
 {
-	int i, v;
 	emit_line_center("Analysis of Variance");
 	emit_line("");
 	print_anova_table_part1();

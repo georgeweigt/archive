@@ -7,6 +7,10 @@ To build and run:
      gcc anova.c -lm
      ./a.out infile
 
+To run a self test:
+
+     ./a.out anova-infile | diff - anova-outfile
+
 Infile has the following format:
 
 1. The first line has a model statement such as Y = A B A*B
@@ -483,7 +487,7 @@ parse_model()
 int
 parse_interaction_term(int k, int m)
 {
-	int i, n, vtab[MAXINT];
+	int n, vtab[MAXINT];
 
 	n = 0;
 	*buf = 0;
@@ -1386,7 +1390,7 @@ void
 print_ttest(int v)
 {
 	int dfe, i, j, k, n;
-	char **a, *s;
+	char *s;
 	double d, mse, pval, se, sse, t, tval;
 
 	emit_line_center("Two Sample t-Test");
