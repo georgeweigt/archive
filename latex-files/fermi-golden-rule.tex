@@ -1,22 +1,20 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{slashed}
-\usepackage{tikz}
 \parindent=0pt
 \pdfinfoomitdate=1
 \pdftrailerid{}
 \begin{document}
 
 \section*{Fermi golden rule}
+
 Consider the transition rate $\Gamma_{1\rightarrow2}$
 where $\psi_1(x)$ is the initial eigenstate
 and $\psi_2(x)$ is the final eigenstate.
 
-\bigskip
-\textcircled{\scriptsize1}
+\begin{enumerate}
+
+\item
 Let $\Psi(x,t)$ be the following linear combination of eigenstates.
 \begin{equation*}
 \Psi(x,t)=c_1(t)\psi_1(x)\exp(-i\omega_1t)+c_2(t)\psi_2(x)\exp(-i\omega_2t)
@@ -24,20 +22,19 @@ Let $\Psi(x,t)$ be the following linear combination of eigenstates.
 
 We need to solve for $c_2(t)$ to find the transition rate.
 
-\bigskip
-\textcircled{\scriptsize2}
+\item
 Let the perturbing Hamiltonian be
 \begin{equation*}
 H'(x,t)=2V(x)\cos(\omega t+\phi)
 \end{equation*}
 
-\textcircled{\scriptsize3}
+\item
 From the time-dependent Schrodinger equation we have
 \begin{equation*}
 i\hbar\frac{\partial}{\partial t}\Psi(x,t)=H_0(x)\Psi(x,t)+H'(x,t)\Psi(x,t)
 \end{equation*}
 
-\textcircled{\scriptsize4}
+\item
 This reduces to
 \begin{equation*}
 i\hbar\frac{\partial c_1(t)}{\partial t}\psi_1(x)\exp(-i\omega_1t)
@@ -45,7 +42,7 @@ i\hbar\frac{\partial c_1(t)}{\partial t}\psi_1(x)\exp(-i\omega_1t)
 =H'(x,t)\Psi(x,t)
 \end{equation*}
 
-\textcircled{\scriptsize5}
+\item
 Take the inner product of $\psi_2^*(x)$ with the above equation to obtain
 \begin{equation*}
 i\hbar\frac{\partial c_2(t)}{\partial t}\exp(-i\omega_2t)
@@ -63,7 +60,7 @@ M_{21}&=\int\psi_2^*(x)V(x)\psi_1(x)\,dx
 M_{22}&=\int\psi_2^*(x)V(x)\psi_2(x)\,dx
 \end{align*}
 
-\textcircled{\scriptsize6}
+\item
 Rewrite as
 \begin{equation*}
 i\hbar\frac{\partial c_2(t)}{\partial t}
@@ -73,7 +70,7 @@ c_1(t)M_{21}\exp\bigl(i(\omega_2-\omega_1)t\bigr)+2c_2(t)M_{22}
 \right)
 \end{equation*}
 
-\textcircled{\scriptsize7}
+\item
 Let the initial state be $\Psi(x,0)=\psi_1(x)$ hence the initial conditions are
 \begin{equation*}
 c_1(0)=1,\quad c_2(0)=0
@@ -85,7 +82,7 @@ i\hbar\frac{\partial c_2(t)}{\partial t}
 =2\cos(\omega t+\phi)M_{21}\exp\bigl(i(\omega_2-\omega_1)t\bigr)
 \end{equation*}
 
-\textcircled{\scriptsize8}
+\item
 Solve for $c_2(t)$ by integrating.
 \begin{equation*}
 c_2(t)=\frac{2M_{21}}{i\hbar}
@@ -106,7 +103,7 @@ c_2(t)
 \right)\exp(i\phi)
 \end{multline*}
 
-\textcircled{\scriptsize9}
+\item
 For $\omega$ such that $\omega\approx\omega_2-\omega_1$ the first term
 dominates so discard the second term and write
 \begin{equation*}
@@ -116,7 +113,7 @@ c_2(t)=-\frac{M_{21}}{\hbar}
 \right)\exp(-i\phi)
 \end{equation*}
 
-\textcircled{\scriptsize10}
+\item
 Rewrite using a sinc function.
 \begin{equation*}
 c_2(t)=-\frac{it}{\hbar}\,M_{21}
@@ -124,14 +121,14 @@ c_2(t)=-\frac{it}{\hbar}\,M_{21}
 \operatorname{sinc}\left(\frac{\omega_2-\omega_1-\omega}{2}\,t\right)
 \end{equation*}
 
-\textcircled{\scriptsize11}
+\item
 Hence the transition probability is
 \begin{equation*}
 P(1\rightarrow2)=|c_2(t)|^2=\frac{t^2}{\hbar^2}\,|M_{21}|^2
 \operatorname{sinc}^2\left(\frac{\omega_2-\omega_1-\omega}{2}\,t\right)
 \end{equation*}
 
-\textcircled{\scriptsize12}
+\item
 Integrate $P(1\rightarrow2)$ to obtain the total transition probability
 $P_{tot}(1\rightarrow2)$.
 \begin{equation*}
@@ -148,8 +145,7 @@ E=\hbar(\omega_2-\omega_1)
 
 and $g(E')$ is the density of photon states for energy $E'$.
 
-\bigskip
-\textcircled{\scriptsize13}
+\item
 Use the approximation $g(E')\approx g(\hbar\omega)$ to obtain
 \begin{equation*}
 P_{tot}(1\rightarrow2)=\frac{t^2}{\hbar^2}|M_{21}|^2g(\hbar\omega)
@@ -157,7 +153,7 @@ P_{tot}(1\rightarrow2)=\frac{t^2}{\hbar^2}|M_{21}|^2g(\hbar\omega)
 \operatorname{sinc}^2\left(\frac{E'/\hbar-\omega}{2}\,t\right)\,dE'
 \end{equation*}
 
-\textcircled{\scriptsize14}
+\item
 Let
 \begin{equation*}
 y=\frac{E'/\hbar-\omega}{2}\,t
@@ -191,7 +187,7 @@ P_{tot}(1\rightarrow2)=\frac{2t}{\hbar}|M_{21}|^2g(\hbar\omega)
 \operatorname{sinc}^2y\,dy
 \end{equation*}
 
-\textcircled{\scriptsize15}
+\item
 The sinc squared function is very narrow so use the approximation
 \begin{equation*}
 \int_{-\epsilon t/2\hbar}^{\epsilon t/2\hbar}\operatorname{sinc}^2 y\,dy
@@ -204,11 +200,13 @@ to obtain
 P_{tot}(1\rightarrow2)=\frac{2\pi t}{\hbar}|M_{21}|^2g(\hbar\omega)
 \end{equation*}
 
-\textcircled{\scriptsize16}
+\item
 The transition rate is the derivative of $P_{tot}(1\rightarrow2)$.
 \begin{equation*}
 \Gamma_{1\rightarrow2}
 =\frac{d}{dt}P_{tot}(1\rightarrow2)=\frac{2\pi}{\hbar}|M_{21}|^2g(\hbar\omega)
 \end{equation*}
+
+\end{enumerate}
 
 \end{document}

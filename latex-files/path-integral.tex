@@ -1,30 +1,29 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
-\usepackage{slashed}
-\usepackage{tikz}
 \parindent=0pt
 \pdfinfoomitdate=1
 \pdftrailerid{}
 \begin{document}
 
 \section*{Path integral}
-\textcircled{\scriptsize1}
+
+\begin{enumerate}
+
+\item
 Let $H$ be the following Hamiltonian where $V\equiv V(x,t)$.
 \begin{equation*}
 H=\frac{\hat p^2}{2m}+V
 \end{equation*}
 
-\textcircled{\scriptsize2}
+\item
 Let $K_j$ be the amplitude to go from $x_j$ to $x_{j+1}$
 in time $\delta t$ where $\delta t=T/N$.
 \begin{equation*}
 K_j=\langle x_{j+1}|\exp\left(-\frac{i}{\hbar}H\delta t\right)|x_j\rangle
 \end{equation*}
 
-\textcircled{\scriptsize3}
+\item
 By the identity
 \begin{equation*}
 \int|p\rangle\langle p|\,dp=1
@@ -36,7 +35,7 @@ K_j=\int\langle x_{j+1}|\exp\left(-\frac{i}{\hbar}H\delta t\right)
 |p\rangle\langle p|x_j\rangle\,dp
 \end{equation*}
 
-\textcircled{\scriptsize4}
+\item
 Replace operator $\hat p$ with its eigenvalue $p$.
 \begin{equation*}
 K_j=\int
@@ -44,7 +43,7 @@ K_j=\int
 \langle x_{j+1}|p\rangle\langle p|x_j\rangle\,dp
 \end{equation*}
 
-\textcircled{\scriptsize5}
+\item
 By the identity
 \begin{equation*}
 \langle x|p\rangle=\frac{1}{\sqrt{2\pi\hbar}}\exp\left(\frac{ipx}{\hbar}\right)
@@ -60,7 +59,7 @@ K_j=\frac{1}{2\pi\hbar}
 \,dp
 \end{equation*}
 
-\textcircled{\scriptsize6}
+\item
 Combine exponentials.
 \begin{equation*}
 K_j=\frac{1}{2\pi\hbar}
@@ -72,7 +71,7 @@ K_j=\frac{1}{2\pi\hbar}
 \,dp
 \end{equation*}
 
-\textcircled{\scriptsize7}
+\item
 The $V$ term does not depend on $p$ so factor it out of the integrand.
 \begin{equation*}
 K_j=\frac{1}{2\pi\hbar}
@@ -84,7 +83,7 @@ K_j=\frac{1}{2\pi\hbar}
 \,dp
 \end{equation*}
 
-\textcircled{\scriptsize8}
+\item
 To solve the integral, use the identity
 \begin{equation*}
 \int_{-\infty}^\infty\exp(-ay^2+by)\,dy=\biggl(\frac{\pi}{a}\biggr)^{1/2}
@@ -104,14 +103,14 @@ K_j=\frac{1}{2\pi\hbar}
 \exp\left(\frac{i}{\hbar}\frac{m}{2}\,\frac{(x_{j+1}-x_j)^2}{\delta t}\right)
 \end{equation*}
 
-\textcircled{\scriptsize9}
+\item
 Combine coefficients and exponentials.
 \begin{equation*}
 K_j=\biggl(\frac{m}{2\pi i\hbar\delta t}\biggr)^{1/2}
 \exp\left(\frac{i}{\hbar}\frac{m}{2}\,\frac{(x_{j+1}-x_j)^2}{\delta t}-\frac{i}{\hbar}V\delta t\right)
 \end{equation*}
 
-\textcircled{\scriptsize10}
+\item
 Factor out $i/\hbar$ and $\delta t$.
 \begin{equation*}
 K_j=\biggl(\frac{m}{2\pi i\hbar\delta t}\biggr)^{1/2}
@@ -120,7 +119,7 @@ K_j=\biggl(\frac{m}{2\pi i\hbar\delta t}\biggr)^{1/2}
 \right]
 \end{equation*}
 
-\textcircled{\scriptsize11}
+\item
 Let $K(b,a)$ be the amplitude to go from $x_a$ at time zero to
 $x_b$ at time $T$ where $x_0\equiv x_a$ and $x_N\equiv x_b$.
 \begin{equation*}
@@ -128,7 +127,7 @@ K(b,a)=\int dx_{N-1}\cdots\int dx_2\int dx_1\,
 K_{N-1}\cdots K_2K_1K_0
 \end{equation*}
 
-\textcircled{\scriptsize12}
+\item
 Substitute for the $K_j$.
 \begin{multline*}
 K(b,a)=\int dx_{N-1}\cdots\int dx_2\int dx_1\,
@@ -142,7 +141,7 @@ K(b,a)=\int dx_{N-1}\cdots\int dx_2\int dx_1\,
 \right]
 \end{multline*}
 
-\textcircled{\scriptsize13}
+\item
 In the limit we have
 \begin{equation*}
 \lim_{N\rightarrow\infty}
@@ -173,7 +172,7 @@ K(b,a)=\int dx_{N-1}\cdots\int dx_2\int dx_1\,
 \right]
 \end{multline*}
 
-\textcircled{\scriptsize14}
+\item
 Define
 \begin{equation*}
 \int Dx(t)=\lim_{N\rightarrow\infty}
@@ -193,5 +192,7 @@ K(b,a)=\int Dx(t)\,
 \,dt
 \right]
 \end{equation*}
+
+\end{enumerate}
 
 \end{document}
