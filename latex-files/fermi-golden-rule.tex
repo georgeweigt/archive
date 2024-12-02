@@ -8,19 +8,15 @@
 
 \section*{Fermi golden rule}
 
-Consider the transition rate $\Gamma_{1\rightarrow2}$
-where $\psi_1(x)$ is the initial eigenstate
-and $\psi_2(x)$ is the final eigenstate.
-
-\begin{enumerate}
-
-\item
-Let $\Psi(x,t)$ be the following linear combination of eigenstates.
+Let $\psi_1(x)$ be an initial eigenstate and let $\psi_2(x)$ be a final eigenstate.
+Let $\Psi(x,t)$ be the following linear combination of $\psi_1(x)$ and $\psi_2(x)$.
 \begin{equation*}
 \Psi(x,t)=c_1(t)\psi_1(x)\exp(-i\omega_1t)+c_2(t)\psi_2(x)\exp(-i\omega_2t)
 \end{equation*}
 
-We need to solve for $c_2(t)$ to find the transition rate.
+Solve for $c_2(t)$ and find the transition rate $\Gamma_{1\rightarrow2}$.
+
+\begin{enumerate}
 
 \item
 Let the perturbing Hamiltonian be
@@ -188,7 +184,7 @@ P_{tot}(1\rightarrow2)=\frac{2t}{\hbar}|M_{21}|^2g(\hbar\omega)
 \end{equation*}
 
 \item
-The sinc squared function is very narrow so use the approximation
+Use the approximation
 \begin{equation*}
 \int_{-\epsilon t/2\hbar}^{\epsilon t/2\hbar}\operatorname{sinc}^2 y\,dy
 \approx
